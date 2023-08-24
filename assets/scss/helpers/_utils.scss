@@ -1,5 +1,11 @@
-.flow {
-  & > * + * {
-    margin-top: var(--flow-space, 1.5rem);
-  }
+.bg-white-brick {
+  background-image: url("/assets/images/gridme.webp"), url("/assets/images/stripes-light-1.png");
+}
+.show-more-y {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 78.13%);
+  padding-top: var(--show-more-padding, 48px);
+  display: flex;
+  justify-content: center;
 }
