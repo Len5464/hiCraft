@@ -1,0 +1,29 @@
+.img-checkbox {
+  --img-checkbox-size: 150px;
+  width: var(--img-checkbox-size, 100px);
+  cursor: pointer;
+  gap: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  input[type="checkbox"] {
+    display: none;
+    &:checked ~ .img-checkbox__icon-checked {
+      display: block;
+    }
+  }
+  img {
+    object-fit: cover;
+    width: var(--img-checkbox-size, 100px);
+    height: var(--img-checkbox-size, 100px);
+  }
+  &__icon-checked {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    color: $primary;
+    display: none;
+  }
+}
