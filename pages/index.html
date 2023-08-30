@@ -2,22 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      http-equiv="X-UA-Compatible"
-      content="IE=edge"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>hiCraft | 搜尋好設計、好點子</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
   </head>
   <body>
-    <%- include('./layout/navbar.ejs'); -%> <%- include('./layout/interest-modal.ejs'); -%> <%-
-    include('./layout/gallery.ejs'); -%> <%- include('./layout/footer.ejs'); -%>
-    <script
-      type="module"
-      src="../main.js"
-    ></script>
+    <%- include('./layout/header'); -%>
+    <div class="index-search bg-black">
+        <h1 class="index-title text-white text-center">搜尋好設計、好點子</h1>
+        
+        <form class="d-flex bg-white rounded-3 p-2 border border-5 border-opacity-10" role="search">
+          <input class="form-control border-0" type="search" placeholder="試試看輸入父親節" aria-label="Search"/>
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              依主題搜尋
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">依作者搜尋</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">依作品搜尋</a>
+              </li>
+            </ul>
+          </div>
+            <button class="btn btn-primary" type="submit">Search</button>
+          </form>
+    </div>
+    
+    <script type="module" src="../main.js"></script>
   </body>
 </html>
