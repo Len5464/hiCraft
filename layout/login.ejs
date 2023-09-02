@@ -1,0 +1,98 @@
+<!-- Button trigger modal -->
+<button
+  type="button"
+  class="btn btn-primary"
+  data-bs-toggle="modal"
+  data-bs-target="#Login-Form"
+>
+  Launch static backdrop modal
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="Login-Form"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="Login-FormLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
+    <div class="modal-content">
+      <div class="modal-header flex-column text-center gap-12 gap-lg-16">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+        <img src="../assets/images/hiCraft_logo.svg" />
+        <h2 class="fw-bold">歡迎來到XX手工</h2>
+      </div>
+      <div class="modal-body p-6 p-lg-12">
+        <form>
+          <div class="mb-6">
+            <label
+              for="Login-InputEmail"
+              class="form-label"
+              >電子郵件</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="Login-InputEmail"
+              placeholder="輸入電子郵件"
+              aria-placeholder="輸入電子郵件"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              for="Login-InputPassword"
+              class="form-label"
+              >密碼</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="Login-InputPassword"
+              placeholder="密碼"
+              aria-placeholder="輸入密碼"
+              required
+              minlength="6"
+            />
+          </div>
+          <ul
+            class="mb-3 form-check d-flex justify-content-between"
+            role="list"
+          >
+            <li>
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="Login-RememberAccount"
+              />
+              <label
+                class="form-check-label"
+                for="Login-RememberAccount"
+                >記住帳號</label
+              >
+            </li>
+            <li><a href="#">忘記密碼?</a></li>
+          </ul>
+          <button
+            type="submit"
+            class="btn btn-primary w-100 mt-8"
+            >登入</button
+          >
+          <p class="text-center my-3 my-lg-6">或</p>
+          <a
+            href="#"
+            class="btn btn-outline-primary w-100"
+            >透過Google登入</a
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

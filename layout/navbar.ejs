@@ -1,86 +1,129 @@
-<nav class="navbar navbar-expand-lg container-fluid bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
   <div class="container">
     <a
       class="navbar-brand"
       href="#"
-      >Navbar</a
     >
+      <img
+        src="../assets/images/hiCraft_brand.svg"
+        alt="hiCraft"
+        class=""
+    /></a>
     <button
-      class="navbar-toggler"
+      class="navbar-toggler border-0"
       type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div
-      class="collapse navbar-collapse"
-      id="navbarSupportedContent"
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
     >
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <button
-            type="button"
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
-            Launch demo modal
-          </button>
-        </li>
-      </ul>
-      <form
-        class="d-flex bg-white rounded-3 p-2 border border-5 border-opacity-10"
-        role="search"
-      >
-        <input
-          class="form-control border-0"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <div class="dropdown">
-          <button
-            class="btn dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Dropdown button
-          </button>
-          <ul class="dropdown-menu">
-            <li
-              ><a
-                class="dropdown-item"
-                href="#"
-                >Action</a
-              ></li
-            >
-            <li
-              ><a
-                class="dropdown-item"
-                href="#"
-                >Another action</a
-              ></li
-            >
-            <li
-              ><a
-                class="dropdown-item"
-                href="#"
-                >Something else here</a
-              ></li
-            >
-          </ul>
-        </div>
+      <div class="offcanvas-header">
+        <h5
+          class="offcanvas-title"
+          id="offcanvasNavbarLabel"
+        ></h5>
         <button
-          class="btn btn-primary"
-          type="submit"
-          >Search</button
-        >
-      </form>
+          type="button"
+          class="btn-close p-6 bg-primary-subtle rounded-0"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body text-center">
+        <ul class="navbar-nav nav-pills justify-content-center column-gap-8 row-gap-6 flex-grow-1">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="#"
+              >好物推薦</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              >關注中</a
+            >
+          </li>
+        </ul>
+        <!-- 菜單列表 -->
+        <ul class="navbar-nav d-lg-none row-gap-6 border-top border-2 py-9 mt-9">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              >作品上傳</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              >通知設定</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              >個人中心</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              >關於我們</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              >登出</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
+    <ul class="navbar-nav d-none d-lg-flex gap-6">
+      <li class="nav-item"
+        ><a
+          href="#"
+          class="nav-link"
+          ><img
+            src="../assets/images/icons/icon-box-arrow-up.svg"
+            width="48px"
+            alt="upload" /></a
+      ></li>
+      <li class="nav-item"
+        ><a
+          href="#"
+          class="nav-link"
+          ><img
+            src="../assets/images/icons/icon-bell-circle.svg"
+            width="48px"
+            alt="notifications" /></a
+      ></li>
+      <li class="nav-item"
+        ><a
+          href="#"
+          class="nav-link"
+          ><img
+            src="../assets/images/icons/icon-person.svg"
+            width="48px"
+            alt="login" /></a
+      ></li>
+    </ul>
   </div>
 </nav>

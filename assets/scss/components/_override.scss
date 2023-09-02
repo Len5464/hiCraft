@@ -1,0 +1,13 @@
+.nav-link {
+  @include media-breakpoint-down(lg) {
+    color: #fff;
+  }
+}
+.navbar-brand {
+  @include media-breakpoint-down(lg) {
+    width: 160px;
+  }
+}
+.btn-primary {
+  color: #fff;
+}

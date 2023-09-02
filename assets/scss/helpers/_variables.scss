@@ -566,6 +566,7 @@ $border-widths: (
   3: 3px,
   4: 4px,
   5: 5px,
+  8: 8px,
 ) !default;
 $border-style: solid !default;
 $border-color: $gray-300 !default;
@@ -841,9 +842,9 @@ $input-btn-padding-y-sm: 0.25rem !default;
 $input-btn-padding-x-sm: 0.5rem !default;
 $input-btn-font-size-sm: $font-size-sm !default;
 
-$input-btn-padding-y-lg: 0.5rem !default;
-$input-btn-padding-x-lg: 1rem !default;
-$input-btn-font-size-lg: $font-size-lg !default;
+$input-btn-padding-y-lg: 1rem;
+$input-btn-padding-x-lg: 2rem;
+$input-btn-font-size-lg: $font-size-base;
 
 $input-btn-border-width: var(--#{$prefix}border-width) !default;
 // scss-docs-end input-btn-variables
@@ -871,7 +872,7 @@ $btn-font-size-lg: $input-btn-font-size-lg !default;
 
 $btn-border-width: $input-btn-border-width !default;
 
-$btn-font-weight: $font-weight-normal !default;
+$btn-font-weight: $font-weight-bold;
 $btn-box-shadow: inset 0 1px 0 rgba($white, 0.15), 0 1px 1px rgba($black, 0.075) !default;
 $btn-focus-width: $input-btn-focus-width !default;
 $btn-focus-box-shadow: $input-btn-focus-box-shadow !default;
@@ -941,7 +942,7 @@ $input-disabled-border-color: null !default;
 
 $input-color: var(--#{$prefix}body-color) !default;
 $input-border-color: var(--#{$prefix}border-color) !default;
-$input-border-width: $input-btn-border-width !default;
+$input-border-width: 3px;
 $input-box-shadow: $box-shadow-inset !default;
 
 $input-border-radius: var(--#{$prefix}border-radius) !default;
@@ -1197,7 +1198,7 @@ $zindex-levels: (
 // scss-docs-start nav-variables
 $nav-link-padding-y: 0.5rem !default;
 $nav-link-padding-x: 1rem !default;
-$nav-link-font-size: null !default;
+$nav-link-font-size: 1.5rem;
 $nav-link-font-weight: null !default;
 $nav-link-color: var(--#{$prefix}link-color) !default;
 $nav-link-hover-color: var(--#{$prefix}link-hover-color) !default;
@@ -1214,8 +1215,8 @@ $nav-tabs-link-active-bg: var(--#{$prefix}body-bg) !default;
 $nav-tabs-link-active-border-color: var(--#{$prefix}border-color) var(--#{$prefix}border-color) $nav-tabs-link-active-bg !default;
 
 $nav-pills-border-radius: var(--#{$prefix}border-radius) !default;
-$nav-pills-link-active-color: $component-active-color !default;
-$nav-pills-link-active-bg: $component-active-bg !default;
+$nav-pills-link-active-color: $black-80;
+$nav-pills-link-active-bg: #d5c0ae5b;
 
 $nav-underline-gap: 1rem !default;
 $nav-underline-border-width: 0.125rem !default;
@@ -1547,7 +1548,7 @@ $modal-content-color: null !default;
 $modal-content-bg: var(--#{$prefix}body-bg) !default;
 $modal-content-border-color: var(--#{$prefix}border-color-translucent) !default;
 $modal-content-border-width: var(--#{$prefix}border-width) !default;
-$modal-content-border-radius: var(--#{$prefix}border-radius-lg) !default;
+$modal-content-border-radius: 0px;
 $modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width) !default;
 $modal-content-box-shadow-xs: $box-shadow-sm !default;
 $modal-content-box-shadow-sm-up: $box-shadow !default;
@@ -1555,7 +1556,7 @@ $modal-content-box-shadow-sm-up: $box-shadow !default;
 $modal-backdrop-bg: $black !default;
 $modal-backdrop-opacity: 0.5 !default;
 
-$modal-header-border-color: var(--#{$prefix}border-color) !default;
+$modal-header-border-color: transparent;
 $modal-header-border-width: $modal-content-border-width !default;
 $modal-header-padding-y: $modal-inner-padding !default;
 $modal-header-padding-x: $modal-inner-padding !default;
@@ -1750,14 +1751,14 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
 // scss-docs-start offcanvas-variables
 $offcanvas-padding-y: $modal-inner-padding !default;
 $offcanvas-padding-x: $modal-inner-padding !default;
-$offcanvas-horizontal-width: 400px !default;
+$offcanvas-horizontal-width: 430px;
 $offcanvas-vertical-height: 30vh !default;
 $offcanvas-transition-duration: 0.3s !default;
 $offcanvas-border-color: $modal-content-border-color !default;
 $offcanvas-border-width: $modal-content-border-width !default;
 $offcanvas-title-line-height: $modal-title-line-height !default;
-$offcanvas-bg-color: var(--#{$prefix}body-bg) !default;
-$offcanvas-color: var(--#{$prefix}body-color) !default;
+$offcanvas-bg-color: $primary;
+$offcanvas-color: #ffffff;
 $offcanvas-box-shadow: $modal-content-box-shadow-xs !default;
 $offcanvas-backdrop-bg: $modal-backdrop-bg !default;
 $offcanvas-backdrop-opacity: $modal-backdrop-opacity !default;

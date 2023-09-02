@@ -1,0 +1,125 @@
+<!-- Button trigger modal -->
+<button
+  type="button"
+  class="btn btn-primary"
+  data-bs-toggle="modal"
+  data-bs-target="#SignUpForm"
+>
+  Launch Sign Up Form modal
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="SignUpForm"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="SignUpFormLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
+    <div class="modal-content">
+      <div class="modal-header px-6 px-lg-12 pb-0 pt-6 pt-lg-12 flex-column gap-4 gap-lg-8">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+        <img src="../assets/images/hiCraft_logo.svg" />
+        <h2 class="fw-bold align-self-start">加入</h2>
+      </div>
+      <div class="modal-body p-6 p-lg-12">
+        <ul
+          class="d-flex mb-6 align-self-start gap-1 p-0"
+          role="list"
+        >
+          <li>
+            <span>已經是會員？</span>
+          </li>
+          <li
+            ><a
+              href="#"
+              class="btn-link"
+              >登入</a
+            ></li
+          >
+        </ul>
+        <form>
+          <div class="mb-6">
+            <label
+              for="SignUp-UserName"
+              class="form-label"
+              >暱稱</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="SignUp-UserName"
+              placeholder="輸入暱稱"
+              aria-placeholder="輸入暱稱"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              for="SignUp-InputEmail"
+              class="form-label"
+              >電子郵件</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="SignUp-InputEmail"
+              placeholder="輸入電子郵件"
+              aria-placeholder="輸入電子郵件"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              for="SignUp-InputPassword"
+              class="form-label"
+              >密碼</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="SignUp-InputPassword"
+              placeholder="密碼"
+              aria-placeholder="輸入密碼"
+              required
+              minlength="6"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              for="SignUp-ConfirmPassword"
+              class="form-label"
+              >確認密碼</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="SignUp-ConfirmPassword"
+              placeholder="確認密碼"
+              aria-placeholder="輸入密碼"
+              required
+              minlength="6"
+            />
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary w-100 mt-8"
+            >建立帳號</button
+          >
+          <p class="text-center my-3 my-lg-6">或</p>
+          <a
+            href="#"
+            class="btn btn-outline-primary w-100"
+            >透過Google登入</a
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

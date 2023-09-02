@@ -1,5 +1,16 @@
 .bg-white-brick {
-  background-image: url("/assets/images/gridme.webp"), url("/assets/images/stripes-light-1.png");
+  background-image: url("../images/gridme.webp"), url("../images/stripes-light-1.png");
+}
+.bg-home-header {
+  background: linear-gradient(180deg, #fff 0%, rgba(148, 126, 118, 0.6) 54.17%), url("../images/bg-home-header.jpg"),
+    lightgray;
+  background-position: center;
+  background-size: cover;
+  height: 616px;
+  display: flex;
+  @include media-breakpoint-down(lg) {
+    height: 376px;
+  }
 }
 .show-more-y {
   position: absolute;
@@ -9,3 +20,71 @@
   display: flex;
   justify-content: center;
 }
+.title-display {
+  color: var(--color, #fff);
+  text-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);
+  font-family: "Noto Sans TC";
+  font-size: 80px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 24px;
+  @include media-breakpoint-down(lg) {
+    font-size: 48px;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+}
+.mw-1060px {
+  max-width: 1060px;
+}
+
+// 生成斷點
+$utilities: map-merge(
+  $utilities,
+  (
+    "font-size":
+      map-merge(
+        map-get($utilities, "font-size"),
+        (
+          responsive: true,
+        )
+      ),
+    "border":
+      map-merge(
+        map-get($utilities, "border"),
+        (
+          responsive: true,
+        )
+      ),
+    "border-top":
+      map-merge(
+        map-get($utilities, "border-top"),
+        (
+          responsive: true,
+        )
+      ),
+    "border-end":
+      map-merge(
+        map-get($utilities, "border-end"),
+        (
+          responsive: true,
+        )
+      ),
+    "border-bottom":
+      map-merge(
+        map-get($utilities, "border-bottom"),
+        (
+          responsive: true,
+        )
+      ),
+    "border-start":
+      map-merge(
+        map-get($utilities, "border-start"),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
