@@ -1,0 +1,67 @@
+.img-checkbox {
+  --img-checkbox-size: 150px;
+  width: var(--img-checkbox-size, 100px);
+  cursor: pointer;
+  gap: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  input[type="checkbox"] {
+    display: none;
+    &:checked ~ .img-checkbox__icon-checked {
+      display: block;
+    }
+  }
+  img {
+    object-fit: cover;
+    width: var(--img-checkbox-size, 100px);
+    height: var(--img-checkbox-size, 100px);
+  }
+  &__icon-checked {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    color: $primary;
+    display: none;
+  }
+}
+
+.bg-white-brick {
+  background-image: url("../images/gridme.webp"), url("../images/stripes-light-1.png");
+}
+.bg-home-header {
+  background: linear-gradient(180deg, #fff 0%, rgba(148, 126, 118, 0.6) 54.17%), url("../images/bg-home-header.jpg"),
+    lightgray;
+  background-position: center;
+  background-size: cover;
+  height: 616px;
+  @include media-breakpoint-down(lg) {
+    height: 376px;
+  }
+}
+.gradient-mask-y {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 78.13%);
+  padding-top: var(--show-more-padding, 48px);
+  display: flex;
+  justify-content: center;
+}
+.title-display {
+  color: var(--color, #fff);
+  text-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);
+  font-family: "Noto Sans TC";
+  font-size: 80px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 24px;
+  @include media-breakpoint-down(lg) {
+    font-size: 48px;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+}

@@ -54,9 +54,9 @@
 /* 在此處添加其他自定義代碼 */
 @import "./helpers/base";
 @import "./helpers/utils";
-@import "./components/img-checkbox";
-@import "./components/override";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+TC&display=swap"); // fonts
+@import "./components/customization";
+@import "./components/bs-override";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap"); // fonts
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"); // bootstrap icons
 
 /* 依需求加入實用程序API，以便根據`_utilities.scss`中的 Sass 映射生成類 */
