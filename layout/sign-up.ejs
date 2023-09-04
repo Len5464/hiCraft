@@ -1,17 +1,6 @@
-<!-- Button trigger modal -->
-<button
-  type="button"
-  class="btn btn-primary"
-  data-bs-toggle="modal"
-  data-bs-target="#SignUpForm"
->
-  Launch Sign Up Form modal
-</button>
-
-<!-- Modal -->
 <div
   class="modal fade"
-  id="SignUpForm"
+  id="SignUp-Form"
   data-bs-backdrop="static"
   data-bs-keyboard="false"
   tabindex="-1"
@@ -20,23 +9,26 @@
 >
   <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
     <div class="modal-content">
-      <div class="modal-header px-6 px-lg-12 pb-0 pt-6 pt-lg-12 flex-column gap-4 gap-lg-8">
+      <div class="modal-header">
         <button
           type="button"
           class="btn-close"
           data-bs-dismiss="modal"
           aria-label="Close"
         ></button>
-        <img src="../assets/images/hiCraft_logo.svg" />
-        <h2 class="fw-bold align-self-start">加入</h2>
       </div>
       <div class="modal-body p-6 p-lg-12">
+        <img
+          class="mx-auto"
+          src="../assets/images/hiCraft_logo.svg"
+        />
+        <h2 class="fw-bold mt-8">加入</h2>
         <ul
           class="d-flex mb-6 align-self-start gap-1 p-0"
           role="list"
         >
           <li>
-            <span>已經是會員？</span>
+            <span class="text-black-50">已經是會員？</span>
           </li>
           <li
             ><a
