@@ -1,129 +1,132 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-  <div class="container">
-    <a
-      class="navbar-brand"
-      href="#"
-    >
-      <img
-        src="../assets/images/hiCraft_brand.svg"
-        alt="hiCraft"
-        class=""
-    /></a>
-    <button
-      class="navbar-toggler border-0"
-      type="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasNavbar"
-      aria-controls="offcanvasNavbar"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<div class="sticky-top">
+  <nav class="navbar navbar-expand-lg flex-column align-items-stretch bg-body-tertiary">
+    <div class="container">
+      <a
+        class="navbar-brand"
+        href="index.html"
+      >
+        <img
+          src="../assets/images/hiCraft_brand.svg"
+          alt="hiCraft"
+          class=""
+      /></a>
+      <button
+        class="navbar-toggler border-0"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div
-      class="offcanvas offcanvas-end"
-      tabindex="-1"
-      id="offcanvasNavbar"
-      aria-labelledby="offcanvasNavbarLabel"
-    >
-      <div class="offcanvas-header">
-        <h5
-          class="offcanvas-title"
-          id="offcanvasNavbarLabel"
-        ></h5>
-        <button
-          type="button"
-          class="btn-close p-6 bg-primary-subtle rounded-0"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <h5
+            class="offcanvas-title"
+            id="offcanvasNavbarLabel"
+          ></h5>
+          <button
+            type="button"
+            class="btn-close p-6 bg-primary-subtle rounded-0"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body text-center">
+          <ul class="navbar-nav nav-pills justify-content-center column-gap-8 row-gap-6 flex-grow-1">
+            <li class="nav-item">
+              <a
+                class="nav-link <%= route === '/explore'? 'active' : '' %>"
+                aria-current="page"
+                href="explore.html"
+                >好物推薦</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link <%= route === '/interest'? 'active' : '' %>"
+                href="interest-list.html"
+                >關注中</a
+              >
+            </li>
+          </ul>
+          <!-- 菜單列表 -->
+          <ul class="navbar-nav d-lg-none row-gap-6 border-top border-2 py-9 mt-9">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                >作品上傳</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                >通知設定</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                >個人中心</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                >關於我們</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                >登出</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="offcanvas-body text-center">
-        <ul class="navbar-nav nav-pills justify-content-center column-gap-8 row-gap-6 flex-grow-1">
-          <li class="nav-item">
-            <a
-              class="nav-link active"
-              aria-current="page"
-              href="#"
-              >好物推薦</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-              >關注中</a
-            >
-          </li>
-        </ul>
-        <!-- 菜單列表 -->
-        <ul class="navbar-nav d-lg-none row-gap-6 border-top border-2 py-9 mt-9">
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-              >作品上傳</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-              >通知設定</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-              >個人中心</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-              >關於我們</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-              >登出</a
-            >
-          </li>
-        </ul>
-      </div>
+      <ul class="navbar-nav d-none d-lg-flex gap-6">
+        <li class="nav-item"
+          ><a
+            href="#"
+            class="nav-link"
+            ><img
+              src="../assets/images/icons/icon-box-arrow-up.svg"
+              width="48px"
+              alt="upload" /></a
+        ></li>
+        <li class="nav-item"
+          ><a
+            href="#"
+            class="nav-link"
+            ><img
+              src="../assets/images/icons/icon-bell-circle.svg"
+              width="48px"
+              alt="notifications" /></a
+        ></li>
+        <li class="nav-item"
+          ><a
+            href="#"
+            class="nav-link"
+            ><img
+              src="../assets/images/icons/icon-person.svg"
+              width="48px"
+              alt="login" /></a
+        ></li>
+      </ul>
     </div>
-    <ul class="navbar-nav d-none d-lg-flex gap-6">
-      <li class="nav-item"
-        ><a
-          href="#"
-          class="nav-link"
-          ><img
-            src="../assets/images/icons/icon-box-arrow-up.svg"
-            width="48px"
-            alt="upload" /></a
-      ></li>
-      <li class="nav-item"
-        ><a
-          href="#"
-          class="nav-link"
-          ><img
-            src="../assets/images/icons/icon-bell-circle.svg"
-            width="48px"
-            alt="notifications" /></a
-      ></li>
-      <li class="nav-item"
-        ><a
-          href="#"
-          class="nav-link"
-          ><img
-            src="../assets/images/icons/icon-person.svg"
-            width="48px"
-            alt="login" /></a
-      ></li>
-    </ul>
-  </div>
-</nav>
+  </nav>
+  <% if( enableCollapseSearch ) { %> <%- include('./layout/collapse-search-bar.ejs'); -%> <% } %>
+</div>

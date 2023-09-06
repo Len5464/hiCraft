@@ -1,7 +1,10 @@
-.nav-link {
+#offcanvasNavbar .nav-link {
   @include media-breakpoint-down(lg) {
     color: #fff;
   }
+}
+.nav-link-font-size-6 {
+  --bs-nav-link-font-size: 20px;
 }
 .navbar-brand {
   @include media-breakpoint-down(lg) {

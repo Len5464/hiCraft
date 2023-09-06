@@ -1,0 +1,51 @@
+<div class="container d-flex gap-2 gap-lg-6 fs-5 fs-lg-3 align-items-center py-3 border-bottom">
+  <ul
+    class="list-inline mb-0 flex-fill overflow-x-scroll tags-list-fold"
+    id="tagsList"
+  >
+    <% interests.forEach((item , index)=>{ %>
+    <li class="btn btn-tag-primary px-lg-5 my-1">
+      <input
+        type="checkbox"
+        name="tag<%= index+1 %>"
+        id="tag<%= index+1 %>"
+      />
+      <label
+        class="cursor-pointer"
+        for="tag<%= index+1 %>"
+        ><%= item %></label
+      >
+    </li>
+    <% }); %>
+  </ul>
+  <ul class="list-inline d-flex ms-auto mb-0 gap-4">
+    <li>
+      <a
+        href="#"
+        class="bi bi-chevron-down text-secondary"
+        onclick="toggleTagsList()"
+      ></a
+    ></li>
+    <li>
+      <a
+        href="#"
+        class="bi bi-filter text-secondary"
+      ></a
+    ></li>
+    <li>
+      <a
+        href="#"
+        class="bi bi-info-circle text-secondary"
+      ></a
+    ></li>
+  </ul>
+</div>
+<script>
+  function toggleTagsList() {
+    const tagsList = document.querySelector("#tagsList");
+    tagsList.classList.toggle("tags-list-fold");
+    tagsList.classList.toggle("tags-list-expend");
+    tagsList.parentElement.classList.toggle("flex-wrap");
+    event.target.classList.toggle("rotate-180");
+  }
+</script>

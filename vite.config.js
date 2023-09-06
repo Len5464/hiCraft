@@ -3,6 +3,7 @@ import { ViteEjsPlugin } from "vite-plugin-ejs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { glob } from "glob";
+import templateData from "./template-data";
 
 import liveReload from "vite-plugin-live-reload";
 
@@ -28,7 +29,7 @@ export default defineConfig({
   base: "/hiCraft/",
   plugins: [
     liveReload(["./layout/**/*.ejs", "./pages/**/*.ejs", "./pages/**/*.html"]),
-    ViteEjsPlugin(),
+    ViteEjsPlugin(templateData),
     moveOutputPlugin(),
   ],
   server: {

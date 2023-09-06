@@ -22,7 +22,6 @@
 @import "../node_modules/bootstrap/scss/images";
 @import "../node_modules/bootstrap/scss/containers";
 @import "../node_modules/bootstrap/scss/grid";
-@import "../node_modules/bootstrap/scss/helpers";
 
 /* 依需求匯入bootstrap元件 */
 @import "../node_modules/bootstrap/scss/tables";
@@ -50,6 +49,7 @@
 @import "../node_modules/bootstrap/scss/spinners";
 @import "../node_modules/bootstrap/scss/offcanvas";
 @import "../node_modules/bootstrap/scss/placeholders";
+@import "../node_modules/bootstrap/scss/helpers";
 
 /* 在此處添加其他自定義代碼 */
 @import "./helpers/base";

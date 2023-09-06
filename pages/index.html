@@ -31,7 +31,20 @@
         />
       </svg>
     </header>
-    <%- include('./layout/gallery'); -%> <%- include('./layout/footer'); -%>
+    <section class="bg-white-brick py-30">
+      <div class="container position-relative">
+        <div class="d-flex justify-content-center align-items-center gap-2">
+          <h2 class="m-0">精選作品 </h2>
+          <img
+            src="../assets/images/hiCraft_logo-light.svg"
+            alt="hiCraft"
+          />
+        </div>
+        <%- include('./layout/gallery'); -%>
+      </div>
+    </section>
+
+    <%- include('./layout/footer'); -%>
     <script
       type="module"
       src="../main.js"
