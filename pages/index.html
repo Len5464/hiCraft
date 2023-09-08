@@ -2,22 +2,220 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      http-equiv="X-UA-Compatible"
-      content="IE=edge"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hiCraft | 搜尋好設計、好點子</title>
   </head>
   <body>
-    <%- include('./layout/navbar.ejs'); -%> <%- include('./layout/interest-modal.ejs'); -%> <%-
-    include('./layout/gallery.ejs'); -%> <%- include('./layout/footer.ejs'); -%>
-    <script
-      type="module"
-      src="../main.js"
-    ></script>
+    <%- include('./layout/navbar.ejs'); -%> <%-
+    include('./layout/interest-modal.ejs'); -%>
+    <!-- 兩個圈圈 -->
+    <div class="box">
+      <svg
+        width="182"
+        height="226"
+        viewBox="0 0 182 226"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="left"
+      >
+        <circle cx="91" cy="135" r="90.5" stroke="#D5C0AE" />
+        <circle cx="91" cy="135" r="77.5" stroke="#D5C0AE" />
+        <circle cx="91" cy="135" r="64.5" stroke="#D5C0AE" />
+        <circle cx="91" cy="135" r="51.5" stroke="#D5C0AE" />
+        <circle cx="91" cy="135" r="38.5" stroke="#D5C0AE" />
+        <circle cx="91" cy="135" r="25.5" stroke="#D5C0AE" />
+        <circle cx="91" cy="135" r="12.5" stroke="#D5C0AE" />
+        <circle cx="57" cy="43" r="43" fill="#D5C0AE" />
+      </svg>
+    </div>
+    <!-- 歡慶節日 -->
+    <div class="container fastival">
+      <h2 class="mb-32 fastival-title">歡慶節日</h2>
+      <div class="row">
+        <div class="col-md-4 position-relative h168 fastival-list">
+          <div class="fastival-text bg-grad-father">
+            <p class="fastival-name">父親節</p>
+            <p class="fastival-date">08/08</p>
+          </div>
+          <img
+            src="./images/fastival/daiga-ellaby-7edWO30e32k-unsplash 1.png"
+            alt="節日示意圖"
+            class="fastival-image-father"
+          />
+        </div>
+
+        <div class="col-md-4 position-relative h168">
+          <div class="fastival-text bg-grad-moon">
+            <p class="fastival-name">中秋節</p>
+            <p class="fastival-date">09/29</p>
+          </div>
+          <img
+            src="./images/fastival/daiga-ellaby-7edWO30e32k-unsplash 1 (1).png"
+            alt="節日示意圖"
+            class="fastival-image-moon"
+          />
+        </div>
+
+        <div class="col-md-4 position-relative h168">
+          <div class="fastival-text bg-grad-xmas">
+            <p class="fastival-name">聖誕節</p>
+            <p class="fastival-date">12/25</p>
+          </div>
+          <img
+            src="./images/fastival/olesia-buyar-Ar9xZN7yF8Q-unsplash.jpg"
+            alt="節日示意圖"
+            class="fastival-image-xmas"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- 兩個圈圈 -->
+    <div class="box">
+      <svg
+        width="182"
+        height="229"
+        viewBox="0 0 182 229"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="right"
+      >
+        <circle cx="91" cy="138" r="90.5" stroke="#D5C0AE" />
+        <circle cx="91" cy="138" r="77.5" stroke="#D5C0AE" />
+        <circle cx="91" cy="138" r="64.5" stroke="#D5C0AE" />
+        <circle cx="91" cy="138" r="51.5" stroke="#D5C0AE" />
+        <circle cx="91" cy="138" r="38.5" stroke="#D5C0AE" />
+        <circle cx="91" cy="138" r="25.5" stroke="#D5C0AE" />
+        <circle cx="91" cy="138" r="12.5" stroke="#D5C0AE" />
+        <circle cx="56" cy="43" r="43" fill="#947E76" />
+      </svg>
+    </div>
+    <!-- 熱門主題、關注主題 -->
+    <div class="topic">
+      <div class="container">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active bg-primary"
+              id="home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#home"
+              type="button"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+            >
+              熱門主題
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link btn-tab"
+              id="profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#profile"
+              type="button"
+              role="tab"
+              aria-controls="profile"
+              aria-selected="false"
+            >
+              關注主題
+            </button>
+          </li>
+        </ul>
+        <!-- 熱門主題內容 -->
+        <div class="tab-content bg-primary" id="myTabContent">
+          <div
+            class="tab-pane fade show active topic-bg"
+            id="home"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+          >
+            <div class="container">
+              <ul class="row topic-list mb-0 p-4">
+                <li class="col-md-4 d-flex h132 topic-card">
+                  <img
+                    src="./images/topic/1.jpg"
+                    alt="主題示意圖"
+                    class="topic-image"
+                  />
+                  <div class="topic-text">
+                    <p class="topic-name">設計家具</p>
+                    <p class="topic-en">Design Furniture</p>
+                  </div>
+                </li>
+                <li class="col-md-4 d-flex h132 topic-card">
+                  <img
+                    src="./images/topic/2.jpg"
+                    alt="主題示意圖"
+                    class="topic-image"
+                  />
+                  <div class="topic-text">
+                    <p class="topic-name">婚禮小物</p>
+                    <p class="topic-en">Wedding Accessories</p>
+                  </div>
+                </li>
+                <li class="col-md-4 d-flex h132 topic-card">
+                  <img
+                    src="./images/topic/3.jpg"
+                    alt="主題示意圖"
+                    class="topic-image"
+                  />
+                  <div class="topic-text">
+                    <p class="topic-name">旅行用品</p>
+                    <p class="topic-en">Travel Goods</p>
+                  </div>
+                </li>
+              </ul>
+              <ul class="row topic-list px-4 pb-4">
+                <li class="col-md-4 d-flex h132 topic-card">
+                  <img
+                    src="./images/topic/4.jpg"
+                    alt="主題示意圖"
+                    class="topic-image"
+                  />
+                  <div class="topic-text">
+                    <p class="topic-name">手工花藝</p>
+                    <p class="topic-en">Handmade Floral</p>
+                  </div>
+                </li>
+                <li class="col-md-4 d-flex h132 topic-card">
+                  <img
+                    src="./images/topic/5.jpg"
+                    alt="主題示意圖"
+                    class="topic-image"
+                  />
+                  <div class="topic-text">
+                    <p class="topic-name">環保愛地球</p>
+                    <p class="topic-en">Environmental Friendly</p>
+                  </div>
+                </li>
+                <li class="col-md-4 d-flex h132 topic-card">
+                  <img
+                    src="./images/topic/6.jpg"
+                    alt="主題示意圖"
+                    class="topic-image"
+                  />
+                  <div class="topic-text">
+                    <p class="topic-name">香氛蠟燭</p>
+                    <p class="topic-en">Scented Candle</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 關注主題內容 -->
+          <div
+            class="tab-pane fade"
+            id="profile"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <%- include('./layout/gallery.ejs'); -%> <%- include('./layout/footer.ejs');
+    -%>
+    <script type="module" src="../main.js"></script>
   </body>
 </html>
