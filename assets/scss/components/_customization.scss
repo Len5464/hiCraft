@@ -1,6 +1,4 @@
 .img-checkbox {
-  --img-checkbox-size: 150px;
-  width: var(--img-checkbox-size, 100px);
   cursor: pointer;
   gap: 0.5em;
   display: flex;
@@ -15,8 +13,7 @@
   }
   img {
     object-fit: cover;
-    width: var(--img-checkbox-size, 100px);
-    height: var(--img-checkbox-size, 100px);
+    max-width: 100%;
   }
   &__icon-checked {
     position: absolute;
@@ -91,14 +88,15 @@
 }
 .tags-list {
   &-fold {
-    max-height: 50px;
+    height: 75px;
     overflow-x: hidden;
     white-space: nowrap;
+    transition: all 0.5s ease-in-out;
   }
 
   &-expend {
-    max-height: 320px;
+    height: 320px;
     white-space: normal;
-    transition: max-height 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 }

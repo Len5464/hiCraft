@@ -1,9 +1,8 @@
-<!-- Modal -->
 <div
   class="modal fade"
-  id="exampleModal"
+  id="interestModal"
   tabindex="-1"
-  aria-labelledby="exampleModalLabel"
+  aria-labelledby="interestModalLabel"
   aria-hidden="true"
 >
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
@@ -11,7 +10,7 @@
       <div class="modal-header py-10 py-lg-20 justify-content-center bg-light position-relative">
         <h1
           class="modal-title"
-          id="exampleModalLabel"
+          id="interestModalLabel"
           >什麼主題是你有興趣的</h1
         >
         <button
@@ -21,151 +20,26 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="modal-body d-flex flex-wrap column-gap-5 row-gap-6 py-20 px-xl-20 justify-content-center">
-        <label class="img-checkbox">
-          <input
-            type="checkbox"
-            name="編織"
-          />
-          <img src="https://fakeimg.pl/1024x768/" />
-          <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>編織
-        </label>
-        <label class="img-checkbox">
-          <input
-            type="checkbox"
-            name="編織"
-          />
-          <img src="https://fakeimg.pl/400/" />
-          <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>編織
-        </label>
-        <label class="img-checkbox">
-          <input
-            type="checkbox"
-            name="編織"
-          />
-          <img src="https://fakeimg.pl/400/" />
-          <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>編織
-        </label>
-        <label class="img-checkbox">
-          <input
-            type="checkbox"
-            name="編織"
-          />
-          <img src="https://fakeimg.pl/400/" />
-          <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>編織
-        </label>
-        <label class="img-checkbox">
-          <input
-            type="checkbox"
-            name="編織"
-          />
-          <img src="https://fakeimg.pl/400/" />
-          <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>編織
-        </label>
-        <label class="img-checkbox">
-          <input
-            type="checkbox"
-            name="編織"
-          />
-          <img src="https://fakeimg.pl/400/" />
-          <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>編織
-        </label>
-        <label class="img-checkbox">
-          <input
-            type="checkbox"
-            name="編織"
-          />
-          <img src="https://fakeimg.pl/400/" />
-          <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>編織
-        </label>
-        <label class="img-checkbox">
-          <input
-            type="checkbox"
-            name="編織"
-          />
-          <img src="https://fakeimg.pl/400/" />
-          <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>編織
-        </label>
-        <label class="img-checkbox">
-          <input
-            type="checkbox"
-            name="編織"
-          />
-          <img src="https://fakeimg.pl/400/" />
-          <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>編織
-        </label>
-        <label class="img-checkbox">
-          <input
-            type="checkbox"
-            name="編織"
-          />
-          <img src="https://fakeimg.pl/400/" />
-          <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>編織
-        </label>
-        <label class="img-checkbox">
-          <input
-            type="checkbox"
-            name="編織"
-          />
-          <img src="https://fakeimg.pl/400/" />
-          <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>編織
-        </label>
-        <label class="img-checkbox">
-          <input
-            type="checkbox"
-            name="編織"
-          />
-          <img src="https://fakeimg.pl/400/" />
-          <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>編織
-        </label>
-        <label class="img-checkbox">
-          <input
-            type="checkbox"
-            name="編織"
-          />
-          <img src="https://fakeimg.pl/400/" />
-          <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>編織
-        </label>
-        <label class="img-checkbox">
-          <input
-            type="checkbox"
-            name="編織"
-          />
-          <img src="https://fakeimg.pl/400/" />
-          <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>編織
-        </label>
-        <label class="img-checkbox">
-          <input
-            type="checkbox"
-            name="編織"
-          />
-          <img src="https://fakeimg.pl/400/" />
-          <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>編織
-        </label>
-        <label class="img-checkbox">
-          <input
-            type="checkbox"
-            name="編織"
-          />
-          <img src="https://fakeimg.pl/400/" />
-          <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>編織
-        </label>
-        <label class="img-checkbox">
-          <input
-            type="checkbox"
-            name="編織"
-          />
-          <img src="https://fakeimg.pl/400/" />
-          <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>編織
-        </label>
-        <label class="img-checkbox">
-          <input
-            type="checkbox"
-            name="編織"
-          />
-          <img src="https://fakeimg.pl/400/" />
-          <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>編織
-        </label>
+      <div class="modal-body">
+        <div class="container p-6 p-lg-12">
+          <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-5 gx-5 gy-6">
+            <% category.forEach((item , index)=>{ %>
+            <div class="col">
+              <label class="img-checkbox w-100">
+                <input
+                  type="checkbox"
+                  name="<%= item %>"
+                />
+                <img
+                  src="https://fakeimg.pl/1024x768/"
+                  alt="category<%= index %>"
+                />
+                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i><%= item %>
+              </label>
+            </div>
+            <% }) %>
+          </div>
+        </div>
       </div>
       <div class="modal-footer row justify-content-center pb-xl-12">
         <button

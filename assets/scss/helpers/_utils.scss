@@ -2,6 +2,16 @@
   transform: rotate(180deg);
   transition: transform 0.2s ease-in-out;
 }
+.scroll-bar-small {
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    background-color: $light;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $secondary;
+  }
+}
 // 生成自訂工具類
 $utilities: map-merge(
   $utilities,

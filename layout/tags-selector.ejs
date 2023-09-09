@@ -1,6 +1,6 @@
 <div class="container d-flex gap-2 gap-lg-6 fs-5 fs-lg-3 align-items-center py-3 border-bottom">
   <ul
-    class="list-inline mb-0 flex-fill overflow-x-scroll tags-list-fold"
+    class="list-inline mb-0 flex-fill overflow-x-scroll scroll-bar-small tags-list-fold"
     id="tagsList"
   >
     <% interests.forEach((item , index)=>{ %>
@@ -19,9 +19,10 @@
     <% }); %>
   </ul>
   <ul class="list-inline d-flex ms-auto mb-0 gap-4">
-    <li>
+    <li class="">
       <a
         href="#"
+        id="tagsToggle"
         class="bi bi-chevron-down text-secondary"
         onclick="toggleTagsList()"
       ></a
@@ -41,11 +42,12 @@
   </ul>
 </div>
 <script>
-  function toggleTagsList() {
-    const tagsList = document.querySelector("#tagsList");
+  const tagsList = document.querySelector("#tagsList");
+  const tagsToggle = document.querySelector("#tagsToggle");
+  tagsToggle.addEventListener("click", () => {
     tagsList.classList.toggle("tags-list-fold");
     tagsList.classList.toggle("tags-list-expend");
     tagsList.parentElement.classList.toggle("flex-wrap");
-    event.target.classList.toggle("rotate-180");
-  }
+    tagsToggle.parentElement.classList.toggle("rotate-180");
+  });
 </script>

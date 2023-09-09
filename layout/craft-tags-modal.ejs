@@ -1,0 +1,185 @@
+<div
+  class="modal fade"
+  id="craftTagsModal"
+  tabindex="-1"
+  aria-labelledby="craftTagsModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <div class="container p-6 p-lg-12">
+          <h2 class="mb-6">類別</h2>
+          <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-5 gx-5 gy-6">
+            <% category.forEach((item , index)=>{ %>
+            <div class="col">
+              <label class="img-checkbox w-100">
+                <input
+                  type="checkbox"
+                  name="<%= item %>"
+                />
+                <img
+                  src="https://fakeimg.pl/1024x768/"
+                  alt="category<%= index %>"
+                />
+                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i><%= item %>
+              </label>
+            </div>
+            <% }) %>
+          </div>
+        </div>
+        <div class="container p-6 p-lg-12 bg-secondary-subtle border border-4">
+          <form class="row gx-6 gy-4 align-items-center mb-4">
+            <h5 class="">沒有找到類別？</h5>
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                id="addNewCategory"
+                placeholder="最多10字"
+                aria-placeholder="最多10字"
+                maxlength="10"
+                required
+              />
+            </div>
+            <div class="col-3 col-lg-1">
+              <button
+                class="btn btn-secondary text-nowrap"
+                type="submit"
+                >新增</button
+              >
+            </div>
+          </form>
+          <ul class="list-inline mb-0 d-flex gap-2 gap-md-4">
+            <li
+              ><a
+                href="#"
+                class="btn btn-tag-secondary"
+                ><i class="bi bi-x"></i>香皂</a
+              ></li
+            >
+            <li
+              ><a
+                href="#"
+                class="btn btn-tag-secondary"
+                ><i class="bi bi-x"></i>樂器</a
+              ></li
+            >
+          </ul>
+        </div>
+        <div class="container p-6 p-lg-12">
+          <h2 class="mb-6">材料</h2>
+          <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-5 gx-5 gy-6">
+            <% materials.forEach((item , index)=>{ %>
+            <div class="col">
+              <label class="img-checkbox w-100">
+                <input
+                  type="checkbox"
+                  name="<%= item %>"
+                />
+                <img
+                  src="https://fakeimg.pl/1024x768/"
+                  alt="materials<%= index %>"
+                />
+                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i><%= item %>
+              </label>
+            </div>
+            <% }) %>
+          </div>
+        </div>
+        <div class="container p-6 p-lg-12 bg-secondary-subtle border border-4">
+          <form class="row gx-6 gy-4 align-items-center mb-4">
+            <h5 class="">沒有找到材料？</h5>
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                id="addNewCategory"
+                placeholder="最多10字"
+                aria-placeholder="最多10字"
+                maxlength="10"
+                required
+              />
+            </div>
+            <div class="col-3 col-lg-1">
+              <button
+                class="btn btn-secondary text-nowrap"
+                type="submit"
+                >新增</button
+              >
+            </div>
+          </form>
+          <ul class="list-inline mb-0 d-flex gap-2 gap-md-4">
+            <li
+              ><a
+                href="#"
+                class="btn btn-tag-secondary"
+                ><i class="bi bi-x"></i>有機物質</a
+              ></li
+            >
+            <li
+              ><a
+                href="#"
+                class="btn btn-tag-secondary"
+                ><i class="bi bi-x"></i>鑽石</a
+              ></li
+            >
+          </ul>
+        </div>
+        <div class="container p-6 p-lg-12">
+          <form class="row gx-6 gy-4 align-items-center my-4">
+            <h4 class="">其他標籤:</h4>
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                id="addNewCategory"
+                placeholder="最多10字"
+                aria-placeholder="最多10字"
+                maxlength="10"
+                required
+              />
+            </div>
+            <div class="col-3 col-lg-1">
+              <button
+                class="btn btn-secondary text-nowrap"
+                type="submit"
+                >新增</button
+              >
+            </div>
+          </form>
+          <ul class="list-inline mb-0 d-flex gap-2 gap-md-4">
+            <li
+              ><a
+                href="#"
+                class="btn btn-tag-secondary"
+                ><i class="bi bi-x"></i>古典</a
+              ></li
+            >
+            <li
+              ><a
+                href="#"
+                class="btn btn-tag-secondary"
+                ><i class="bi bi-x"></i>歐式</a
+              ></li
+            >
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-center gap-5">
+        <button
+          type="submit"
+          class="btn btn-outline-secondary"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          >取消</button
+        >
+        <button
+          type="submit"
+          class="btn btn-primary"
+          >確定</button
+        >
+      </div>
+    </div>
+  </div>
+</div>

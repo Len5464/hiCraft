@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>index</title>
+  </head>
+  <body>
+    <%- include('./layout/navbar'); -%>
+    <main class="container py-16 py-lg-24">
+      <form
+        action=""
+        class="row gx-16"
+      >
+        <h1 class="mb-8">上傳</h1>
+        <ul class="col-md-6 list-inline d-flex flex-column gap-8 mb-8">
+          <li class="">
+            <h5 class="">圖片上傳</h5>
+            <a
+              href="#"
+              class="border border-3 d-block position-relative"
+              style="aspect-ratio: 1/1"
+            >
+              <img
+                class="position-absolute top-50 start-50 translate-middle"
+                src="../assets/images/icons/add_photo.svg"
+                width="100"
+                height="100"
+                alt="上傳圖片"
+              />
+            </a>
+          </li>
+          <li class="flex-fill">
+            <h5 class="">標籤</h5>
+            <div class="d-flex flex-wrap gap-4 border border-3 p-4">
+              <a
+                href="#"
+                class="btn btn-tag-secondary"
+                ><i class="bi bi-x"></i>聖誕節</a
+              >
+              <a
+                href="#"
+                class="btn btn-tag-secondary"
+                ><i class="bi bi-x"></i>可愛</a
+              >
+              <a
+                href="#craftTagsModal"
+                class="btn btn-secondary mt-4 rounded-5 w-100 mt-auto"
+                data-bs-toggle="modal"
+                ><i class="bi bi-plus"></i>新增標籤</a
+              >
+            </div>
+          </li>
+        </ul>
+        <ul class="col-md-6 list-inline d-flex flex-column gap-8 mb-8">
+          <li class="">
+            <label for="workTitle">
+              <h5 class="">作品名稱</h5>
+            </label>
+            <input
+              class="form-control"
+              type="text"
+              name="name"
+              id="workTitle"
+              placeholder="最多15個字"
+              maxlength="15"
+              required
+            />
+          </li>
+          <li class="">
+            <label for="workDescription">
+              <h5 class="">作品描述</h5>
+            </label>
+
+            <textarea
+              class="form-control"
+              name="description"
+              id="workDescription"
+              cols="30"
+              rows="10"
+              placeholder="最多不超過500字"
+              maxlength="500"
+              required
+            ></textarea>
+          </li>
+          <li class="">
+            <label for="shopLinks">
+              <h5 class="">購買連結</h5>
+            </label>
+            <textarea
+              class="form-control"
+              name="shopLinks"
+              id="shopLinks"
+              cols="30"
+              rows="3"
+            ></textarea>
+          </li>
+          <li class="form-check form-switch fs-5 text-end">
+            <label class="form-check-label form-check-reverse">
+              是否開啟留言通知
+              <input
+                class="form-check-input ms-4"
+                type="checkbox"
+                role="switch"
+                checked
+              />
+            </label>
+          </li>
+        </ul>
+        <div class="col-12 d-flex justify-content-end">
+          <button
+            class="btn btn-lg btn-primary"
+            type="submit"
+            >提交</button
+          >
+        </div>
+      </form>
+    </main>
+
+    <%- include('./layout/footer'); -%>
+    <script
+      type="module"
+      src="../main.js"
+    ></script>
+  </body>
+</html>
