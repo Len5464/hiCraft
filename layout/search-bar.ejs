@@ -1,4 +1,5 @@
 <form
+  action="search-result.html"
   class="row align-items-center gy-2 gy-lg-0 mw-1060px mx-auto bg-white rounded-3 p-2 border border-primary-light border-4 border-lg-8 border-opacity-50"
   role="search"
 >
@@ -22,75 +23,33 @@
       aria-label="Search"
     />
   </div>
-
-  <div class="col-lg-2 dropdown border-start-lg border-end-lg">
-    <button
-      class="w-100 bg-transparent text-black-50 d-flex align-items-center px-0 py-4 border border-start-0 border-end-0 border-lg-0"
-      id="searchOptions"
-      type="button"
-      data-bs-toggle="dropdown"
-      data-bs-offset="-12,0"
-      aria-expanded="false"
+  <div class="col-lg-2 d-flex align-items-center border-start-lg border-end-lg">
+    <svg
+      class="d-lg-none"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
     >
-      <svg
-        class="d-lg-none"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-      >
-        <path
-          d="M4.956 9.007h14.08a.682.682 0 1 0 0-1.364H4.956a.675.675 0 0 0-.678.678c0 .37.302.686.678.686Zm0 3.39h14.08a.686.686 0 0 0 .686-.678.69.69 0 0 0-.686-.693H4.956a.683.683 0 0 0-.678.693c0 .369.302.678.678.678Zm0 3.397h14.08a.69.69 0 0 0 .686-.693.682.682 0 0 0-.686-.678H4.956a.68.68 0 0 0-.678.678c0 .377.302.693.678.693Z"
-          fill="#947E76"
-        />
-      </svg>
-      <span class="me-auto w-100 text-start ps-3">找主題</span>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-        fill="none"
-      >
-        <g clip-path="url(#clip0_333_311)">
-          <path
-            d="M9.88 11.4534L16 17.56L22.12 11.4534L24 13.3334L16 21.3334L8 13.3334L9.88 11.4534Z"
-            fill="#947E76"
-          />
-        </g>
-        <defs>
-          <clipPath id="clip0_333_311">
-            <rect
-              width="32"
-              height="32"
-              fill="white"
-            />
-          </clipPath>
-        </defs>
-      </svg>
-    </button>
-    <ul
-      class="dropdown-menu w-100"
-      aria-labelledby="searchOptions"
+      <path
+        d="M4.956 9.007h14.08a.682.682 0 1 0 0-1.364H4.956a.675.675 0 0 0-.678.678c0 .37.302.686.678.686Zm0 3.39h14.08a.686.686 0 0 0 .686-.678.69.69 0 0 0-.686-.693H4.956a.683.683 0 0 0-.678.693c0 .369.302.678.678.678Zm0 3.397h14.08a.69.69 0 0 0 .686-.693.682.682 0 0 0-.686-.678H4.956a.68.68 0 0 0-.678.678c0 .377.302.693.678.693Z"
+        fill="#947E76"
+      />
+    </svg>
+    <select
+      class="form-select border-start-0 border-end-0 border-lg-0 px-3 py-4"
+      aria-label="searchType"
     >
-      <li>
-        <a
-          class="dropdown-item"
-          href="#"
-          >找作者</a
-        >
-      </li>
-      <li>
-        <a
-          class="dropdown-item"
-          href="#"
-          >找作品</a
-        >
-      </li>
-    </ul>
+      <option
+        value="topic"
+        selected
+        >找主題</option
+      >
+      <option value="author">找作者</option>
+      <option value="name">找作品</option>
+    </select>
   </div>
-
   <div class="col-lg-2">
     <button
       class="btn btn-lg btn-primary w-100 text-nowrap"

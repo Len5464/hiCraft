@@ -4,6 +4,7 @@
 >
   <div class="container py-3">
     <form
+      action="search-result.html"
       class="d-flex align-items-center mw-1060px mx-auto flex-fill bg-white rounded-3 p-2 border border-primary-light border-4 border-opacity-50"
       role="search"
     >
@@ -27,60 +28,18 @@
         aria-label="Search"
       />
 
-      <div class="dropdown border-start border-end me-3 me-md-6 ps-2">
-        <button
-          class="d-flex align-items-center bg-transparent text-black-50 text-nowrap px-0 border-0"
-          id="searchOptions"
-          type="button"
-          data-bs-toggle="dropdown"
-          data-bs-offset="-12,0"
-          aria-expanded="false"
+      <select
+        class="form-select w-auto border-top-0 border-bottom-0 me-3 me-md-6 ps-2"
+        aria-label="searchType"
+      >
+        <option
+          value="topic"
+          selected
+          >找主題</option
         >
-          找主題
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 32 32"
-            fill="none"
-          >
-            <g clip-path="url(#clip0_333_311)">
-              <path
-                d="M9.88 11.4534L16 17.56L22.12 11.4534L24 13.3334L16 21.3334L8 13.3334L9.88 11.4534Z"
-                fill="#947E76"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_333_311">
-                <rect
-                  width="32"
-                  height="32"
-                  fill="white"
-                />
-              </clipPath>
-            </defs>
-          </svg>
-        </button>
-        <ul
-          class="dropdown-menu"
-          aria-labelledby="searchOptions"
-        >
-          <li>
-            <a
-              class="dropdown-item"
-              href="#"
-              >找作者</a
-            >
-          </li>
-          <li>
-            <a
-              class="dropdown-item"
-              href="#"
-              >找作品</a
-            >
-          </li>
-        </ul>
-      </div>
+        <option value="author">找作者</option>
+        <option value="name">找作品</option>
+      </select>
       <button
         class="btn btn-primary"
         type="submit"

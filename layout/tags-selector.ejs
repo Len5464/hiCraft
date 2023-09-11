@@ -1,6 +1,6 @@
-<div class="container d-flex gap-2 gap-lg-6 fs-5 fs-lg-3 align-items-center py-3 border-bottom">
+<div class="container d-flex fs-5 fs-lg-3 align-items-center py-3 border-bottom">
   <ul
-    class="list-inline mb-0 flex-fill overflow-x-scroll scroll-bar-small tags-list-fold"
+    class="list-inline mb-0 flex-fill scroll-bar-small tags-list-fold"
     id="tagsList"
   >
     <% interests.forEach((item , index)=>{ %>
@@ -18,32 +18,66 @@
     </li>
     <% }); %>
   </ul>
-  <ul class="list-inline d-flex ms-auto mb-0 gap-4">
+  <ul class="list-inline d-flex ms-auto mb-0 py-3 gap-4 position-relative gradient-mask-left">
     <li class="">
       <a
         href="#"
         id="tagsToggle"
         class="bi bi-chevron-down text-secondary"
-        onclick="toggleTagsList()"
       ></a
     ></li>
-    <li>
+    <li class="dropdown dropdown-center">
       <a
         href="#"
         class="bi bi-filter text-secondary"
-      ></a
-    ></li>
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      ></a>
+      <ul class="dropdown-menu">
+        <li
+          ><a
+            class="dropdown-item active"
+            aria-current="true"
+            href="#"
+            >最多人收藏</a
+          ></li
+        >
+        <li
+          ><a
+            class="dropdown-item"
+            href="#"
+            >最多人觀看</a
+          ></li
+        >
+        <li
+          ><a
+            class="dropdown-item"
+            href="#"
+            >最新</a
+          ></li
+        >
+      </ul>
+    </li>
     <li>
       <a
-        href="#"
+        tabindex="0"
+        id="tagListTips"
         class="bi bi-info-circle text-secondary"
-      ></a
-    ></li>
+        role="button"
+        data-bs-toggle="popover"
+        data-bs-placement="top"
+        data-bs-trigger="focus"
+        title=""
+        data-bs-content="選擇要顯示的主題"
+      ></a>
+    </li>
   </ul>
 </div>
 <script>
   const tagsList = document.querySelector("#tagsList");
   const tagsToggle = document.querySelector("#tagsToggle");
+
   tagsToggle.addEventListener("click", () => {
     tagsList.classList.toggle("tags-list-fold");
     tagsList.classList.toggle("tags-list-expend");

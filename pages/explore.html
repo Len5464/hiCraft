@@ -13,7 +13,7 @@
     <title>hiCraft | 搜尋好設計、好點子</title>
   </head>
   <body>
-    <%- include('./layout/navbar.ejs',{enableCollapseSearch:true , route:'/explore'}); -%>
+    <%- include('./layout/navbar.ejs',{enableCollapseSearch:true ,route:'/explore'}); -%>
     <nav class="border-bottom">
       <div
         class="nav nav-underline nav-link-font-size-6 container justify-content-center align-items-center gap-lg-12"
@@ -217,7 +217,9 @@
             </div>
           </h1>
         </header>
-        <main class="container position-relative"> <%- include('./layout/gallery.ejs',{route:'/explore'}); -%> </main>
+        <main class="container position-relative">
+          <%- include('./layout/gallery.ejs',{enableCollapseSearch: true , route:'/explore'}); -%>
+        </main>
         <nav class="container py-4 py-lg-8">
           <div class="row mt-16 align-items-center">
             <a

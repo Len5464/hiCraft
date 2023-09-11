@@ -47,6 +47,16 @@
     display: flex;
     justify-content: center;
   }
+  &-left::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    transform: translate(-100%, -50%);
+    background: linear-gradient(90deg, hsla(0, 0%, 100%, 0), #fff 35%, #fff);
+  }
 }
 .title-display {
   color: var(--color, #fff);
@@ -88,14 +98,15 @@
 }
 .tags-list {
   &-fold {
-    height: 75px;
-    overflow-x: hidden;
+    height: 54px;
+    overflow-x: scroll;
     white-space: nowrap;
     transition: all 0.5s ease-in-out;
   }
 
   &-expend {
-    height: 320px;
+    height: 150px;
+    overflow-y: scroll;
     white-space: normal;
     transition: all 0.5s ease-in-out;
   }
