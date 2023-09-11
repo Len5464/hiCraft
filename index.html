@@ -11,8 +11,8 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>index</title>
-    <script type="module" crossorigin src="/hiCraft/assets/main-205169f7.js"></script>
-    <link rel="stylesheet" href="/hiCraft/assets/main-ddeb7081.css">
+    <script type="module" crossorigin src="/hiCraft/assets/main-ff89430e.js"></script>
+    <link rel="stylesheet" href="/hiCraft/assets/main-1e198d88.css">
   </head>
   <body>
     <div class="sticky-top">
@@ -117,7 +117,7 @@
       <ul class="navbar-nav d-none d-lg-flex gap-6">
         <li class="nav-item"
           ><a
-            href="#"
+            href="upload.html"
             class="nav-link"
             ><img
               src="/hiCraft/assets/icon-box-arrow-up-7e13ccc4.svg"
@@ -135,22 +135,237 @@
         ></li>
         <li class="nav-item"
           ><a
-            href="#"
+            href="#SignUp-Form"
             class="nav-link"
+            role="button"
+            data-bs-toggle="modal"
             ><img
               src="/hiCraft/assets/icon-person-131d492d.svg"
               width="48px"
-              alt="login" /></a
-        ></li>
+              alt="login"
+          /></a>
+        </li>
       </ul>
     </div>
   </nav>
   
 </div>
+<div
+  class="modal fade"
+  id="SignUp-Form"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="SignUpFormLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body p-6 p-lg-12">
+        <img
+          class="mx-auto"
+          src="/hiCraft/assets/hiCraft_logo-3ac4a473.svg"
+        />
+        <h2 class="fw-bold mt-8">加入</h2>
+        <ul
+          class="d-flex mb-6 align-self-start gap-1 p-0"
+          role="list"
+        >
+          <li>
+            <span class="text-black-50">已經是會員？</span>
+          </li>
+          <li
+            ><a
+              href="#Login-Form"
+              class="btn-link"
+              role="button"
+              data-bs-toggle="modal"
+              >登入</a
+            ></li
+          >
+        </ul>
+        <form>
+          <div class="mb-6">
+            <label
+              for="SignUp-UserName"
+              class="form-label"
+              >暱稱</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="SignUp-UserName"
+              placeholder="輸入暱稱"
+              aria-placeholder="輸入暱稱"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              for="SignUp-InputEmail"
+              class="form-label"
+              >電子郵件</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="SignUp-InputEmail"
+              placeholder="輸入電子郵件"
+              aria-placeholder="輸入電子郵件"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              for="SignUp-InputPassword"
+              class="form-label"
+              >密碼</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="SignUp-InputPassword"
+              placeholder="密碼"
+              aria-placeholder="輸入密碼"
+              required
+              minlength="6"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              for="SignUp-ConfirmPassword"
+              class="form-label"
+              >確認密碼</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="SignUp-ConfirmPassword"
+              placeholder="確認密碼"
+              aria-placeholder="輸入密碼"
+              required
+              minlength="6"
+            />
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary w-100 mt-8"
+            data-bs-toggle="modal"
+            data-bs-target="#Login-Form"
+            >建立帳號</button
+          >
+          <p class="text-center my-3 my-lg-6">或</p>
+          <a
+            href="#"
+            class="btn btn-outline-primary w-100"
+            >透過Google登入</a
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="modal fade"
+  id="Login-Form"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="Login-FormLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body p-6 p-lg-12">
+        <img
+          class="mb-12 mb-lg-16 mx-auto"
+          src="/hiCraft/assets/hiCraft_logo-3ac4a473.svg"
+        />
+        <h2 class="fw-bold text-center mb-12">歡迎來到XX手工</h2>
+        <form action="index.html">
+          <div class="mb-6">
+            <label
+              for="Login-InputEmail"
+              class="form-label"
+              >電子郵件</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="Login-InputEmail"
+              placeholder="輸入電子郵件"
+              aria-placeholder="輸入電子郵件"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              for="Login-InputPassword"
+              class="form-label"
+              >密碼</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="Login-InputPassword"
+              placeholder="密碼"
+              aria-placeholder="輸入密碼"
+              required
+              minlength="6"
+            />
+          </div>
+          <ul
+            class="mb-11 form-check d-flex justify-content-between"
+            role="list"
+          >
+            <li>
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="Login-RememberAccount"
+              />
+              <label
+                class="form-check-label"
+                for="Login-RememberAccount"
+                >記住帳號</label
+              >
+            </li>
+            <li><a href="#">忘記密碼?</a></li>
+          </ul>
+          <button
+            type="submit"
+            class="btn btn-primary w-100"
+            >登入</button
+          >
+          <p class="text-center my-3 my-lg-6">或</p>
+          <a
+            href="#"
+            class="btn btn-outline-primary w-100"
+            >透過Google登入</a
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
     <header class="bg-home-header d-flex flex-column">
       <div class="container my-auto">
         <h1 class="title-display">搜尋好設計、好點子</h1>
         <form
+  action="search-result.html"
   class="row align-items-center gy-2 gy-lg-0 mw-1060px mx-auto bg-white rounded-3 p-2 border border-primary-light border-4 border-lg-8 border-opacity-50"
   role="search"
 >
@@ -174,75 +389,33 @@
       aria-label="Search"
     />
   </div>
-
-  <div class="col-lg-2 dropdown border-start-lg border-end-lg">
-    <button
-      class="w-100 bg-transparent text-black-50 d-flex align-items-center px-0 py-4 border border-start-0 border-end-0 border-lg-0"
-      id="searchOptions"
-      type="button"
-      data-bs-toggle="dropdown"
-      data-bs-offset="-12,0"
-      aria-expanded="false"
+  <div class="col-lg-2 d-flex align-items-center border-start-lg border-end-lg">
+    <svg
+      class="d-lg-none"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
     >
-      <svg
-        class="d-lg-none"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-      >
-        <path
-          d="M4.956 9.007h14.08a.682.682 0 1 0 0-1.364H4.956a.675.675 0 0 0-.678.678c0 .37.302.686.678.686Zm0 3.39h14.08a.686.686 0 0 0 .686-.678.69.69 0 0 0-.686-.693H4.956a.683.683 0 0 0-.678.693c0 .369.302.678.678.678Zm0 3.397h14.08a.69.69 0 0 0 .686-.693.682.682 0 0 0-.686-.678H4.956a.68.68 0 0 0-.678.678c0 .377.302.693.678.693Z"
-          fill="#947E76"
-        />
-      </svg>
-      <span class="me-auto w-100 text-start ps-3">找主題</span>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-        fill="none"
-      >
-        <g clip-path="url(#clip0_333_311)">
-          <path
-            d="M9.88 11.4534L16 17.56L22.12 11.4534L24 13.3334L16 21.3334L8 13.3334L9.88 11.4534Z"
-            fill="#947E76"
-          />
-        </g>
-        <defs>
-          <clipPath id="clip0_333_311">
-            <rect
-              width="32"
-              height="32"
-              fill="white"
-            />
-          </clipPath>
-        </defs>
-      </svg>
-    </button>
-    <ul
-      class="dropdown-menu w-100"
-      aria-labelledby="searchOptions"
+      <path
+        d="M4.956 9.007h14.08a.682.682 0 1 0 0-1.364H4.956a.675.675 0 0 0-.678.678c0 .37.302.686.678.686Zm0 3.39h14.08a.686.686 0 0 0 .686-.678.69.69 0 0 0-.686-.693H4.956a.683.683 0 0 0-.678.693c0 .369.302.678.678.678Zm0 3.397h14.08a.69.69 0 0 0 .686-.693.682.682 0 0 0-.686-.678H4.956a.68.68 0 0 0-.678.678c0 .377.302.693.678.693Z"
+        fill="#947E76"
+      />
+    </svg>
+    <select
+      class="form-select border-start-0 border-end-0 border-lg-0 px-3 py-4"
+      aria-label="searchType"
     >
-      <li>
-        <a
-          class="dropdown-item"
-          href="#"
-          >找作者</a
-        >
-      </li>
-      <li>
-        <a
-          class="dropdown-item"
-          href="#"
-          >找作品</a
-        >
-      </li>
-    </ul>
+      <option
+        value="topic"
+        selected
+        >找主題</option
+      >
+      <option value="author">找作者</option>
+      <option value="name">找作品</option>
+    </select>
   </div>
-
   <div class="col-lg-2">
     <button
       class="btn btn-lg btn-primary w-100 text-nowrap"

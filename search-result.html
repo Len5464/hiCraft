@@ -60,7 +60,7 @@
           <ul class="navbar-nav nav-pills justify-content-center column-gap-8 row-gap-6 flex-grow-1">
             <li class="nav-item">
               <a
-                class="nav-link active"
+                class="nav-link "
                 aria-current="page"
                 href="explore.html"
                 >好物推薦</a
@@ -423,463 +423,452 @@
     </div>
   </div>
 </div>
-    <nav class="border-bottom">
-      <div
-        class="nav nav-underline nav-link-font-size-6 container justify-content-center align-items-center gap-lg-12"
-        id="nav-tab"
-        role="tablist"
-      >
-        <button
-          class="nav-link py-4 active"
-          id="nav-hot-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#nav-hot"
-          type="button"
-          role="tab"
-          aria-controls="nav-hot"
-          aria-selected="true"
-          >熱門作品</button
+    <header class="container">
+      <form action="">
+        <ul class="list-inline row my-8">
+          <li class="col-6 col-lg-2">
+            <select
+              class="form-select btn btn-tag-secondary"
+              aria-label="select materials"
+              name="materials"
+            >
+              <option selected>選擇材質</option>
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="1"
+                >木材</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="2"
+                >金屬</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="3"
+                >玻璃</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="4"
+                >陶瓷</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="5"
+                >布料/紡織品</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="6"
+                >皮革</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="7"
+                >紙張/紙板</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="8"
+                >塑料</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="9"
+                >石材</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="10"
+                >珠寶材料</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="11"
+                >粘土</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="12"
+                >植物材料</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="13"
+                >電子元件</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="14"
+                >食品材料</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="15"
+                >水彩/油畫顏料</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="16"
+                >蠟燭材料</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="17"
+                >香薰材料</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="18"
+                >環保再生材料</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="19"
+                >石膏/混凝土</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="20"
+                >軟性材質</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="21"
+                >酸性材質</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="22"
+                >金箔/銀箔</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="23"
+                >複合材料</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="24"
+                >其他</option
+              >
+              
+            </select>
+          </li>
+          <li class="col-6 col-lg-2">
+            <select
+              class="form-select btn btn-tag-secondary"
+              aria-label="select category"
+              name="category"
+            >
+              <option selected>選擇類別</option>
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="1"
+                >木工</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="2"
+                >飾品</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="3"
+                >文具</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="4"
+                >織品</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="5"
+                >陶瓷和陶器</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="6"
+                >粘土創作</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="7"
+                >珠寶</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="8"
+                >紙藝</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="9"
+                >玻璃工藝</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="10"
+                >古董和復古裝飾</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="11"
+                >繪畫和插畫</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="12"
+                >雕刻</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="13"
+                >皮革製品</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="14"
+                >美食工藝</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="15"
+                >蠟燭和香薰</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="16"
+                >音樂和樂器</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="17"
+                >環保再生製品</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="18"
+                >植物和園藝</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="19"
+                >軟玩具和娃娃</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="20"
+                >拼貼和雕貼</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="21"
+                >電子手工藝</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="22"
+                >空間設計和裝飾</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="23"
+                >影視手工藝</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="24"
+                >創意裝置藝術</option
+              >
+              
+              <option
+                class="bg-secondary-subtle text-secondary-emphasis"
+                value="25"
+                >DIY工具和工藝材料</option
+              >
+              
+            </select>
+          </li>
+        </ul>
+      </form>
+      <h1 class="border-bottom border-3 d-flex justify-content-between align-items-center">
+        父親節 有關的主題：
+        <div class="dropdown">
+          <a
+            href="#"
+            class="bi bi-filter-square-fill fs-3 text-secondary"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          ></a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li
+              ><a
+                class="dropdown-item"
+                href="#"
+                >最多人收藏</a
+              ></li
+            >
+            <li
+              ><a
+                class="dropdown-item"
+                href="#"
+                >最多人觀看</a
+              ></li
+            >
+            <li
+              ><a
+                class="dropdown-item"
+                href="#"
+                >最新</a
+              ></li
+            >
+          </ul>
+        </div>
+      </h1>
+    </header>
+    <main class="container position-relative"> <div class="row mt-6">
+  <div class="mt-6 col col-sm-6 col-md-4 d-flex flex-column gap-6 align-items-center">
+    <a href="#">
+      <img
+        src="/hiCraft/assets/craft-select1-f60158f9.png"
+        alt="product1"
+      /> </a
+    ><a href="#">
+      <img
+        src="/hiCraft/assets/craft-select4-7bfd310d.png"
+        alt="product4"
+      /> </a
+    ><a href="#">
+      <img
+        src="/hiCraft/assets/craft-select7-5797d2c1.png"
+        alt="product7"
+      />
+    </a>
+
+    <!-- <img src="https://fakeimg.pl/600x800/" />
+    <img src="https://fakeimg.pl/1500x1000/" />
+    <img src="https://fakeimg.pl/1000x1000/" />
+    <img src="https://fakeimg.pl/800x600/" />
+    <img src="https://fakeimg.pl/1280x800/" /> -->
+  </div>
+  <div class="mt-6 col-sm-6 col-md-4 d-flex flex-column gap-6 align-items-center">
+    <a href="#">
+      <img
+        src="/hiCraft/assets/craft-select2-d860d3f7.png"
+        alt="product2"
+      />
+    </a>
+    <a href="#">
+      <img
+        src="/hiCraft/assets/craft-select5-5d3b52a9.png"
+        alt="product5"
+      />
+    </a>
+    <a href="#">
+      <img
+        src="/hiCraft/assets/craft-select8-5b56d0df.png"
+        alt="product8"
+      />
+    </a>
+    <!-- <img src="https://fakeimg.pl/1000x1000/" />
+    <img src="https://fakeimg.pl/1500x1000/" />
+    <img src="https://fakeimg.pl/600x800/" />
+    <img src="https://fakeimg.pl/1280x800/" />
+    <img src="https://fakeimg.pl/800x600/" /> -->
+  </div>
+  <div class="mt-6 col-sm-6 col-md-4 d-flex flex-column gap-6 align-items-center">
+    <a href="#">
+      <img
+        src="/hiCraft/assets/craft-select3-8dd5cb59.png"
+        alt="product3"
+      />
+    </a>
+    <a href="#">
+      <img
+        src="/hiCraft/assets/craft-select6-b3af49bd.png"
+        alt="product6"
+      />
+    </a>
+    <a href="#">
+      <img
+        src="/hiCraft/assets/craft-select9-06038d2a.png"
+        alt="product9"
+      />
+    </a>
+
+    <!-- <img src="https://fakeimg.pl/1500x1000/" />
+    <img src="https://fakeimg.pl/1280x800/" />
+    <img src="https://fakeimg.pl/1000x1000/" />
+    <img src="https://fakeimg.pl/800x600/" />
+    <img src="https://fakeimg.pl/600x800/" /> -->
+  </div>
+  <div class="gradient-mask-y">
+    
+  </div>
+</div>
+ </main>
+    <nav class="container py-4 py-lg-8">
+      <div class="row mt-16 align-items-center">
+        <a
+          href="#"
+          class="btn btn-outline-primary col-6 offset-3"
+          >下一頁</a
         >
-        <span class="text-secondary">|</span>
-        <button
-          class="nav-link py-4"
-          id="nav-newcomer-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#nav-newcomer"
-          type="button"
-          role="tab"
-          aria-controls="nav-newcomer"
-          aria-selected="false"
-          >新人作品</button
-        >
-        <span class="text-secondary">|</span>
-        <button
-          class="nav-link py-4"
-          id="nav-topic-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#nav-topic"
-          type="button"
-          role="tab"
-          aria-controls="nav-topic"
-          aria-selected="false"
-          >主題作品</button
-        >
+        <span class="col-12 col-lg-1 offset-lg-2 text-center py-2">1/15 頁</span>
       </div>
     </nav>
-    <div
-      class="tab-content"
-      id="nav-tabContent"
-    >
-      <div
-        class="tab-pane fade show active"
-        id="nav-hot"
-        role="tabpanel"
-        aria-labelledby="nav-hot-tab"
-        tabindex="0"
-      >
-        <header class="container pt-12">
-          <h1 class="border-bottom border-3 d-flex justify-content-between align-items-center">
-            熱門作品
-            <div class="dropdown">
-              <a
-                href="#"
-                class="bi bi-filter-square-fill fs-3 text-secondary"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              ></a>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li
-                  ><a
-                    class="dropdown-item"
-                    href="#"
-                    >最多人收藏</a
-                  ></li
-                >
-                <li
-                  ><a
-                    class="dropdown-item"
-                    href="#"
-                    >最多人觀看</a
-                  ></li
-                >
-                <li
-                  ><a
-                    class="dropdown-item"
-                    href="#"
-                    >最新</a
-                  ></li
-                >
-              </ul>
-            </div>
-          </h1>
-        </header>
-        <main class="container position-relative"> <div class="row mt-6">
-  <div class="mt-6 col col-sm-6 col-md-4 d-flex flex-column gap-6 align-items-center">
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select1-f60158f9.png"
-        alt="product1"
-      /> </a
-    ><a href="#">
-      <img
-        src="/hiCraft/assets/craft-select4-7bfd310d.png"
-        alt="product4"
-      /> </a
-    ><a href="#">
-      <img
-        src="/hiCraft/assets/craft-select7-5797d2c1.png"
-        alt="product7"
-      />
-    </a>
-
-    <!-- <img src="https://fakeimg.pl/600x800/" />
-    <img src="https://fakeimg.pl/1500x1000/" />
-    <img src="https://fakeimg.pl/1000x1000/" />
-    <img src="https://fakeimg.pl/800x600/" />
-    <img src="https://fakeimg.pl/1280x800/" /> -->
-  </div>
-  <div class="mt-6 col-sm-6 col-md-4 d-flex flex-column gap-6 align-items-center">
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select2-d860d3f7.png"
-        alt="product2"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select5-5d3b52a9.png"
-        alt="product5"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select8-5b56d0df.png"
-        alt="product8"
-      />
-    </a>
-    <!-- <img src="https://fakeimg.pl/1000x1000/" />
-    <img src="https://fakeimg.pl/1500x1000/" />
-    <img src="https://fakeimg.pl/600x800/" />
-    <img src="https://fakeimg.pl/1280x800/" />
-    <img src="https://fakeimg.pl/800x600/" /> -->
-  </div>
-  <div class="mt-6 col-sm-6 col-md-4 d-flex flex-column gap-6 align-items-center">
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select3-8dd5cb59.png"
-        alt="product3"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select6-b3af49bd.png"
-        alt="product6"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select9-06038d2a.png"
-        alt="product9"
-      />
-    </a>
-
-    <!-- <img src="https://fakeimg.pl/1500x1000/" />
-    <img src="https://fakeimg.pl/1280x800/" />
-    <img src="https://fakeimg.pl/1000x1000/" />
-    <img src="https://fakeimg.pl/800x600/" />
-    <img src="https://fakeimg.pl/600x800/" /> -->
-  </div>
-  <div class="gradient-mask-y">
-    
-  </div>
-</div>
- </main>
-        <nav class="container py-4 py-lg-8">
-          <div class="row mt-16 align-items-center">
-            <a
-              href="#"
-              class="btn btn-outline-primary col-6 offset-3"
-              >下一頁</a
-            >
-            <span class="col offset-md-1 offset-lg-2">1/15 頁</span>
-          </div>
-        </nav>
-      </div>
-      <div
-        class="tab-pane fade"
-        id="nav-newcomer"
-        role="tabpanel"
-        aria-labelledby="nav-newcomer-tab"
-        tabindex="0"
-      >
-        <header class="container pt-12">
-          <h1 class="border-bottom border-3 d-flex justify-content-between align-items-center">
-            新人作品
-            <div class="dropdown">
-              <a
-                href="#"
-                class="bi bi-filter-square-fill fs-3 text-secondary"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              ></a>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li
-                  ><a
-                    class="dropdown-item"
-                    href="#"
-                    >最多人收藏</a
-                  ></li
-                >
-                <li
-                  ><a
-                    class="dropdown-item"
-                    href="#"
-                    >最多人觀看</a
-                  ></li
-                >
-                <li
-                  ><a
-                    class="dropdown-item"
-                    href="#"
-                    >最新</a
-                  ></li
-                >
-              </ul>
-            </div>
-          </h1>
-        </header>
-        <main class="container position-relative"> <div class="row mt-6">
-  <div class="mt-6 col col-sm-6 col-md-4 d-flex flex-column gap-6 align-items-center">
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select1-f60158f9.png"
-        alt="product1"
-      /> </a
-    ><a href="#">
-      <img
-        src="/hiCraft/assets/craft-select4-7bfd310d.png"
-        alt="product4"
-      /> </a
-    ><a href="#">
-      <img
-        src="/hiCraft/assets/craft-select7-5797d2c1.png"
-        alt="product7"
-      />
-    </a>
-
-    <!-- <img src="https://fakeimg.pl/600x800/" />
-    <img src="https://fakeimg.pl/1500x1000/" />
-    <img src="https://fakeimg.pl/1000x1000/" />
-    <img src="https://fakeimg.pl/800x600/" />
-    <img src="https://fakeimg.pl/1280x800/" /> -->
-  </div>
-  <div class="mt-6 col-sm-6 col-md-4 d-flex flex-column gap-6 align-items-center">
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select2-d860d3f7.png"
-        alt="product2"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select5-5d3b52a9.png"
-        alt="product5"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select8-5b56d0df.png"
-        alt="product8"
-      />
-    </a>
-    <!-- <img src="https://fakeimg.pl/1000x1000/" />
-    <img src="https://fakeimg.pl/1500x1000/" />
-    <img src="https://fakeimg.pl/600x800/" />
-    <img src="https://fakeimg.pl/1280x800/" />
-    <img src="https://fakeimg.pl/800x600/" /> -->
-  </div>
-  <div class="mt-6 col-sm-6 col-md-4 d-flex flex-column gap-6 align-items-center">
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select3-8dd5cb59.png"
-        alt="product3"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select6-b3af49bd.png"
-        alt="product6"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select9-06038d2a.png"
-        alt="product9"
-      />
-    </a>
-
-    <!-- <img src="https://fakeimg.pl/1500x1000/" />
-    <img src="https://fakeimg.pl/1280x800/" />
-    <img src="https://fakeimg.pl/1000x1000/" />
-    <img src="https://fakeimg.pl/800x600/" />
-    <img src="https://fakeimg.pl/600x800/" /> -->
-  </div>
-  <div class="gradient-mask-y">
-    
-  </div>
-</div>
- </main>
-        <nav class="container py-4 py-lg-8">
-          <div class="row mt-16 align-items-center">
-            <a
-              href="#"
-              class="btn btn-outline-primary col-6 offset-3"
-              >下一頁</a
-            >
-            <span class="col offset-md-1 offset-lg-2">1/15 頁</span>
-          </div>
-        </nav>
-      </div>
-      <div
-        class="tab-pane fade"
-        id="nav-topic"
-        role="tabpanel"
-        aria-labelledby="nav-topic-tab"
-        tabindex="0"
-      >
-        <header class="container pt-12">
-          <h1 class="border-bottom border-3 d-flex justify-content-between align-items-center">
-            主題作品
-            <div class="dropdown">
-              <a
-                href="#"
-                class="bi bi-filter-square-fill fs-3 text-secondary"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              ></a>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li
-                  ><a
-                    class="dropdown-item"
-                    href="#"
-                    >最多人收藏</a
-                  ></li
-                >
-                <li
-                  ><a
-                    class="dropdown-item"
-                    href="#"
-                    >最多人觀看</a
-                  ></li
-                >
-                <li
-                  ><a
-                    class="dropdown-item"
-                    href="#"
-                    >最新</a
-                  ></li
-                >
-              </ul>
-            </div>
-          </h1>
-        </header>
-        <main class="container position-relative">
-          <div class="row mt-6">
-  <div class="mt-6 col col-sm-6 col-md-4 d-flex flex-column gap-6 align-items-center">
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select1-f60158f9.png"
-        alt="product1"
-      /> </a
-    ><a href="#">
-      <img
-        src="/hiCraft/assets/craft-select4-7bfd310d.png"
-        alt="product4"
-      /> </a
-    ><a href="#">
-      <img
-        src="/hiCraft/assets/craft-select7-5797d2c1.png"
-        alt="product7"
-      />
-    </a>
-
-    <!-- <img src="https://fakeimg.pl/600x800/" />
-    <img src="https://fakeimg.pl/1500x1000/" />
-    <img src="https://fakeimg.pl/1000x1000/" />
-    <img src="https://fakeimg.pl/800x600/" />
-    <img src="https://fakeimg.pl/1280x800/" /> -->
-  </div>
-  <div class="mt-6 col-sm-6 col-md-4 d-flex flex-column gap-6 align-items-center">
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select2-d860d3f7.png"
-        alt="product2"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select5-5d3b52a9.png"
-        alt="product5"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select8-5b56d0df.png"
-        alt="product8"
-      />
-    </a>
-    <!-- <img src="https://fakeimg.pl/1000x1000/" />
-    <img src="https://fakeimg.pl/1500x1000/" />
-    <img src="https://fakeimg.pl/600x800/" />
-    <img src="https://fakeimg.pl/1280x800/" />
-    <img src="https://fakeimg.pl/800x600/" /> -->
-  </div>
-  <div class="mt-6 col-sm-6 col-md-4 d-flex flex-column gap-6 align-items-center">
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select3-8dd5cb59.png"
-        alt="product3"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select6-b3af49bd.png"
-        alt="product6"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select9-06038d2a.png"
-        alt="product9"
-      />
-    </a>
-
-    <!-- <img src="https://fakeimg.pl/1500x1000/" />
-    <img src="https://fakeimg.pl/1280x800/" />
-    <img src="https://fakeimg.pl/1000x1000/" />
-    <img src="https://fakeimg.pl/800x600/" />
-    <img src="https://fakeimg.pl/600x800/" /> -->
-  </div>
-  <div class="gradient-mask-y">
-    
-  </div>
-</div>
-        </main>
-        <nav class="container py-4 py-lg-8">
-          <div class="row mt-16 align-items-center">
-            <a
-              href="#"
-              class="btn btn-outline-primary col-6 offset-3"
-              >下一頁</a
-            >
-            <span class="col offset-md-1 offset-lg-2">1/15 頁</span>
-          </div>
-        </nav>
-      </div>
-    </div>
     <footer class="bg-black-20 py-20">
   <div class="container">
     <div class="row">
