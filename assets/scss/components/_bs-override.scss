@@ -1,16 +1,46 @@
+.nav {
+  &-tabs-lg {
+    --bs-nav-link-font-size: 20px;
+  }
+  &-topic {
+    .nav-link {
+      background-color: $black-40;
+      color: $black-80;
+    }
+  }
+}
 #offcanvasNavbar .nav-link {
   @include media-breakpoint-down(lg) {
     color: #fff;
   }
-}
-.nav-link-font-size-6 {
-  --bs-nav-link-font-size: 20px;
 }
 .navbar-brand {
   @include media-breakpoint-down(lg) {
     width: 160px;
   }
 }
-.btn-primary {
-  color: #fff;
+.btn {
+  &-primary {
+    color: #fff;
+  }
+  &-tag-primary {
+    --bs-btn-border-radius: 25px;
+    --bs-btn-border-color: #{$primary-border-subtle};
+    --bs-btn-bg: #{$primary-bg-subtle};
+    --bs-btn-color: #{$primary-text-emphasis};
+    --bs-btn-hover-bg: #{$primary};
+    --bs-btn-hover-color: #{$primary-light};
+    --bs-btn-active-bg: #{$primary};
+    --bs-btn-active-color: #{$primary-light};
+  }
+  &-tag-secondary {
+    --bs-btn-border-radius: 25px;
+    --bs-btn-border-color: #{$secondary-border-subtle};
+    --bs-btn-bg: #{$secondary-bg-subtle};
+    --bs-btn-color: #{$secondary-text-emphasis};
+    --bs-btn-hover-bg: #{$secondary};
+    --bs-btn-hover-color: #{$secondary-light};
+    --bs-btn-active-bg: #{$secondary};
+    --bs-btn-active-color: #{$secondary-light};
+  }
 }

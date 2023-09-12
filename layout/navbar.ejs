@@ -98,16 +98,16 @@
         </div>
       </div>
       <ul class="navbar-nav d-none d-lg-flex gap-6">
-        <li class="nav-item"
+        <li class="nav-item bg-hover-primary-light"
           ><a
-            href="#"
+            href="upload.html"
             class="nav-link"
             ><img
               src="../assets/images/icons/icon-box-arrow-up.svg"
               width="48px"
               alt="upload" /></a
         ></li>
-        <li class="nav-item"
+        <li class="nav-item bg-hover-primary-light"
           ><a
             href="#"
             class="nav-link"
@@ -116,17 +116,21 @@
               width="48px"
               alt="notifications" /></a
         ></li>
-        <li class="nav-item"
+        <li class="nav-item bg-hover-primary-light"
           ><a
-            href="#"
+            href="#SignUp-Form"
             class="nav-link"
+            role="button"
+            data-bs-toggle="modal"
             ><img
               src="../assets/images/icons/icon-person.svg"
               width="48px"
-              alt="login" /></a
-        ></li>
+              alt="login"
+          /></a>
+        </li>
       </ul>
     </div>
   </nav>
   <% if( enableCollapseSearch ) { %> <%- include('./layout/collapse-search-bar.ejs'); -%> <% } %>
 </div>
+<%- include('./layout/sign-up'); -%><%- include('./layout/login'); -%><%- include('./layout/reset-password'); -%>

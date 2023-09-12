@@ -30,6 +30,265 @@
         />
       </picture>
     </header>
+    <!-- 節日 -->
+    <section class="pt-20 pb-30 position-relative">
+      <svg
+        class="position-absolute top-n50px start-50px d-none d-md-block"
+        width="182"
+        height="226"
+        viewBox="0 0 182 226"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="91"
+          cy="135"
+          r="90.5"
+          stroke="#D5C0AE"
+        />
+        <circle
+          cx="91"
+          cy="135"
+          r="77.5"
+          stroke="#D5C0AE"
+        />
+        <circle
+          cx="91"
+          cy="135"
+          r="64.5"
+          stroke="#D5C0AE"
+        />
+        <circle
+          cx="91"
+          cy="135"
+          r="51.5"
+          stroke="#D5C0AE"
+        />
+        <circle
+          cx="91"
+          cy="135"
+          r="38.5"
+          stroke="#D5C0AE"
+        />
+        <circle
+          cx="91"
+          cy="135"
+          r="25.5"
+          stroke="#D5C0AE"
+        />
+        <circle
+          cx="91"
+          cy="135"
+          r="12.5"
+          stroke="#D5C0AE"
+        />
+        <circle
+          cx="57"
+          cy="43"
+          r="43"
+          fill="#D5C0AE"
+        />
+      </svg>
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2 class="z-1 mb-8">歡慶節日 </h2>
+        </div>
+        <div class="row gy-6">
+          <div class="col-md-4">
+            <a
+              href="#"
+              class="festival-card festival-card-fathers-day"
+            >
+              <h3 class="festival-card-title">父親節</h3>
+              <time class="festival-card-date">08/08</time>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a
+              href="#"
+              class="festival-card festival-card-mid-autumn"
+            >
+              <h3 class="festival-card-title">中秋節</h3>
+              <time class="festival-card-date">09/29</time>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a
+              href="#"
+              class="festival-card festival-card-xmas"
+            >
+              <h3 class="festival-card-title">聖誕節</h3>
+              <time class="festival-card-date">12/25</time>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 主題 -->
+    <section class="py-30 bg-black-20 position-relative">
+      <svg
+        class="position-absolute top-n50px end-50px d-none d-md-block"
+        width="182"
+        height="226"
+        viewBox="0 0 182 226"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="91"
+          cy="135"
+          r="90.5"
+          stroke="#D5C0AE"
+        />
+        <circle
+          cx="91"
+          cy="135"
+          r="77.5"
+          stroke="#D5C0AE"
+        />
+        <circle
+          cx="91"
+          cy="135"
+          r="64.5"
+          stroke="#D5C0AE"
+        />
+        <circle
+          cx="91"
+          cy="135"
+          r="51.5"
+          stroke="#D5C0AE"
+        />
+        <circle
+          cx="91"
+          cy="135"
+          r="38.5"
+          stroke="#D5C0AE"
+        />
+        <circle
+          cx="91"
+          cy="135"
+          r="25.5"
+          stroke="#D5C0AE"
+        />
+        <circle
+          cx="91"
+          cy="135"
+          r="12.5"
+          stroke="#D5C0AE"
+        />
+        <circle
+          cx="57"
+          cy="43"
+          r="43"
+          fill="#D5C0AE"
+        />
+      </svg>
+      <div class="container">
+        <ul
+          class="nav nav-tabs row g-0 nav-topic"
+          id="homeTab"
+          role="tablist"
+        >
+          <li
+            class="nav-item col-6 col-lg-3 z-1"
+            role="presentation"
+          >
+            <button
+              class="nav-link w-100 active"
+              id="topicTab"
+              data-bs-toggle="tab"
+              data-bs-target="#topicList"
+              type="button"
+              role="tab"
+              aria-controls="topicList"
+              aria-selected="true"
+            >
+              熱門主題
+            </button>
+          </li>
+          <li
+            class="nav-item col-6 col-lg-3 z-1"
+            role="presentation"
+          >
+            <button
+              class="nav-link w-100"
+              id="interestTab"
+              data-bs-toggle="tab"
+              data-bs-target="#interestList"
+              type="button"
+              role="tab"
+              aria-controls="interestList"
+              aria-selected="false"
+            >
+              關注主題
+            </button>
+          </li>
+        </ul>
+        <div
+          id="homeTabContent"
+          class="tab-content"
+        >
+          <div
+            class="tab-pane bg-primary p-6 fade show active"
+            id="topicList"
+            role="tabpanel"
+            aria-labelledby="topicList-tab"
+            tabindex="0"
+          >
+            <ul class="list-inline mb-0 row row-cols-1 row-cols-md-2 row-cols-xl-3 gy-6">
+              <% for (let i = 0 ; i < 6; i++){ %>
+              <li class="col">
+                <a
+                  href="explore.html"
+                  class="topic-card"
+                >
+                  <img
+                    src="../assets/images/topic/<%= hotNow[i].id %>.jpg"
+                    alt="主題示意圖"
+                    class="topic-card-img"
+                  />
+                  <div class="topic-card-body">
+                    <h4 class="topic-card-title"><%= hotNow[i].titleZH %></h4>
+                    <small class="topic-card-sub-title"><%= hotNow[i].titleEN %></small>
+                  </div>
+                </a>
+              </li>
+              <% } %>
+            </ul>
+          </div>
+          <div
+            id="interestList"
+            class="tab-pane bg-primary p-6 fade"
+            role="tabpanel"
+            aria-labelledby="interest-tab"
+            tabindex="0"
+          >
+            <ul class="list-inline mb-0 row row-cols-1 row-cols-md-2 row-cols-xl-3 gy-6">
+              <% for (let i = 0 ; i < 6; i++){ %>
+              <li class="col">
+                <a
+                  href="interest-list.html"
+                  class="topic-card"
+                >
+                  <img
+                    src="../assets/images/topic/<%= interests[i].id %>.jpg"
+                    alt="主題示意圖"
+                    class="topic-card-img"
+                  />
+                  <div class="topic-card-body">
+                    <h4 class="topic-card-title"><%= interests[i].titleZH %></h4>
+                    <small class="topic-card-sub-title"><%= interests[i].titleEN %></small>
+                  </div>
+                </a>
+              </li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 精選 -->
     <section class="bg-white-brick py-30">
       <div class="container position-relative">
         <div class="d-flex justify-content-center align-items-center gap-2">
@@ -42,7 +301,6 @@
         <%- include('./layout/gallery'); -%>
       </div>
     </section>
-
     <%- include('./layout/footer'); -%>
     <script
       type="module"

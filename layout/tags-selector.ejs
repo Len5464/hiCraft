@@ -3,18 +3,15 @@
     class="list-inline mb-0 flex-fill scroll-bar-small tags-list-fold"
     id="tagsList"
   >
-    <% interests.forEach((item , index)=>{ %>
-    <li class="btn btn-tag-primary px-lg-5 my-1">
-      <input
-        type="checkbox"
-        name="tag<%= index+1 %>"
-        id="tag<%= index+1 %>"
-      />
-      <label
-        class="cursor-pointer"
-        for="tag<%= index+1 %>"
-        ><%= item %></label
-      >
+    <% interests.forEach(item =>{ %>
+    <li class="d-inline">
+      <label class="btn btn-tag-primary px-lg-5 my-1 cursor-pointer">
+        <input
+          type="checkbox"
+          name="tag<%= item.id %>"
+        />
+        <span><%= item.titleZH %></span>
+      </label>
     </li>
     <% }); %>
   </ul>

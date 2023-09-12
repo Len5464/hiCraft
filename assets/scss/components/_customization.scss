@@ -1,3 +1,74 @@
+.festival-card {
+  display: block;
+  position: relative;
+  z-index: 1;
+  padding: 48px 32px;
+  color: $light;
+  &-title {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+  &-date {
+    font-size: 20px;
+    font-weight: 900;
+  }
+  &-fathers-day {
+    background: linear-gradient(90deg, #84623a 34.01%, rgba(132, 98, 58, 0) 77.64%),
+      center / cover no-repeat url("/assets/images/fastival/FathersDay.png");
+    &:hover {
+      background: linear-gradient(90deg, #84623a 34.01%, rgba(132, 98, 58, 0.82) 77.64%),
+        center / cover no-repeat url("/assets/images/fastival/FathersDay.png");
+    }
+  }
+  &-mid-autumn {
+    background: linear-gradient(90deg, #d0a768 34.01%, rgba(208, 167, 104, 0) 77.64%),
+      center / cover no-repeat url("/assets/images/fastival/Mid-Autumn-Festival.png");
+    &:hover {
+      background: linear-gradient(90deg, #d0a768 34.01%, rgba(208, 167, 104, 0.82) 77.64%),
+        center / cover no-repeat url("/assets/images/fastival/Mid-Autumn-Festival.png");
+    }
+  }
+  &-xmas {
+    background: linear-gradient(90deg, #78462b 34.01%, rgba(120, 70, 43, 0) 77.64%),
+      center / cover no-repeat url("/assets/images/fastival/Xmas.jpg");
+    &:hover {
+      background: linear-gradient(90deg, #78462b 34.01%, rgba(120, 70, 43, 0.82) 77.64%),
+        center / cover no-repeat url("/assets/images/fastival/Xmas.jpg");
+    }
+  }
+}
+.topic-card {
+  display: flex;
+  padding: 16px;
+  color: $dark;
+  background: url("../assets/images/stripes-light.webp"), lightgray 0% 0% / 50px 50px repeat;
+  overflow: hidden;
+  &:hover {
+    color: $light;
+    background: $primary;
+  }
+  &-title {
+    font-size: 24px;
+    overflow: hidden;
+  }
+  &-sub-title {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  &-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 24px;
+  }
+  &-img {
+    width: var(--topic-card-img-width, 100px);
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+}
 .img-checkbox {
   cursor: pointer;
   gap: 0.5em;
@@ -7,7 +78,7 @@
   position: relative;
   input[type="checkbox"] {
     display: none;
-    &:checked ~ .img-checkbox__icon-checked {
+    &:checked ~ .img-checkbox-mark {
       display: block;
     }
   }
@@ -15,7 +86,7 @@
     object-fit: cover;
     max-width: 100%;
   }
-  &__icon-checked {
+  &-mark {
     position: absolute;
     top: 0;
     right: 0;
@@ -24,20 +95,30 @@
     display: none;
   }
 }
-
-.bg-white-brick {
-  background-image: url("../images/gridme.webp"), url("../images/stripes-light-1.png");
-}
-.bg-home-header {
-  background: linear-gradient(180deg, #fff 0%, rgba(148, 126, 118, 0.6) 54.17%), url("../images/bg-home-header.jpg"),
-    lightgray;
-  background-position: center;
-  background-size: cover;
-  height: 616px;
-  @include media-breakpoint-down(lg) {
-    height: 376px;
+.bg {
+  &-white-brick {
+    background-image: url("../images/gridme.webp"), url("../images/stripes-light-1.png");
+  }
+  &-home-header {
+    background: linear-gradient(180deg, #fff 0%, rgba(148, 126, 118, 0.6) 54.17%), url("../images/bg-home-header.jpg"),
+      lightgray;
+    background-position: center;
+    background-size: cover;
+    height: 616px;
+    @include media-breakpoint-down(lg) {
+      height: 376px;
+    }
   }
 }
+.bg-hover {
+  &-primary-light {
+    &:hover {
+      background-color: $primary-light;
+      border-radius: 10px;
+    }
+  }
+}
+
 .gradient-mask {
   &-y {
     position: absolute;
@@ -55,7 +136,7 @@
     width: 30px;
     height: 100%;
     transform: translate(-100%, -50%);
-    background: linear-gradient(90deg, hsla(0, 0%, 100%, 0), #fff 35%, #fff);
+    background: linear-gradient(90deg, transparent, #fff 70%, #fff);
   }
 }
 .title-display {
@@ -74,28 +155,7 @@
     margin-bottom: 16px;
   }
 }
-.btn-tag {
-  &-secondary {
-    --bs-btn-border-radius: 25px;
-    --bs-btn-border-color: #{$secondary-border-subtle};
-    --bs-btn-bg: #{$secondary-bg-subtle};
-    --bs-btn-color: #{$secondary-text-emphasis};
-    --bs-btn-hover-bg: #{$secondary};
-    --bs-btn-hover-color: #{$secondary-light};
-    --bs-btn-active-bg: #{$secondary};
-    --bs-btn-active-color: #{$secondary-light};
-  }
-  &-primary {
-    --bs-btn-border-radius: 25px;
-    --bs-btn-border-color: #{$primary-border-subtle};
-    --bs-btn-bg: #{$primary-bg-subtle};
-    --bs-btn-color: #{$primary-text-emphasis};
-    --bs-btn-hover-bg: #{$primary};
-    --bs-btn-hover-color: #{$primary-light};
-    --bs-btn-active-bg: #{$primary};
-    --bs-btn-active-color: #{$primary-light};
-  }
-}
+
 .tags-list {
   &-fold {
     height: 54px;

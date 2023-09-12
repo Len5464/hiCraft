@@ -2,17 +2,93 @@ export default {
   enableCollapseSearch: false,
   route: "/",
   interests: [
-    "木工",
-    "文具",
-    "紙藝",
-    "繪畫和插畫",
-    "雕刻",
-    "皮革製品",
-    "環保再生製品",
-    "軟玩具和娃娃",
-    "拼貼和雕貼",
-    "影視手工藝",
-    "DIY工具和工藝材料",
+    {
+      id: 1,
+      titleZH: "木工",
+      titleEN: "Woodworking",
+    },
+    {
+      id: 2,
+      titleZH: "文具",
+      titleEN: "Stationery",
+    },
+    {
+      id: 3,
+      titleZH: "紙藝",
+      titleEN: "Paper Crafts",
+    },
+    {
+      id: 4,
+      titleZH: "繪畫和插畫",
+      titleEN: "Painting and Illustration",
+    },
+    {
+      id: 5,
+      titleZH: "雕刻",
+      titleEN: "Sculpture",
+    },
+    {
+      id: 6,
+      titleZH: "皮革製品",
+      titleEN: "Leather Goods",
+    },
+    {
+      id: 7,
+      titleZH: "環保再生製品",
+      titleEN: "Eco-friendly Upcycled Products",
+    },
+    {
+      id: 8,
+      titleZH: "軟玩具和娃娃",
+      titleEN: "Soft Toys and Dolls",
+    },
+    {
+      id: 9,
+      titleZH: "拼貼和雕貼",
+      titleEN: "Collage and Decoupage",
+    },
+    {
+      id: 10,
+      titleZH: "影視手工藝",
+      titleEN: "Film and TV Crafts",
+    },
+    {
+      id: 11,
+      titleZH: "DIY工具和工藝材料",
+      titleEN: "DIY Tools and Craft Materials",
+    },
+  ],
+  hotNow: [
+    {
+      id: 1,
+      titleZH: "設計家具",
+      titleEN: "Design Furniture",
+    },
+    {
+      id: 2,
+      titleZH: "婚禮小物",
+      titleEN: "Wedding Accessories",
+    },
+    {
+      id: 3,
+      titleZH: "旅行用品",
+      titleEN: "Travel Goods",
+    },
+    {
+      id: 4,
+      titleZH: "手工花藝",
+      titleEN: "Handmade Floral",
+    },
+    {
+      id: 5,
+      titleZH: "環保愛地球",
+      titleEN: "Environmental Friendly",
+    },
+    {
+      id: 6,
+      titleZH: "香氛蠟燭",
+      titleEN: "Scented Candle",
+    },
   ],
   materials: [
     "木材",
