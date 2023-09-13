@@ -1,9 +1,8 @@
-.mb-32 {
-  margin-bottom: 32px;
+.fw900 {
+  font-weight: 900;
 }
 .h168 {
   height: 168px;
-  overflow: hidden;
 }
 .bg-grad-father {
   background: linear-gradient(
@@ -60,58 +59,36 @@
       transparent 1.75px -286.451px / 100% 291.018% no-repeat;
   }
 }
-.box {
-  position: relative;
-  .left,
-  .right {
-    position: absolute;
-  }
-  .left {
-    transform: translatey(-20%);
-    left: 5%;
-  }
-  .right {
-    right: 5%;
-    transform: translatey(-20%);
-  }
+
+.left {
+  transform: translatey(-20%);
+  left: 5%;
 }
+.right {
+  right: 5%;
+  transform: translatey(-20%);
+}
+
 .fastival {
-  margin-top: 80px;
-  margin-bottom: 120px;
-}
-
-.fastival-image-father {
-  object-fit: cover;
-  object-position: 95px -15px;
-}
-.fastival-image-moon {
-  object-fit: cover;
-  object-position: 0px -58px;
-}
-.fastival-image-xmas {
-  object-fit: cover;
-  object-position: 0px -285px;
-}
-
-.fastival-title {
-  color: var(--black-100, #333);
-  font-size: 40px;
-  line-height: 120%;
+  &-image-father {
+    object-fit: cover;
+    object-position: 95px -15px;
+  }
+  &-image-moon {
+    object-fit: cover;
+    object-position: 0px -58px;
+  }
+  &-image-xmas {
+    object-fit: cover;
+    object-position: 0px -285px;
+  }
 }
 .fastival-text {
-  position: absolute;
-  padding: 48px 288px 48px 32px;
-  .fastival-name {
-    color: var(--black-0, #fff);
-    font-size: 32px;
-    font-weight: 900;
-    line-height: 120%;
-    margin-bottom: 10px;
-  }
-  .fastival-date {
-    color: var(--black-0, #fff);
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 120%;
-  }
+  padding-right: 288px;
+}
+.fastival-name {
+  margin-bottom: 10px;
+}
+.fastival-date {
+  font-size: 20px;
 }

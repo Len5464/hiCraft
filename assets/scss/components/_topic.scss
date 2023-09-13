@@ -1,17 +1,10 @@
-.topic {
-  background: $primary;
-  padding: 120px 0;
+.lh120 {
+  line-height: 120%;
 }
 .h132 {
   height: 132px;
-  overflow: hidden;
 }
-.active {
-  color: var(--black-0, #fff);
-  font-size: 24px;
-  line-height: 120%;
-}
-.btn-tab {
+.await {
   color: var(--black-80, #525252);
   font-size: 24px;
   line-height: 120%;
@@ -22,19 +15,14 @@
     border: 0px;
   }
 }
-.nav-link {
-  display: flex;
+.topic-btn {
   padding: 16px 111px;
-  justify-content: center;
-  align-items: center;
   gap: 4px;
   flex: 1 0 0;
   border-radius: 4px 4px 0px 0px;
-  background-color: $primary;
 }
 .topic-card {
   background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/stripes-light.png);
-  padding: 16px;
   flex: 1 0 0;
   &:not(:last-child) {
     margin-right: 24px;
@@ -51,22 +39,8 @@
   height: 100px;
 }
 .topic-text {
-  margin-left: 24px;
-  justify-content: center;
   flex: 1 0 0;
-  align-self: stretch;
-
-  .topic-name {
-    color: var(--black-100, #333);
-    font-size: 24px;
-    line-height: 120%;
-    margin-bottom: 8px;
-    margin-top: 21px;
-  }
-  .topic-en {
-    color: var(--black-100, #333);
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 150%;
-  }
+}
+.topic-en {
+  line-height: 150%;
 }
