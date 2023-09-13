@@ -11,8 +11,8 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>index</title>
-    <script type="module" crossorigin src="/hiCraft/assets/main-ff89430e.js"></script>
-    <link rel="stylesheet" href="/hiCraft/assets/main-1e198d88.css">
+    <script type="module" crossorigin src="/hiCraft/assets/main-10039137.js"></script>
+    <link rel="stylesheet" href="/hiCraft/assets/main-6328c0fb.css">
   </head>
   <body>
     <div class="sticky-top">
@@ -115,7 +115,7 @@
         </div>
       </div>
       <ul class="navbar-nav d-none d-lg-flex gap-6">
-        <li class="nav-item"
+        <li class="nav-item bg-hover-primary-light"
           ><a
             href="upload.html"
             class="nav-link"
@@ -124,7 +124,7 @@
               width="48px"
               alt="upload" /></a
         ></li>
-        <li class="nav-item"
+        <li class="nav-item bg-hover-primary-light"
           ><a
             href="#"
             class="nav-link"
@@ -133,7 +133,7 @@
               width="48px"
               alt="notifications" /></a
         ></li>
-        <li class="nav-item"
+        <li class="nav-item bg-hover-primary-light"
           ><a
             href="#SignUp-Form"
             class="nav-link"
@@ -175,10 +175,7 @@
           src="/hiCraft/assets/hiCraft_logo-3ac4a473.svg"
         />
         <h2 class="fw-bold mt-8">加入</h2>
-        <ul
-          class="d-flex mb-6 align-self-start gap-1 p-0"
-          role="list"
-        >
+        <ul class="list-unstyled d-flex mb-6 align-self-start gap-1 p-0">
           <li>
             <span class="text-black-50">已經是會員？</span>
           </li>
@@ -327,10 +324,7 @@
               minlength="6"
             />
           </div>
-          <ul
-            class="mb-11 form-check d-flex justify-content-between"
-            role="list"
-          >
+          <ul class="list-unstyled mb-11 form-check d-flex justify-content-between">
             <li>
               <input
                 type="checkbox"
@@ -343,7 +337,14 @@
                 >記住帳號</label
               >
             </li>
-            <li><a href="#">忘記密碼?</a></li>
+            <li
+              ><a
+                href="#ResetPassword-Form"
+                role="button"
+                data-bs-toggle="modal"
+                >忘記密碼?</a
+              ></li
+            >
           </ul>
           <button
             type="submit"
@@ -355,6 +356,64 @@
             href="#"
             class="btn btn-outline-primary w-100"
             >透過Google登入</a
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="modal fade"
+  id="ResetPassword-Form"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="ResetPasswordLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
+    <div class="modal-content">
+      <div class="modal-header align-items-center">
+        <a
+          href="#Login-Form"
+          class="bi bi-arrow-left fs-5 link-dark"
+          role="button"
+          data-bs-toggle="modal"
+        ></a>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body p-6 p-lg-12">
+        <img
+          class="mx-auto"
+          src="/hiCraft/assets/hiCraft_logo-3ac4a473.svg"
+        />
+        <h2 class="fw-bold mt-8">忘記密碼?</h2>
+        <p class="text-black-50">下方輸入您帳戶的電子郵件，您將收到一封用於重置密碼的電子郵件。</p>
+        <form>
+          <div class="mb-6">
+            <label
+              for="ResetPassword-InputEmail"
+              class="form-label"
+              >電子郵件</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="ResetPassword-InputEmail"
+              placeholder="輸入電子郵件"
+              aria-placeholder="輸入電子郵件"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary w-100 mb-16"
+            >發送信件</button
           >
         </form>
       </div>
@@ -494,7 +553,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category0"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>木工
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>木工
               </label>
             </div>
             
@@ -508,7 +567,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category1"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>飾品
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>飾品
               </label>
             </div>
             
@@ -522,7 +581,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category2"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>文具
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>文具
               </label>
             </div>
             
@@ -536,7 +595,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category3"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>織品
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>織品
               </label>
             </div>
             
@@ -550,7 +609,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category4"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>陶瓷和陶器
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>陶瓷和陶器
               </label>
             </div>
             
@@ -564,7 +623,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category5"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>粘土創作
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>粘土創作
               </label>
             </div>
             
@@ -578,7 +637,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category6"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>珠寶
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>珠寶
               </label>
             </div>
             
@@ -592,7 +651,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category7"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>紙藝
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>紙藝
               </label>
             </div>
             
@@ -606,7 +665,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category8"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>玻璃工藝
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>玻璃工藝
               </label>
             </div>
             
@@ -620,7 +679,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category9"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>古董和復古裝飾
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>古董和復古裝飾
               </label>
             </div>
             
@@ -634,7 +693,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category10"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>繪畫和插畫
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>繪畫和插畫
               </label>
             </div>
             
@@ -648,7 +707,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category11"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>雕刻
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>雕刻
               </label>
             </div>
             
@@ -662,7 +721,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category12"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>皮革製品
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>皮革製品
               </label>
             </div>
             
@@ -676,7 +735,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category13"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>美食工藝
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>美食工藝
               </label>
             </div>
             
@@ -690,7 +749,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category14"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>蠟燭和香薰
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>蠟燭和香薰
               </label>
             </div>
             
@@ -704,7 +763,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category15"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>音樂和樂器
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>音樂和樂器
               </label>
             </div>
             
@@ -718,7 +777,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category16"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>環保再生製品
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>環保再生製品
               </label>
             </div>
             
@@ -732,7 +791,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category17"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>植物和園藝
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>植物和園藝
               </label>
             </div>
             
@@ -746,7 +805,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category18"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>軟玩具和娃娃
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>軟玩具和娃娃
               </label>
             </div>
             
@@ -760,7 +819,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category19"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>拼貼和雕貼
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>拼貼和雕貼
               </label>
             </div>
             
@@ -774,7 +833,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category20"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>電子手工藝
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>電子手工藝
               </label>
             </div>
             
@@ -788,7 +847,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category21"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>空間設計和裝飾
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>空間設計和裝飾
               </label>
             </div>
             
@@ -802,7 +861,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category22"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>影視手工藝
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>影視手工藝
               </label>
             </div>
             
@@ -816,7 +875,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category23"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>創意裝置藝術
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>創意裝置藝術
               </label>
             </div>
             
@@ -830,7 +889,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="category24"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>DIY工具和工藝材料
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>DIY工具和工藝材料
               </label>
             </div>
             
@@ -889,7 +948,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials0"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>木材
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>木材
               </label>
             </div>
             
@@ -903,7 +962,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials1"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>金屬
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>金屬
               </label>
             </div>
             
@@ -917,7 +976,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials2"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>玻璃
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>玻璃
               </label>
             </div>
             
@@ -931,7 +990,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials3"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>陶瓷
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>陶瓷
               </label>
             </div>
             
@@ -945,7 +1004,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials4"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>布料/紡織品
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>布料/紡織品
               </label>
             </div>
             
@@ -959,7 +1018,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials5"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>皮革
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>皮革
               </label>
             </div>
             
@@ -973,7 +1032,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials6"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>紙張/紙板
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>紙張/紙板
               </label>
             </div>
             
@@ -987,7 +1046,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials7"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>塑料
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>塑料
               </label>
             </div>
             
@@ -1001,7 +1060,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials8"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>石材
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>石材
               </label>
             </div>
             
@@ -1015,7 +1074,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials9"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>珠寶材料
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>珠寶材料
               </label>
             </div>
             
@@ -1029,7 +1088,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials10"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>粘土
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>粘土
               </label>
             </div>
             
@@ -1043,7 +1102,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials11"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>植物材料
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>植物材料
               </label>
             </div>
             
@@ -1057,7 +1116,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials12"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>電子元件
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>電子元件
               </label>
             </div>
             
@@ -1071,7 +1130,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials13"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>食品材料
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>食品材料
               </label>
             </div>
             
@@ -1085,7 +1144,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials14"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>水彩/油畫顏料
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>水彩/油畫顏料
               </label>
             </div>
             
@@ -1099,7 +1158,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials15"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>蠟燭材料
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>蠟燭材料
               </label>
             </div>
             
@@ -1113,7 +1172,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials16"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>香薰材料
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>香薰材料
               </label>
             </div>
             
@@ -1127,7 +1186,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials17"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>環保再生材料
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>環保再生材料
               </label>
             </div>
             
@@ -1141,7 +1200,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials18"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>石膏/混凝土
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>石膏/混凝土
               </label>
             </div>
             
@@ -1155,7 +1214,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials19"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>軟性材質
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>軟性材質
               </label>
             </div>
             
@@ -1169,7 +1228,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials20"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>酸性材質
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>酸性材質
               </label>
             </div>
             
@@ -1183,7 +1242,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials21"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>金箔/銀箔
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>金箔/銀箔
               </label>
             </div>
             
@@ -1197,7 +1256,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials22"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>複合材料
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>複合材料
               </label>
             </div>
             
@@ -1211,7 +1270,7 @@
                   src="https://fakeimg.pl/1024x768/"
                   alt="materials23"
                 />
-                <i class="img-checkbox__icon-checked fs-3 bi bi-check-circle-fill"></i>其他
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>其他
               </label>
             </div>
             
@@ -1322,10 +1381,7 @@
           alt="hiCraft"
           class=""
         />
-        <ul
-          class="col-md-7 d-flex flex-column gap-2 justify-content-center"
-          role="list"
-        >
+        <ul class="list-unstyled mb-0 ms-6 col-md-7 d-flex flex-column gap-2 justify-content-center">
           <li
             ><a
               href="#"
@@ -1349,11 +1405,7 @@
           >
         </ul>
       </div>
-      <ul
-        role="list"
-        class="col-md-3 d-flex flex-column text-end"
-        style="gap: 26px"
-      >
+      <ul class="list-unstyled mb-0 col-md-3 d-flex flex-column gap-26px text-end">
         <li class="d-flex gap-6 justify-content-end"
           ><a href="#"
             ><img

@@ -11,8 +11,8 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>hiCraft | 搜尋好設計、好點子</title>
-    <script type="module" crossorigin src="/hiCraft/assets/main-ff89430e.js"></script>
-    <link rel="stylesheet" href="/hiCraft/assets/main-1e198d88.css">
+    <script type="module" crossorigin src="/hiCraft/assets/main-10039137.js"></script>
+    <link rel="stylesheet" href="/hiCraft/assets/main-6328c0fb.css">
   </head>
   <body>
     <div class="sticky-top">
@@ -115,7 +115,7 @@
         </div>
       </div>
       <ul class="navbar-nav d-none d-lg-flex gap-6">
-        <li class="nav-item"
+        <li class="nav-item bg-hover-primary-light"
           ><a
             href="upload.html"
             class="nav-link"
@@ -124,7 +124,7 @@
               width="48px"
               alt="upload" /></a
         ></li>
-        <li class="nav-item"
+        <li class="nav-item bg-hover-primary-light"
           ><a
             href="#"
             class="nav-link"
@@ -133,7 +133,7 @@
               width="48px"
               alt="notifications" /></a
         ></li>
-        <li class="nav-item"
+        <li class="nav-item bg-hover-primary-light"
           ><a
             href="#SignUp-Form"
             class="nav-link"
@@ -237,10 +237,7 @@
           src="/hiCraft/assets/hiCraft_logo-3ac4a473.svg"
         />
         <h2 class="fw-bold mt-8">加入</h2>
-        <ul
-          class="d-flex mb-6 align-self-start gap-1 p-0"
-          role="list"
-        >
+        <ul class="list-unstyled d-flex mb-6 align-self-start gap-1 p-0">
           <li>
             <span class="text-black-50">已經是會員？</span>
           </li>
@@ -389,10 +386,7 @@
               minlength="6"
             />
           </div>
-          <ul
-            class="mb-11 form-check d-flex justify-content-between"
-            role="list"
-          >
+          <ul class="list-unstyled mb-11 form-check d-flex justify-content-between">
             <li>
               <input
                 type="checkbox"
@@ -405,7 +399,14 @@
                 >記住帳號</label
               >
             </li>
-            <li><a href="#">忘記密碼?</a></li>
+            <li
+              ><a
+                href="#ResetPassword-Form"
+                role="button"
+                data-bs-toggle="modal"
+                >忘記密碼?</a
+              ></li
+            >
           </ul>
           <button
             type="submit"
@@ -417,6 +418,64 @@
             href="#"
             class="btn btn-outline-primary w-100"
             >透過Google登入</a
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="modal fade"
+  id="ResetPassword-Form"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="ResetPasswordLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
+    <div class="modal-content">
+      <div class="modal-header align-items-center">
+        <a
+          href="#Login-Form"
+          class="bi bi-arrow-left fs-5 link-dark"
+          role="button"
+          data-bs-toggle="modal"
+        ></a>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body p-6 p-lg-12">
+        <img
+          class="mx-auto"
+          src="/hiCraft/assets/hiCraft_logo-3ac4a473.svg"
+        />
+        <h2 class="fw-bold mt-8">忘記密碼?</h2>
+        <p class="text-black-50">下方輸入您帳戶的電子郵件，您將收到一封用於重置密碼的電子郵件。</p>
+        <form>
+          <div class="mb-6">
+            <label
+              for="ResetPassword-InputEmail"
+              class="form-label"
+              >電子郵件</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="ResetPassword-InputEmail"
+              placeholder="輸入電子郵件"
+              aria-placeholder="輸入電子郵件"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary w-100 mb-16"
+            >發送信件</button
           >
         </form>
       </div>
@@ -778,82 +837,8 @@
         </div>
       </h1>
     </header>
-    <main class="container position-relative"> <div class="row mt-6">
-  <div class="mt-6 col col-sm-6 col-md-4 d-flex flex-column gap-6 align-items-center">
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select1-f60158f9.png"
-        alt="product1"
-      /> </a
-    ><a href="#">
-      <img
-        src="/hiCraft/assets/craft-select4-7bfd310d.png"
-        alt="product4"
-      /> </a
-    ><a href="#">
-      <img
-        src="/hiCraft/assets/craft-select7-5797d2c1.png"
-        alt="product7"
-      />
-    </a>
-
-    <!-- <img src="https://fakeimg.pl/600x800/" />
-    <img src="https://fakeimg.pl/1500x1000/" />
-    <img src="https://fakeimg.pl/1000x1000/" />
-    <img src="https://fakeimg.pl/800x600/" />
-    <img src="https://fakeimg.pl/1280x800/" /> -->
-  </div>
-  <div class="mt-6 col-sm-6 col-md-4 d-flex flex-column gap-6 align-items-center">
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select2-d860d3f7.png"
-        alt="product2"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select5-5d3b52a9.png"
-        alt="product5"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select8-5b56d0df.png"
-        alt="product8"
-      />
-    </a>
-    <!-- <img src="https://fakeimg.pl/1000x1000/" />
-    <img src="https://fakeimg.pl/1500x1000/" />
-    <img src="https://fakeimg.pl/600x800/" />
-    <img src="https://fakeimg.pl/1280x800/" />
-    <img src="https://fakeimg.pl/800x600/" /> -->
-  </div>
-  <div class="mt-6 col-sm-6 col-md-4 d-flex flex-column gap-6 align-items-center">
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select3-8dd5cb59.png"
-        alt="product3"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select6-b3af49bd.png"
-        alt="product6"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="/hiCraft/assets/craft-select9-06038d2a.png"
-        alt="product9"
-      />
-    </a>
-
-    <!-- <img src="https://fakeimg.pl/1500x1000/" />
-    <img src="https://fakeimg.pl/1280x800/" />
-    <img src="https://fakeimg.pl/1000x1000/" />
-    <img src="https://fakeimg.pl/800x600/" />
-    <img src="https://fakeimg.pl/600x800/" /> -->
-  </div>
+    <main class="container position-relative"> <div class="position-relative">
+  <div class="gallery row row-cols-1 row-cols-sm-2 row-cols-md-3 mt-6"> </div>
   <div class="gradient-mask-y">
     
   </div>
@@ -878,10 +863,7 @@
           alt="hiCraft"
           class=""
         />
-        <ul
-          class="col-md-7 d-flex flex-column gap-2 justify-content-center"
-          role="list"
-        >
+        <ul class="list-unstyled mb-0 ms-6 col-md-7 d-flex flex-column gap-2 justify-content-center">
           <li
             ><a
               href="#"
@@ -905,11 +887,7 @@
           >
         </ul>
       </div>
-      <ul
-        role="list"
-        class="col-md-3 d-flex flex-column text-end"
-        style="gap: 26px"
-      >
+      <ul class="list-unstyled mb-0 col-md-3 d-flex flex-column gap-26px text-end">
         <li class="d-flex gap-6 justify-content-end"
           ><a href="#"
             ><img
