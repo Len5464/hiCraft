@@ -97,7 +97,7 @@
 }
 .bg {
   &-white-brick {
-    background-image: url("../images/gridme.webp"), url("../images/stripes-light-1.png");
+    background-image: url("../images/gridme.webp"), url("../images/stripes-light.webp");
   }
   &-home-header {
     background: linear-gradient(180deg, #fff 0%, rgba(148, 126, 118, 0.6) 54.17%), url("../images/bg-home-header.jpg"),
@@ -121,6 +121,7 @@
 
 .gradient-mask {
   &-y {
+    width: 100%;
     position: absolute;
     bottom: 0;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 78.13%);
