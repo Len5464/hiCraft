@@ -12,7 +12,8 @@ if (tagListTips) {
 }
 if (navSearch) {
   const toggleNavSearch = createScrollToggleHandler(navSearch);
-  window.addEventListener("scroll", throttle(toggleNavSearch, 300));
+  window.addEventListener("wheel", throttle(toggleNavSearch, 300));
+  window.addEventListener("touchmove", throttle(toggleNavSearch, 300));
 }
 
 document.querySelectorAll(".gallery").forEach((gallery) => {
@@ -47,7 +48,10 @@ function createResizeHandler(rowElm, items) {
     }
     items.forEach((i) => {
       const shortestColumn = findShortestColumn(rowElm);
-      shortestColumn.innerHTML += `<img class="gallery-img w-100 d-block" src="../assets/images/craft-select/craft-select${i}.png" >`;
+      shortestColumn.innerHTML += `
+      <a href="craft.html">
+        <img class="gallery-img w-100 d-block" src="../assets/images/craft-select/craft-select${i}.png" >
+      </a>`;
       // rowElm.children[
       //   index % rowElm.childElementCount
       // ].innerHTML += `<img class="gallery-img w-100 d-block" src="https://fakeimg.pl/${item}/">`;

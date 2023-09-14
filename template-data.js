@@ -150,8 +150,15 @@ export default {
       description:
         "散發著迷人香氛的蠟燭，讓您瞬間放鬆並營造溫馨氛圍。完美選擇，無論是為了為家裡增添溫馨氛圍，或送給親朋好友，帶來特別的禮物體驗。",
       tags: ["聖誕節", "可愛"],
-      imgURLs: [""],
+      imgURLs: [
+        "https://images.unsplash.com/photo-1610283795609-edb9f19436a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1972&q=80",
+        "https://images.unsplash.com/photo-1612293905607-b003de9e54fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+        "https://images.unsplash.com/photo-1570823635306-250abb06d4b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "https://images.unsplash.com/photo-1613068431228-8cb6a1e92573?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+        "https://images.unsplash.com/photo-1604172083143-081d302edb4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
+      ],
       shopLinks: [""],
+      author: "不會飛的兔子",
     },
     {
       id: 1,
@@ -160,6 +167,7 @@ export default {
       tags: ["窗簾", "針織"],
       imgURLs: [""],
       shopLinks: [""],
+      author: "",
     },
     {
       id: 2,
@@ -168,6 +176,7 @@ export default {
       tags: ["花盆", "乾燥花"],
       imgURLs: [""],
       shopLinks: [""],
+      author: "",
     },
     {
       id: 3,
@@ -176,6 +185,7 @@ export default {
       tags: ["愛心", "裝飾"],
       imgURLs: [""],
       shopLinks: [""],
+      author: "",
     },
     {
       id: 4,
@@ -184,6 +194,7 @@ export default {
       tags: ["乾燥花", "花束"],
       imgURLs: [""],
       shopLinks: [""],
+      author: "",
     },
     {
       id: 5,
@@ -192,6 +203,7 @@ export default {
       tags: ["毛線", "袋子"],
       imgURLs: [""],
       shopLinks: [""],
+      author: "",
     },
     {
       id: 6,
@@ -200,6 +212,7 @@ export default {
       tags: ["陶杯", "陶瓷"],
       imgURLs: [""],
       shopLinks: [""],
+      author: "",
     },
     {
       id: 7,
@@ -208,6 +221,7 @@ export default {
       tags: ["肥皂架", "手工"],
       imgURLs: [""],
       shopLinks: [""],
+      author: "",
     },
     {
       id: 8,
@@ -216,6 +230,7 @@ export default {
       tags: ["陶盤", "檸檬"],
       imgURLs: [""],
       shopLinks: [""],
+      author: "",
     },
     {
       id: 9,
@@ -224,7 +239,9 @@ export default {
       tags: ["手工肥皂", "天然"],
       imgURLs: [""],
       shopLinks: [""],
+      author: "",
     },
   ],
+
   craftSelect: [1, 2, 3, 4, 5, 6, 7, 8, 9],
 };

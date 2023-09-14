@@ -19,6 +19,69 @@
 $utilities: map-merge(
   $utilities,
   (
+    "max-width": (
+      property: max-width,
+      class: mw,
+      values: (
+        100: 100%,
+        "1060px": 1060px,
+        "300px": 300px,
+        "100px": 100px,
+      ),
+    ),
+    "width": (
+      property: width,
+      class: w,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto,
+        "300px": 300px,
+        "100px": 100px,
+        "50px": 50px,
+      ),
+    ),
+
+    "height": (
+      property: height,
+      class: h,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto,
+        "100px": 100px,
+        "300px": 300px,
+      ),
+    ),
+
+    "cursor": (
+      property: cursor,
+      class: cursor,
+      values: auto pointer grab,
+    ),
+    "ratio-self": (
+      property: aspect-ratio,
+      class: ratio-self,
+      values: (
+        "1x1": 1,
+        "3x2": 3 / 2,
+      ),
+    ),
+    "opacity": (
+      property: opacity,
+      state: focus,
+      values: (
+        0: 0,
+        25: 0.25,
+        50: 0.5,
+        75: 0.75,
+        100: 1,
+      ),
+    ),
     "font-size":
       map-merge(
         map-get($utilities, "font-size"),
@@ -74,53 +137,5 @@ $utilities: map-merge(
           responsive: true,
         )
       ),
-    "max-width": (
-      property: max-width,
-      class: mw,
-      values: (
-        100: 100%,
-        "1060px": 1060px,
-        "300px": 300px,
-      ),
-    ),
-    "width": (
-      property: width,
-      class: w,
-      values: (
-        25: 25%,
-        50: 50%,
-        75: 75%,
-        100: 100%,
-        auto: auto,
-        "300px": 300px,
-      ),
-    ),
-
-    "height": (
-      property: height,
-      class: h,
-      values: (
-        25: 25%,
-        50: 50%,
-        75: 75%,
-        100: 100%,
-        auto: auto,
-        "100px": 100px,
-        "300px": 300px,
-      ),
-    ),
-
-    "cursor": (
-      property: cursor,
-      class: cursor,
-      values: auto pointer grab,
-    ),
-    "ratio-self": (
-      property: aspect-ratio,
-      class: ratio-self,
-      values: (
-        "1x1": 1,
-      ),
-    ),
   )
 );
