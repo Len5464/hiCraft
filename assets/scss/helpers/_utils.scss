@@ -80,12 +80,47 @@ $utilities: map-merge(
       values: (
         100: 100%,
         "1060px": 1060px,
+        "300px": 300px,
       ),
     ),
+    "width": (
+      property: width,
+      class: w,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto,
+        "300px": 300px,
+      ),
+    ),
+
+    "height": (
+      property: height,
+      class: h,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto,
+        "100px": 100px,
+        "300px": 300px,
+      ),
+    ),
+
     "cursor": (
       property: cursor,
       class: cursor,
       values: auto pointer grab,
+    ),
+    "ratio-self": (
+      property: aspect-ratio,
+      class: ratio-self,
+      values: (
+        "1x1": 1,
+      ),
     ),
   )
 );
