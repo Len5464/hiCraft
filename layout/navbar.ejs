@@ -90,8 +90,10 @@
             <li class="nav-item">
               <a
                 class="nav-link"
-                href="#"
-                >登出</a
+                href="#SignUp-Form"
+                role="button"
+                data-bs-toggle="modal"
+                >登入 / 登出</a
               >
             </li>
           </ul>
@@ -107,15 +109,27 @@
               width="48px"
               alt="upload" /></a
         ></li>
-        <li class="nav-item bg-hover-primary-light"
-          ><a
-            href="#"
-            class="nav-link"
-            ><img
-              src="../assets/images/icons/icon-bell-circle.svg"
-              width="48px"
-              alt="notifications" /></a
-        ></li>
+        <li class="nav-item bg-hover-primary-light">
+          <div class="dropdown">
+            <a
+              href="#"
+              class="nav-link"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              ><img
+                src="../assets/images/icons/icon-bell-circle.svg"
+                width="48px"
+                alt="notifications"
+              />
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end p-4 h-300px">
+              <li>
+                <h6 class="dropdown-header">目前沒有任何通知！</h6>
+              </li>
+            </ul>
+          </div>
+        </li>
         <li class="nav-item bg-hover-primary-light"
           ><a
             href="#SignUp-Form"
@@ -133,4 +147,5 @@
   </nav>
   <% if( enableCollapseSearch ) { %> <%- include('./layout/collapse-search-bar.ejs'); -%> <% } %>
 </div>
-<%- include('./layout/sign-up'); -%><%- include('./layout/login'); -%><%- include('./layout/reset-password'); -%>
+<%- include('./layout/sign-up'); -%> <%- include('./layout/login'); -%> <%- include('./layout/reset-password'); -%>
+<%-include('./layout/interest-modal'); -%>

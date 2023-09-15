@@ -151,14 +151,14 @@ export default {
         "散發著迷人香氛的蠟燭，讓您瞬間放鬆並營造溫馨氛圍。完美選擇，無論是為了為家裡增添溫馨氛圍，或送給親朋好友，帶來特別的禮物體驗。",
       tags: ["聖誕節", "可愛"],
       imgURLs: [
-        "https://images.unsplash.com/photo-1610283795609-edb9f19436a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1972&q=80",
         "https://images.unsplash.com/photo-1612293905607-b003de9e54fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+        "https://images.unsplash.com/photo-1610283795609-edb9f19436a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1972&q=80",
         "https://images.unsplash.com/photo-1570823635306-250abb06d4b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
         "https://images.unsplash.com/photo-1613068431228-8cb6a1e92573?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
         "https://images.unsplash.com/photo-1604172083143-081d302edb4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
       ],
       shopLinks: [""],
-      author: "不會飛的兔子",
+      author: "飛行兔子",
     },
     {
       id: 1,

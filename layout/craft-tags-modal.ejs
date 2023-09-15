@@ -8,7 +8,7 @@
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl modal-fullscreen-sm-down">
     <div class="modal-content">
       <div class="modal-body p-0">
-        <div class="container p-6 p-lg-12">
+        <div class="container mw-800px py-6 py-lg-12">
           <h2 class="mb-6">類別</h2>
           <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-5 gx-5 gy-6">
             <% category.forEach((item , index)=>{ %>
@@ -29,46 +29,48 @@
             <% }) %>
           </div>
         </div>
-        <div class="container p-6 p-lg-12 bg-secondary-subtle border border-4">
-          <form class="row gx-6 gy-4 align-items-center mb-4">
-            <h5 class="">沒有找到類別？</h5>
-            <div class="col">
-              <input
-                type="text"
-                class="form-control"
-                id="addNewCategory"
-                placeholder="最多10字"
-                aria-placeholder="最多10字"
-                maxlength="10"
-                required
-              />
-            </div>
-            <div class="col-3 col-lg-1">
-              <button
-                class="btn btn-secondary text-nowrap"
-                type="submit"
-                >新增</button
+        <div class="py-6 py-lg-12 bg-secondary-subtle border border-4">
+          <div class="container mw-800px">
+            <form class="row gx-6 gy-4 align-items-center mb-4">
+              <h5 class="">沒有找到類別？</h5>
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="addNewCategory"
+                  placeholder="最多10字"
+                  aria-placeholder="最多10字"
+                  maxlength="10"
+                  required
+                />
+              </div>
+              <div class="col-3 col-lg-1">
+                <button
+                  class="btn btn-secondary text-nowrap"
+                  type="submit"
+                  >新增</button
+                >
+              </div>
+            </form>
+            <ul class="list-inline mb-0 d-flex gap-2 gap-md-4">
+              <li
+                ><a
+                  href="#"
+                  class="btn btn-tag-secondary"
+                  ><i class="bi bi-x"></i>香皂</a
+                ></li
               >
-            </div>
-          </form>
-          <ul class="list-inline mb-0 d-flex gap-2 gap-md-4">
-            <li
-              ><a
-                href="#"
-                class="btn btn-tag-secondary"
-                ><i class="bi bi-x"></i>香皂</a
-              ></li
-            >
-            <li
-              ><a
-                href="#"
-                class="btn btn-tag-secondary"
-                ><i class="bi bi-x"></i>樂器</a
-              ></li
-            >
-          </ul>
+              <li
+                ><a
+                  href="#"
+                  class="btn btn-tag-secondary"
+                  ><i class="bi bi-x"></i>樂器</a
+                ></li
+              >
+            </ul>
+          </div>
         </div>
-        <div class="container p-6 p-lg-12">
+        <div class="container mw-800px py-6 py-lg-12">
           <h2 class="mb-6">材料</h2>
           <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-5 gx-5 gy-6">
             <% materials.forEach((item , index)=>{ %>
@@ -89,46 +91,48 @@
             <% }) %>
           </div>
         </div>
-        <div class="container p-6 p-lg-12 bg-secondary-subtle border border-4">
-          <form class="row gx-6 gy-4 align-items-center mb-4">
-            <h5 class="">沒有找到材料？</h5>
-            <div class="col">
-              <input
-                type="text"
-                class="form-control"
-                id="addNewMatirial"
-                placeholder="最多10字"
-                aria-placeholder="最多10字"
-                maxlength="10"
-                required
-              />
-            </div>
-            <div class="col-3 col-lg-1">
-              <button
-                class="btn btn-secondary text-nowrap"
-                type="submit"
-                >新增</button
+        <div class="py-6 py-lg-12 bg-secondary-subtle border border-4">
+          <div class="container mw-800px">
+            <form class="row gx-6 gy-4 align-items-center mb-4">
+              <h5 class="">沒有找到材料？</h5>
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="addNewMatirial"
+                  placeholder="最多10字"
+                  aria-placeholder="最多10字"
+                  maxlength="10"
+                  required
+                />
+              </div>
+              <div class="col-3 col-lg-1">
+                <button
+                  class="btn btn-secondary text-nowrap"
+                  type="submit"
+                  >新增</button
+                >
+              </div>
+            </form>
+            <ul class="list-inline mb-0 d-flex gap-2 gap-md-4">
+              <li
+                ><a
+                  href="#"
+                  class="btn btn-tag-secondary"
+                  ><i class="bi bi-x"></i>有機物質</a
+                ></li
               >
-            </div>
-          </form>
-          <ul class="list-inline mb-0 d-flex gap-2 gap-md-4">
-            <li
-              ><a
-                href="#"
-                class="btn btn-tag-secondary"
-                ><i class="bi bi-x"></i>有機物質</a
-              ></li
-            >
-            <li
-              ><a
-                href="#"
-                class="btn btn-tag-secondary"
-                ><i class="bi bi-x"></i>鑽石</a
-              ></li
-            >
-          </ul>
+              <li
+                ><a
+                  href="#"
+                  class="btn btn-tag-secondary"
+                  ><i class="bi bi-x"></i>鑽石</a
+                ></li
+              >
+            </ul>
+          </div>
         </div>
-        <div class="container p-6 p-lg-12">
+        <div class="container mw-800px py-6 py-lg-12">
           <form class="row gx-6 gy-4 align-items-center my-4">
             <h4 class="">其他標籤:</h4>
             <div class="col">

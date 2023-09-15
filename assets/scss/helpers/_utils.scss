@@ -25,6 +25,7 @@ $utilities: map-merge(
       values: (
         100: 100%,
         "1060px": 1060px,
+        "800px": 800px,
         "300px": 300px,
         "100px": 100px,
       ),
@@ -68,7 +69,7 @@ $utilities: map-merge(
       class: ratio-self,
       values: (
         "1x1": 1,
-        "3x2": 3 / 2,
+        "3x2": calc(3 / 2),
       ),
     ),
     "opacity": (
