@@ -1,5 +1,6 @@
-<div
-  class="modal fade"
+<form
+  class="modal fade needs-validation"
+  action=""
   id="SignUp-Form"
   data-bs-backdrop="static"
   data-bs-keyboard="false"
@@ -37,82 +38,83 @@
             ></li
           >
         </ul>
-        <form action="">
-          <div class="mb-6">
-            <label
-              for="SignUp-UserName"
-              class="form-label"
-              >暱稱</label
-            >
-            <input
-              type="email"
-              class="form-control"
-              id="SignUp-UserName"
-              placeholder="輸入暱稱"
-              aria-placeholder="輸入暱稱"
-            />
-          </div>
-          <div class="mb-6">
-            <label
-              for="SignUp-InputEmail"
-              class="form-label"
-              >電子郵件</label
-            >
-            <input
-              type="email"
-              class="form-control"
-              id="SignUp-InputEmail"
-              placeholder="輸入電子郵件"
-              aria-placeholder="輸入電子郵件"
-            />
-          </div>
-          <div class="mb-6">
-            <label
-              for="SignUp-InputPassword"
-              class="form-label"
-              >密碼</label
-            >
-            <input
-              type="password"
-              class="form-control"
-              id="SignUp-InputPassword"
-              placeholder="密碼"
-              aria-placeholder="輸入密碼"
-              required
-              minlength="6"
-            />
-          </div>
-          <div class="mb-6">
-            <label
-              for="SignUp-ConfirmPassword"
-              class="form-label"
-              >確認密碼</label
-            >
-            <input
-              type="password"
-              class="form-control"
-              id="SignUp-ConfirmPassword"
-              placeholder="確認密碼"
-              aria-placeholder="輸入密碼"
-              required
-              minlength="6"
-            />
-          </div>
-          <button
-            type="submit"
-            class="btn btn-primary w-100 mt-8"
-            data-bs-toggle="modal"
-            data-bs-target="#Login-Form"
-            >建立帳號</button
+
+        <div class="mb-6">
+          <label
+            for="SignUp-UserName"
+            class="form-label"
+            >暱稱</label
           >
-          <p class="text-center my-3 my-lg-6">或</p>
-          <a
-            href="#"
-            class="btn btn-outline-primary w-100"
-            >透過Google登入</a
+          <input
+            type="text"
+            class="form-control"
+            id="SignUp-UserName"
+            placeholder="輸入暱稱"
+            aria-placeholder="輸入暱稱"
+            minlength="3"
+            maxlength="20"
+            required
+          />
+        </div>
+        <div class="mb-6">
+          <label
+            for="SignUp-InputEmail"
+            class="form-label"
+            >電子郵件</label
           >
-        </form>
+          <input
+            type="email"
+            class="form-control"
+            id="SignUp-InputEmail"
+            placeholder="輸入電子郵件"
+            aria-placeholder="輸入電子郵件"
+            required
+          />
+        </div>
+        <div class="mb-6">
+          <label
+            for="SignUp-InputPassword"
+            class="form-label"
+            >密碼</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="SignUp-InputPassword"
+            placeholder="密碼"
+            aria-placeholder="輸入密碼"
+            required
+            minlength="6"
+          />
+        </div>
+        <div class="mb-6">
+          <label
+            for="SignUp-ConfirmPassword"
+            class="form-label"
+            >確認密碼</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="SignUp-ConfirmPassword"
+            placeholder="確認密碼"
+            aria-placeholder="輸入密碼"
+            required
+            minlength="6"
+          />
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary w-100 mt-8"
+          >建立帳號</button
+        >
+        <p class="text-center my-3 my-lg-6">或</p>
+        <a
+          href="#"
+          class="btn btn-outline-primary w-100"
+          >透過Google登入</a
+        >
       </div>
     </div>
   </div>
-</div>
+</form>

@@ -51,7 +51,9 @@
                 <a
                   href="#"
                   class="bi bi-hand-thumbs-up"
-                ></a>
+                >
+                <small><%= crafts[0].like %> </small>
+              </a>
               </li>
             </ul>
           </h2>
@@ -143,10 +145,17 @@
                   Zawa 
                   <small class="d-block text-secondary">1天前</small>
                 </h5>
-                <a class="bi bi-hand-thumbs-up-fill fs-4 " href="#"></a>
-                <a class="link-primary text-decoration-underline " href="#">回覆</a>
+                <a class="bi bi-hand-thumbs-up-fill fs-4 " href="#"><small class="ms-2" >2</small></a>
+                <a class="link-primary text-decoration-underline mt-auto mb-2" href="#reply1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseReply1">回覆</a>
               </div>
               <p>讚喔!</p>
+              <form class="collapse ms-8 border-start border-3 p-5" id="reply1" action="">
+                <textarea class="form-control mb-4" name="message" id="craftMessageInput" cols="30" rows="10" placeholder="最多500字" maxlength="500" required aria-required="true" ></textarea>
+                <div class="d-flex justify-content-end gap-4">
+                  <button class="btn btn-secondary" type="button"  data-bs-toggle="collapse" data-bs-target="#reply1" aria-expanded="false" aria-controls="collapseReply1">取消</button>
+                  <button class="btn btn-primary" type="submit">送出</button>
+                </div>
+              </form>
             </li>
             <hr>
             <li>
@@ -162,14 +171,14 @@
                   MOMO 
                   <small class="d-block text-secondary">1個月前</small>
                 </h5>
-                <a class="bi bi-hand-thumbs-up-fill fs-4 " href="#"></a>
-                <a class="link-primary text-decoration-underline " href="#">回覆</a>
+                <a class="bi bi-hand-thumbs-up-fill fs-4" href="#"><small class="ms-2">1</small></a>
+                <a class="link-primary text-decoration-underline mt-auto mb-2" href="#reply2" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseReply2">回覆</a>
               </div>
               <p>好好看!</p>
-              <form class="ms-8 border-start border-3 p-5" action="">
+              <form class="collapse show ms-8 border-start border-3 p-5" id="reply2" action="">
                 <textarea class="form-control mb-4" name="message" id="craftMessageInput" cols="30" rows="10" placeholder="最多500字" maxlength="500" required aria-required="true" ></textarea>
                 <div class="d-flex justify-content-end gap-4">
-                  <button class="btn btn-secondary" type="button">取消</button>
+                  <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#reply2" aria-expanded="false" aria-controls="collapseReply2">取消</button>
                   <button class="btn btn-primary" type="submit">送出</button>
                 </div>
               </form>

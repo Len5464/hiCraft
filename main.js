@@ -4,9 +4,30 @@ import templateData from "./template-data";
 const navSearch = document.querySelector("#navSearch");
 const tagListTips = document.querySelector("#tagListTips");
 const galleries = document.querySelectorAll(".gallery");
+const signUpForm = document.querySelector("#SignUp-Form");
+const loginForm = document.querySelector("#Login-Form");
+
+if (signUpForm) {
+  signUpForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const thisModal = bootstrap.Modal.getOrCreateInstance(event.target);
+    const loginModal = bootstrap.Modal.getOrCreateInstance(document.querySelector("#Login-Form"));
+    loginModal.show();
+    thisModal.hide();
+  });
+}
+if (loginForm) {
+  loginForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const thisModal = bootstrap.Modal.getOrCreateInstance(event.target);
+    const interestModal = bootstrap.Modal.getOrCreateInstance(document.querySelector("#interestModal"));
+    interestModal.show();
+    thisModal.hide();
+  });
+}
 
 if (tagListTips) {
-  const popover = new bootstrap.Popover(tagListTips, {
+  const popover = bootstrap.Popover.getOrCreateInstance(tagListTips, {
     trigger: "focus",
   });
 }
@@ -19,12 +40,13 @@ if (navSearch) {
 galleries.forEach((gallery) => {
   const updateGallery = createResizeGalleryHandler(gallery);
   window.addEventListener("resize", debounce(updateGallery));
-  window.addEventListener("load", updateGallery);
+  // window.addEventListener("DOMContentLoaded", updateGallery);
 });
 
-document.querySelectorAll('[data-bs-toggle="tab"]').forEach((tab, i) => {
+document.querySelectorAll("#nav-hot-tab , #nav-newcomer-tab , #nav-topic-tab").forEach((tab, i) => {
   const updateGallery = createResizeGalleryHandler(galleries[i]);
   tab.addEventListener("shown.bs.tab", updateGallery);
+  window.addEventListener("load", updateGallery);
 });
 function createScrollToggleHandler(element) {
   let prevScrollPos = window.pageYOffset;
