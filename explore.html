@@ -11,7 +11,7 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>hiCraft | 搜尋好設計、好點子</title>
-    <script type="module" crossorigin src="/hiCraft/assets/main-e2e20139.js"></script>
+    <script type="module" crossorigin src="/hiCraft/assets/main-a58d6521.js"></script>
     <link rel="stylesheet" href="/hiCraft/assets/main-b4744ed3.css">
   </head>
   <body>
@@ -226,8 +226,9 @@
 </nav>
  
 </div>
-<div
-  class="modal fade"
+<form
+  class="modal fade needs-validation"
+  action=""
   id="SignUp-Form"
   data-bs-backdrop="static"
   data-bs-keyboard="false"
@@ -265,92 +266,89 @@
             ></li
           >
         </ul>
-        <form
-          class="needs-validation"
-          action=""
+
+        <div class="mb-6">
+          <label
+            for="SignUp-UserName"
+            class="form-label"
+            >暱稱</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="SignUp-UserName"
+            placeholder="輸入暱稱"
+            aria-placeholder="輸入暱稱"
+            minlength="3"
+            maxlength="20"
+            required
+          />
+        </div>
+        <div class="mb-6">
+          <label
+            for="SignUp-InputEmail"
+            class="form-label"
+            >電子郵件</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="SignUp-InputEmail"
+            placeholder="輸入電子郵件"
+            aria-placeholder="輸入電子郵件"
+            required
+          />
+        </div>
+        <div class="mb-6">
+          <label
+            for="SignUp-InputPassword"
+            class="form-label"
+            >密碼</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="SignUp-InputPassword"
+            placeholder="密碼"
+            aria-placeholder="輸入密碼"
+            required
+            minlength="6"
+          />
+        </div>
+        <div class="mb-6">
+          <label
+            for="SignUp-ConfirmPassword"
+            class="form-label"
+            >確認密碼</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="SignUp-ConfirmPassword"
+            placeholder="確認密碼"
+            aria-placeholder="輸入密碼"
+            required
+            minlength="6"
+          />
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary w-100 mt-8"
+          >建立帳號</button
         >
-          <div class="mb-6">
-            <label
-              for="SignUp-UserName"
-              class="form-label"
-              >暱稱</label
-            >
-            <input
-              type="email"
-              class="form-control"
-              id="SignUp-UserName"
-              placeholder="輸入暱稱"
-              aria-placeholder="輸入暱稱"
-              required
-            />
-          </div>
-          <div class="mb-6">
-            <label
-              for="SignUp-InputEmail"
-              class="form-label"
-              >電子郵件</label
-            >
-            <input
-              type="email"
-              class="form-control"
-              id="SignUp-InputEmail"
-              placeholder="輸入電子郵件"
-              aria-placeholder="輸入電子郵件"
-              required
-            />
-          </div>
-          <div class="mb-6">
-            <label
-              for="SignUp-InputPassword"
-              class="form-label"
-              >密碼</label
-            >
-            <input
-              type="password"
-              class="form-control"
-              id="SignUp-InputPassword"
-              placeholder="密碼"
-              aria-placeholder="輸入密碼"
-              required
-              minlength="6"
-            />
-          </div>
-          <div class="mb-6">
-            <label
-              for="SignUp-ConfirmPassword"
-              class="form-label"
-              >確認密碼</label
-            >
-            <input
-              type="password"
-              class="form-control"
-              id="SignUp-ConfirmPassword"
-              placeholder="確認密碼"
-              aria-placeholder="輸入密碼"
-              required
-              minlength="6"
-            />
-          </div>
-          <button
-            type="submit"
-            class="btn btn-primary w-100 mt-8"
-            data-bs-toggle="modal"
-            data-bs-target="#Login-Form"
-            >建立帳號</button
-          >
-          <p class="text-center my-3 my-lg-6">或</p>
-          <a
-            href="#"
-            class="btn btn-outline-primary w-100"
-            >透過Google登入</a
-          >
-        </form>
+        <p class="text-center my-3 my-lg-6">或</p>
+        <a
+          href="#"
+          class="btn btn-outline-primary w-100"
+          >透過Google登入</a
+        >
       </div>
     </div>
   </div>
-</div>
- <div
-  class="modal fade"
+</form>
+ <form
+  class="modal fade needs-validation"
+  action=""
   id="Login-Form"
   data-bs-backdrop="static"
   data-bs-keyboard="false"
@@ -374,81 +372,74 @@
           src="/hiCraft/assets/hiCraft_logo-3ac4a473.svg"
         />
         <h2 class="fw-bold text-center mb-12">歡迎來到XX手工</h2>
-        <form
-          class="needs-validation"
-          action=""
+        <div class="mb-6">
+          <label
+            for="Login-InputEmail"
+            class="form-label"
+            >電子郵件</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="Login-InputEmail"
+            placeholder="輸入電子郵件"
+            aria-placeholder="輸入電子郵件"
+            required
+          />
+        </div>
+        <div class="mb-6">
+          <label
+            for="Login-InputPassword"
+            class="form-label"
+            >密碼</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="Login-InputPassword"
+            placeholder="密碼"
+            aria-placeholder="輸入密碼"
+            required
+            minlength="6"
+          />
+        </div>
+        <ul class="list-unstyled mb-11 form-check d-flex justify-content-between">
+          <li>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="Login-RememberAccount"
+            />
+            <label
+              class="form-check-label"
+              for="Login-RememberAccount"
+              >記住帳號</label
+            >
+          </li>
+          <li
+            ><a
+              href="#ResetPassword-Form"
+              role="button"
+              data-bs-toggle="modal"
+              >忘記密碼?</a
+            ></li
+          >
+        </ul>
+        <button
+          type="submit"
+          class="btn btn-primary w-100"
+          >登入</button
         >
-          <div class="mb-6">
-            <label
-              for="Login-InputEmail"
-              class="form-label"
-              >電子郵件</label
-            >
-            <input
-              type="email"
-              class="form-control"
-              id="Login-InputEmail"
-              placeholder="輸入電子郵件"
-              aria-placeholder="輸入電子郵件"
-              required
-            />
-          </div>
-          <div class="mb-6">
-            <label
-              for="Login-InputPassword"
-              class="form-label"
-              >密碼</label
-            >
-            <input
-              type="password"
-              class="form-control"
-              id="Login-InputPassword"
-              placeholder="密碼"
-              aria-placeholder="輸入密碼"
-              required
-              minlength="6"
-            />
-          </div>
-          <ul class="list-unstyled mb-11 form-check d-flex justify-content-between">
-            <li>
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="Login-RememberAccount"
-              />
-              <label
-                class="form-check-label"
-                for="Login-RememberAccount"
-                >記住帳號</label
-              >
-            </li>
-            <li
-              ><a
-                href="#ResetPassword-Form"
-                role="button"
-                data-bs-toggle="modal"
-                >忘記密碼?</a
-              ></li
-            >
-          </ul>
-          <button
-            type="button"
-            class="btn btn-primary w-100"
-            data-bs-toggle="modal"
-            data-bs-target="#interestModal"
-            >登入</button
-          >
-          <p class="text-center my-3 my-lg-6">或</p>
-          <a
-            href="#"
-            class="btn btn-outline-primary w-100"
-            >透過Google登入</a
-          >
-        </form>
+        <p class="text-center my-3 my-lg-6">或</p>
+        <a
+          href="#"
+          class="btn btn-outline-primary w-100"
+          >透過Google登入</a
+        >
       </div>
     </div>
   </div>
-</div>
+</form>
  <div
   class="modal fade"
   id="ResetPassword-Form"
@@ -494,6 +485,7 @@
               id="ResetPassword-InputEmail"
               placeholder="輸入電子郵件"
               aria-placeholder="輸入電子郵件"
+              required
             />
           </div>
 
@@ -1211,7 +1203,7 @@
       >
         <header class="container pt-12">
           <h1 class="border-bottom border-3 d-flex justify-content-between align-items-center">
-            主題作品
+            歡慶節日
             <div class="dropdown">
               <a
                 href="#"
