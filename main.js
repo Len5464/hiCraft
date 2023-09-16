@@ -4,7 +4,6 @@ import templateData from "./template-data";
 const navSearch = document.querySelector("#navSearch");
 const tagListTips = document.querySelector("#tagListTips");
 const galleries = document.querySelectorAll(".gallery");
-const { craftSelect } = templateData;
 
 if (tagListTips) {
   const popover = new bootstrap.Popover(tagListTips, {
@@ -18,13 +17,13 @@ if (navSearch) {
 }
 
 galleries.forEach((gallery) => {
-  const updateGallery = createResizeGalleryHandler(gallery, craftSelect);
+  const updateGallery = createResizeGalleryHandler(gallery);
   window.addEventListener("resize", debounce(updateGallery));
   window.addEventListener("load", updateGallery);
 });
 
 document.querySelectorAll('[data-bs-toggle="tab"]').forEach((tab, i) => {
-  const updateGallery = createResizeGalleryHandler(galleries[i], craftSelect);
+  const updateGallery = createResizeGalleryHandler(galleries[i]);
   tab.addEventListener("shown.bs.tab", updateGallery);
 });
 function createScrollToggleHandler(element) {
@@ -37,18 +36,20 @@ function createScrollToggleHandler(element) {
     prevScrollPos = currentScrollPos;
   };
 }
-function createResizeGalleryHandler(rowElm, items) {
+function createResizeGalleryHandler(rowElm) {
   const colHTML = '<div class="col d-flex flex-column" ></div>';
   return () => {
-    if (window.innerWidth >= 768 && window.innerWidth < 3840) rowElm.innerHTML = colHTML.repeat(4);
-    else if (window.innerWidth >= 576 && window.innerWidth < 768) rowElm.innerHTML = colHTML.repeat(3);
-    else if (window.innerWidth >= 0 && window.innerWidth < 576) rowElm.innerHTML = colHTML.repeat(2);
+    if (window.innerWidth >= 992 && window.innerWidth < 3840) rowElm.innerHTML = colHTML.repeat(3);
+    else if (window.innerWidth >= 576 && window.innerWidth < 992) rowElm.innerHTML = colHTML.repeat(2);
+    else if (window.innerWidth >= 0 && window.innerWidth < 576) rowElm.innerHTML = colHTML.repeat(1);
     else return;
-    items.forEach((i) => {
+    const conditions = rowElm.dataset.filter.split(" ");
+    const contentArr = templateData.crafts.filter((item) => item.tags.some((tag) => conditions.includes(tag)));
+    contentArr.forEach((content) => {
       const shortestColumn = findShortestColumn(rowElm);
       shortestColumn.innerHTML += `
       <a href="craft.html">
-        <img class="gallery-img w-100 d-block py-3" src="../assets/images/select/craft-select${i}.png" >
+        <img class="gallery-img w-100 d-block py-3" src="${content.imgURLs[0]}" >
       </a>`;
     });
     console.log("refresh gallery!");

@@ -105,7 +105,9 @@
             </div>
           </h1>
         </header>
-        <main class="container position-relative"> <%- include('./layout/gallery.ejs',{route:'/explore'}); -%> </main>
+        <main class="container position-relative">
+          <%-include('./layout/gallery.ejs',{filter:'熱門' ,route:'/explore'}); -%>
+        </main>
         <nav class="container py-4 py-lg-8">
           <div class="row mt-16 align-items-center">
             <a
@@ -161,7 +163,9 @@
             </div>
           </h1>
         </header>
-        <main class="container position-relative"> <%- include('./layout/gallery.ejs',{route:'/explore'}); -%> </main>
+        <main class="container position-relative">
+          <%-include('./layout/gallery.ejs',{filter:'新人作品' ,route:'/explore'}); -%>
+        </main>
         <nav class="container py-4 py-lg-8">
           <div class="row mt-16 align-items-center">
             <a
@@ -218,7 +222,7 @@
           </h1>
         </header>
         <main class="container position-relative">
-          <%- include('./layout/gallery.ejs',{enableCollapseSearch: true , route:'/explore'}); -%>
+          <%-include('./layout/gallery.ejs',{filter: '中秋節 父親節 聖誕節' ,route:'/explore'}); -%>
         </main>
         <nav class="container py-4 py-lg-8">
           <div class="row mt-16 align-items-center">

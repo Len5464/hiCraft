@@ -1,5 +1,69 @@
 <div class="position-relative">
-  <div class="gallery row row-cols-2 row-cols-sm-3 row-cols-md-4 mt-6"> </div>
+  <div
+    class="gallery row row-cols-1 row-cols-sm-2 row-cols-lg-3 mt-6"
+    data-filter="<%= filter %>"
+  >
+    <div class="col d-flex flex-column">
+      <a href="craft.html">
+        <img
+          class="gallery-img w-100 d-block py-3"
+          src="<%= crafts[0].imgURLs[0] %>"
+        />
+      </a>
+      <a href="craft.html">
+        <img
+          class="gallery-img w-100 d-block py-3"
+          src="<%= crafts[3].imgURLs[0] %>"
+        />
+      </a>
+      <a href="craft.html">
+        <img
+          class="gallery-img w-100 d-block py-3"
+          src="<%= crafts[6].imgURLs[0] %>"
+        />
+      </a>
+    </div>
+    <div class="col d-flex flex-column">
+      <a href="craft.html">
+        <img
+          class="gallery-img w-100 d-block py-3"
+          src="<%= crafts[1].imgURLs[0] %>"
+        />
+      </a>
+      <a href="craft.html">
+        <img
+          class="gallery-img w-100 d-block py-3"
+          src="<%= crafts[4].imgURLs[0] %>"
+        />
+      </a>
+      <a href="craft.html">
+        <img
+          class="gallery-img w-100 d-block py-3"
+          src="<%= crafts[7].imgURLs[0] %>"
+        />
+      </a>
+    </div>
+    <div class="col d-flex flex-column">
+      <a href="craft.html">
+        <img
+          class="gallery-img w-100 d-block py-3"
+          src="<%= crafts[2].imgURLs[0] %>"
+        />
+      </a>
+      <a href="craft.html">
+        <img
+          class="gallery-img w-100 d-block py-3"
+          src="<%= crafts[5].imgURLs[0] %>"
+        />
+      </a>
+      <a href="craft.html">
+        <img
+          class="gallery-img w-100 d-block py-3"
+          src="<%= crafts[8].imgURLs[0] %>"
+        />
+      </a>
+    </div>
+  </div>
   <div class="gradient-mask-y">
     <% if (route === '/') { %>
     <button
