@@ -11,8 +11,8 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>hiCraft | 搜尋好設計、好點子</title>
-    <script type="module" crossorigin src="/hiCraft/assets/main-a58d6521.js"></script>
-    <link rel="stylesheet" href="/hiCraft/assets/main-b4744ed3.css">
+    <script type="module" crossorigin src="/hiCraft/assets/main-ecea03fc.js"></script>
+    <link rel="stylesheet" href="/hiCraft/assets/main-894bc49f.css">
   </head>
   <body>
     <div class="sticky-top">
@@ -140,9 +140,42 @@
                 alt="notifications"
               />
             </a>
-            <ul class="dropdown-menu dropdown-menu-end p-4 h-300px">
+            <ul class="dropdown-menu dropdown-menu-end h-300px w-300px gap-4">
               <li>
-                <h6 class="dropdown-header">目前沒有任何通知！</h6>
+                <h6 class="dropdown-header text-center">您有2則新通知！</h6>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a
+                  class="dropdown-item d-flex gap-4 align-items-center"
+                  href="craft.html"
+                >
+                  <img
+                    class="w-25px h-25px rounded-circle object-fit-cover ratio-self-1x1"
+                    src="https://images.unsplash.com/photo-1638803040283-7a5ffd48dad5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+                    alt="avatar"
+                  />
+                  <p class="mb-0 text-truncate d-flex flex-column">
+                    MOMO喜歡你的 "香氛蠟燭"
+                    <small class="text-secondary">1個月前</small>
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item d-flex gap-4 align-items-center"
+                  href="craft.html"
+                >
+                  <img
+                    class="w-25px h-25px rounded-circle object-fit-cover ratio-self-1x1"
+                    src="https://images.unsplash.com/photo-1636622433525-127afdf3662d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80"
+                    alt="avatar"
+                  />
+                  <p class="mb-0 text-truncate d-flex flex-column">
+                    Zawa喜歡你的 "香氛蠟燭"
+                    <small class="text-secondary">1天前</small>
+                  </p>
+                </a>
               </li>
             </ul>
           </div>
@@ -410,7 +443,10 @@
         />
         <h2 class="fw-bold mt-8">忘記密碼?</h2>
         <p class="text-black-50">下方輸入您帳戶的電子郵件，您將收到一封用於重置密碼的電子郵件。</p>
-        <form>
+        <form
+          action=""
+          onsubmit="window.alert('我們已經將重設密碼連結傳送到您的信箱')"
+        >
           <div class="mb-6">
             <label
               for="ResetPassword-InputEmail"
