@@ -38,55 +38,57 @@ if (navSearch) {
 }
 
 galleries.forEach((gallery) => {
-  const updateGallery = createResizeGalleryHandler(gallery);
-  window.addEventListener("resize", debounce(updateGallery));
-  // window.addEventListener("DOMContentLoaded", updateGallery);
+  const loadGallery = createGalleryLoadHandler(gallery);
+  window.addEventListener("resize", debounce(loadGallery));
+  loadGallery();
 });
 
 document.querySelectorAll("#nav-hot-tab , #nav-newcomer-tab , #nav-topic-tab").forEach((tab, i) => {
-  const updateGallery = createResizeGalleryHandler(galleries[i]);
-  tab.addEventListener("shown.bs.tab", updateGallery);
-  window.addEventListener("load", updateGallery);
+  const loadGallery = createGalleryLoadHandler(galleries[i]);
+  tab.addEventListener("shown.bs.tab", loadGallery);
 });
-function createScrollToggleHandler(element) {
+
+function fetchImgURLs(galleryElm) {
+  const conditions = galleryElm.dataset.filter.split(" ");
+  const items = templateData.crafts.filter((item) => item.tags.some((tag) => conditions.includes(tag)));
+  return items.map((item) => item.imgURLs[0]);
+}
+
+function createScrollToggleHandler(toggleElm) {
   let prevScrollPos = window.pageYOffset;
-  const bsCollapse = new bootstrap.Collapse(element);
+  const bsCollapse = new bootstrap.Collapse(toggleElm);
   return () => {
-    if (element.classList.contains("collapsing")) return;
+    if (toggleElm.classList.contains("collapsing")) return;
     const currentScrollPos = window.pageYOffset;
     currentScrollPos > prevScrollPos ? bsCollapse.hide() : bsCollapse.show();
     prevScrollPos = currentScrollPos;
   };
 }
-function createResizeGalleryHandler(rowElm) {
-  const colHTML = '<div class="col d-flex flex-column" ></div>';
+
+function createGalleryLoadHandler(galleryElm) {
+  const colHTML = '<div class="col d-flex flex-column gap-6" ></div>';
+  const imgURLs = fetchImgURLs(galleryElm);
   return () => {
-    if (window.innerWidth >= 992 && window.innerWidth < 3840) rowElm.innerHTML = colHTML.repeat(3);
-    else if (window.innerWidth >= 576 && window.innerWidth < 992) rowElm.innerHTML = colHTML.repeat(2);
-    else if (window.innerWidth >= 0 && window.innerWidth < 576) rowElm.innerHTML = colHTML.repeat(1);
+    if (window.innerWidth >= 992 && window.innerWidth < 3840) galleryElm.innerHTML = colHTML.repeat(3);
+    else if (window.innerWidth >= 576 && window.innerWidth < 992) galleryElm.innerHTML = colHTML.repeat(2);
+    else if (window.innerWidth >= 0 && window.innerWidth < 576) galleryElm.innerHTML = colHTML.repeat(1);
     else return;
-    const conditions = rowElm.dataset.filter.split(" ");
-    const contentArr = templateData.crafts.filter((item) => item.tags.some((tag) => conditions.includes(tag)));
-    contentArr.forEach((content) => {
-      const shortestColumn = findShortestColumn(rowElm);
-      shortestColumn.innerHTML += `
-      <a href="craft.html">
-        <img class="gallery-img w-100 d-block py-3" src="${content.imgURLs[0]}" >
-      </a>`;
+    imgURLs.forEach((url) => {
+      const newImg = document.createElement("img");
+      newImg.src = url;
+      newImg.classList = "gallery-img w-100 d-block";
+      newImg.onload = (event) => {
+        const colsHightArr = Array.from(galleryElm.children, (col) =>
+          col.lastChild ? col.lastChild.lastChild.offsetTop + col.lastChild.lastChild.height : 0
+        );
+        const shortestIndex = colsHightArr.indexOf(Math.min(...colsHightArr));
+        const newItemHTML = `<a href='craft.html'>${event.target.outerHTML}</a>`;
+        galleryElm.children[shortestIndex].innerHTML += newItemHTML;
+      };
     });
-    console.log("refresh gallery!");
   };
 }
 
-function findShortestColumn(rowElm) {
-  const columnHeights = Array.from(rowElm.children, (column) => {
-    const galleryImgs = [...column.querySelectorAll(".gallery-img")];
-    return galleryImgs.reduce((acc, img) => acc + (img.offsetHeight || 0), 0);
-  });
-  const shortestColHeight = Math.min(...columnHeights);
-  const shortestColIndex = columnHeights.indexOf(shortestColHeight);
-  return rowElm.children[shortestColIndex];
-}
 function throttle(fn, delay = 500) {
   let timer = null;
   return (...args) => {

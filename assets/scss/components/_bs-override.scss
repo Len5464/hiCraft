@@ -44,3 +44,15 @@
     --bs-btn-active-color: #{$secondary-light};
   }
 }
+.accordion {
+  &-qa {
+    .accordion-body::before {
+      content: "A:";
+      margin-right: 1rem;
+    }
+    .accordion-button::before {
+      content: "Q:";
+      margin-right: 1rem;
+    }
+  }
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>hiCraft | 搜尋好設計、好點子</title>
+  </head>
+  <body>
+    <%- include('./layout/navbar'); -%>
+    <header class="container pt-12 d-flex justify-content-sm-center align-items-center gap-4">
+      <img
+        class="pb-3"
+        src="/assets/images/hiCraft_logo-light.svg"
+        alt="logo"
+      />
+      <h1 class="border-bottom border-3"> 關於我們 </h1>
+    </header>
+    <main class="container py-12">
+      <h2 class="mb-6 ms-5">常見問答</h2>
+      <div
+        class="accordion accordion-qa"
+        id="accordionQA"
+      >
+        <div class="accordion-item">
+          <h2
+            class="accordion-header"
+            id="headingOne"
+          >
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              我如何註冊並登錄網站？
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionQA"
+          >
+            <div class="accordion-body">
+              <ul class="">
+                <li>按照提示填寫您的個人信息，包括姓名、電子郵件地址和密碼。</li>
+                <li>按照提示填寫您的個人信息，包括姓名、電子郵件地址和密碼。</li>
+                <li>點擊“提交”按鈕完成註冊。</li>
+                <br />註冊完成後，您可以使用剛剛註冊的電子郵件地址和密碼登錄我們的網站。
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2
+            class="accordion-header"
+            id="headingTwo"
+          >
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              我如何與創作者互動？
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionQA"
+          >
+            <div class="accordion-body"> 登入會員後，可以在作品頁中直接留言給創作者。 </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2
+            class="accordion-header"
+            id="headingThree"
+          >
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              我要如何分享作品？
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#accordionQA"
+          >
+            <div class="accordion-body"> 請先註冊成為網站會員之後，即可在頁面上方上傳自己的作品。 </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2
+            class="accordion-header"
+            id="headingFour"
+          >
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour"
+            >
+              我要如何購買喜歡的作品?
+            </button>
+          </h2>
+          <div
+            id="collapseFour"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFour"
+            data-bs-parent="#accordionQA"
+          >
+            <div class="accordion-body">
+              點作品描述內的藍色連結就可以了，如果作品描述內沒有連結，可能是作者沒有放上去，可以在留言處詢問作者購買連結等
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2
+            class="accordion-header"
+            id="headingFive"
+          >
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseFive"
+            >
+              我忘記了登入密碼，要如何處理？
+            </button>
+          </h2>
+          <div
+            id="collapseFive"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFive"
+            data-bs-parent="#accordionQA"
+          >
+            <div class="accordion-body">
+              如果您忘記了密碼，請在登入頁點擊"忘記密碼"，我們將會發送重設密碼的連結到您註冊的郵箱，請按照郵件提示進行操作即可重設密碼。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2
+            class="accordion-header"
+            id="headingSix"
+          >
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSix"
+              aria-expanded="false"
+              aria-controls="collapseSix"
+            >
+              為什麼要選擇興趣？
+            </button>
+          </h2>
+          <div
+            id="collapseSix"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingSix"
+            data-bs-parent="#accordionQA"
+          >
+            <div class="accordion-body">
+              選擇興趣可以幫助我們更好地為您推薦您感興趣的手工藝品作品。您可以在個人設置勾選您喜愛的手工藝品類別，我們會根據您的選擇來為您呈現相關內容。
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-20" />
+      <section class="container">
+        <h2 class="mb-6">網站理念</h2>
+        <div class="row row-cols-1 row-cols-md-3 gx-lg-12">
+          <div class="col d-flex flex-column gap-6">
+            <img
+              class="rounded w-100 object-fit-cover ratio-self-1x1"
+              src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="理念1"
+            />
+            <p class="mb-20 fs-xl-6">連結全球優秀手工藝藝術家，分享創意，找到靈感。</p>
+          </div>
+          <div class="col d-flex flex-column gap-6">
+            <img
+              class="rounded w-100 object-fit-cover ratio-self-1x1"
+              src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="理念2"
+            />
+            <p class="mb-20 fs-xl-6">展示多樣手工藝品，提高作品曝光度，獲得更多關注。</p>
+          </div>
+          <div class="col d-flex flex-column gap-6">
+            <img
+              class="rounded w-100 object-fit-cover ratio-self-1x1"
+              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="理念3"
+            />
+            <p class="mb-20 fs-xl-6">舉辦豐富主題活動，促進社群交流，共同成長。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('./layout/footer'); -%>
+    <script
+      type="module"
+      src="../main.js"
+    ></script>
+  </body>
+</html>
