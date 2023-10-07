@@ -3,9 +3,10 @@ import * as bootstrap from "bootstrap";
 import templateData from "./template-data";
 const navSearch = document.querySelector("#navSearch");
 const tagListTips = document.querySelector("#tagListTips");
-const galleries = document.querySelectorAll(".gallery");
 const signUpForm = document.querySelector("#SignUp-Form");
 const loginForm = document.querySelector("#Login-Form");
+const toastTrigger = document.querySelector("#resetPasswordForm");
+const galleries = document.querySelectorAll(".gallery");
 
 if (signUpForm) {
   signUpForm.addEventListener("submit", (event) => {
@@ -36,7 +37,9 @@ if (navSearch) {
   window.addEventListener("wheel", throttle(toggleNavSearch, 300));
   window.addEventListener("touchmove", throttle(toggleNavSearch, 300));
 }
-
+if (toastTrigger) {
+  toastTrigger.addEventListener("submit", showToast);
+}
 galleries.forEach((gallery) => {
   const loadGallery = createGalleryLoadHandler(gallery);
   window.addEventListener("resize", debounce(loadGallery));
@@ -88,7 +91,17 @@ function createGalleryLoadHandler(galleryElm) {
     });
   };
 }
-
+function showToast() {
+  const toastList = document.querySelectorAll(".toast");
+  if (toastList.length) {
+    toastList.forEach((toastElm) => {
+      const toast = new bootstrap.Toast(toastElm);
+      toast.show();
+    });
+  } else {
+    console.log("找不到吐司");
+  }
+}
 function throttle(fn, delay = 500) {
   let timer = null;
   return (...args) => {
