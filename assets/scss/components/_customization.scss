@@ -122,13 +122,15 @@
 
 .gradient-mask {
   &-y {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 78.13%);
-    padding-top: var(--gradient-mask-spacer, 48px);
-    display: flex;
-    justify-content: center;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding-top: 80px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 78.13%);
+    }
   }
   &-left::before {
     content: "";

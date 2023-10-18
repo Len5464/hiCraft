@@ -23,6 +23,15 @@
   &-primary {
     color: #fff;
   }
+  &-primary-white {
+    --bs-btn-border-color: #{$primary-border-subtle};
+    --bs-btn-bg: #fff;
+    --bs-btn-color: #{$primary-text-emphasis};
+    --bs-btn-hover-bg: #{$primary};
+    --bs-btn-hover-color: #{$primary-light};
+    --bs-btn-active-bg: #{$primary};
+    --bs-btn-active-color: #{$primary-light};
+  }
   &-tag-primary {
     --bs-btn-border-radius: 25px;
     --bs-btn-border-color: #{$primary-border-subtle};
