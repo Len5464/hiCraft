@@ -143,6 +143,21 @@
     background: linear-gradient(90deg, transparent, #fff 70%, #fff);
   }
 }
+.loading-mask {
+  background-color: #ffffff9d;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+}
+
 .title-display {
   color: var(--color, #fff);
   text-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);

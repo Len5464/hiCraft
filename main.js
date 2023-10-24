@@ -1,13 +1,22 @@
 import "./assets/scss/all.scss";
 import * as bootstrap from "bootstrap";
-import templateData from "./template-data";
+import * as gallery from "./gallery";
 const navSearch = document.querySelector("#navSearch");
 const tagListTips = document.querySelector("#tagListTips");
 const signUpForm = document.querySelector("#SignUp-Form");
 const loginForm = document.querySelector("#Login-Form");
 const toastTrigger = document.querySelector("#resetPasswordForm");
+const spinner = document.querySelector(".loading-mask");
 const galleries = document.querySelectorAll(".gallery");
-
+const notActivatedGalleries = [...document.querySelectorAll(".tab-pane:not(.show) .gallery")];
+if (spinner) {
+  window.addEventListener("load", () => {
+    spinner.classList.add("opacity-0");
+  });
+  spinner.addEventListener("transitionend", () => {
+    spinner.classList.add("d-none");
+  });
+}
 if (signUpForm) {
   signUpForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -40,57 +49,31 @@ if (navSearch) {
 if (toastTrigger) {
   toastTrigger.addEventListener("submit", showToast);
 }
-galleries.forEach((gallery) => {
-  const onResize = () => {
-    reloadGallery(gallery);
-  };
-  window.addEventListener("resize", debounce(onResize));
-  reloadGallery(gallery);
+document.querySelectorAll('button[data-bs-toggle="tab"]').forEach((tab) => {
+  const elm = document.querySelector(`${tab.dataset.bsTarget} .gallery`);
+  tab.addEventListener("shown.bs.tab", () => {
+    initGallery(elm);
+  });
 });
-
-document.querySelectorAll("#nav-hot-tab , #nav-newcomer-tab , #nav-topic-tab").forEach((tab, i) => {
-  const onTabActive = () => {
-    reloadGallery(galleries[i]);
-  };
-  tab.addEventListener("shown.bs.tab", onTabActive);
-});
-document.querySelectorAll(".load-img").forEach((btn) => {
-  const gallery = btn.previousElementSibling;
-  const loadIMGs = createImgLoadHandler(gallery, 9);
-  btn.addEventListener("click", loadIMGs);
-  loadIMGs();
-});
-
-function createImgLoadHandler(galleryElm, numToLoad) {
-  const conditions = galleryElm.dataset.filter.split(" ");
-  const items = templateData.crafts.filter((item) => item.tags.some((tag) => conditions.includes(tag)));
-  let urls = items.map((item) => item.imgURLs[0]);
-  let shortestIndex = 0;
-  let shortestHight = 0;
-  return () => {
-    const chunk = urls.splice(0, numToLoad);
-    if (urls.length === 0) galleryElm.nextElementSibling.textContent = "到底了";
-    if (chunk.length) {
-      console.log(`正在載入${chunk.length}個圖片`);
-      chunk.forEach((url) => {
-        const newImg = document.createElement("img");
-        newImg.src = url;
-        newImg.classList = "gallery-img w-100 d-block";
-        newImg.onload = (event) => {
-          const newItemHTML = `<a href='craft.html'>${event.target.outerHTML}</a>`;
-          galleryElm.children[shortestIndex].innerHTML += newItemHTML;
-          const colsHightArr = Array.from(galleryElm.children, (col) =>
-            col.lastChild ? col.lastChild.lastChild.offsetTop + col.lastChild.lastChild.height : 0
-          );
-          shortestHight = Math.min(...colsHightArr);
-          shortestIndex = colsHightArr.indexOf(shortestHight);
-          galleryElm.style.height = `${shortestHight}px`;
-        };
-      });
-    }
-  };
+for (let elm of galleries) {
+  if (notActivatedGalleries.includes(elm)) continue;
+  initGallery(elm);
+  window.addEventListener(
+    "resize",
+    debounce(() => {
+      const galleryElm = document.querySelector(".tab-pane.show .gallery") || elm;
+      gallery.rerender(galleryElm);
+    })
+  );
 }
-
+function initGallery(elm) {
+  const imgs = gallery.rerender(elm);
+  if (imgs.length === 0) {
+    const loadImgs = gallery.createLoader(elm);
+    loadImgs(9);
+    elm.nextElementSibling.onclick = () => loadImgs(3);
+  }
+}
 function createScrollToggleHandler(toggleElm) {
   let prevScrollPos = window.pageYOffset;
   const bsCollapse = new bootstrap.Collapse(toggleElm);
@@ -100,16 +83,6 @@ function createScrollToggleHandler(toggleElm) {
     currentScrollPos > prevScrollPos ? bsCollapse.hide() : bsCollapse.show();
     prevScrollPos = currentScrollPos;
   };
-}
-function reloadGallery(galleryElm) {
-  const colHTML = '<div class="col d-flex flex-column gap-6" ></div>';
-  const imgNum = galleryElm.querySelectorAll(".gallery-img").length;
-  if (window.innerWidth >= 992 && window.innerWidth < 3840) galleryElm.innerHTML = colHTML.repeat(3);
-  else if (window.innerWidth >= 576 && window.innerWidth < 992) galleryElm.innerHTML = colHTML.repeat(2);
-  else if (window.innerWidth >= 0 && window.innerWidth < 576) galleryElm.innerHTML = colHTML.repeat(1);
-  else return;
-  const loadIMGs = createImgLoadHandler(galleryElm, imgNum);
-  loadIMGs();
 }
 
 function showToast(event) {
