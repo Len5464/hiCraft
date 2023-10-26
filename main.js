@@ -49,7 +49,7 @@ if (navSearch) {
 if (toastTrigger) {
   toastTrigger.addEventListener("submit", showToast);
 }
-document.querySelectorAll('button[data-bs-toggle="tab"]').forEach((tab) => {
+document.querySelectorAll("#nav-hot-tab,#nav-newcomer-tab,#nav-topic-tab").forEach((tab) => {
   const elm = document.querySelector(`${tab.dataset.bsTarget} .gallery`);
   tab.addEventListener("shown.bs.tab", () => {
     initGallery(elm);
@@ -71,7 +71,7 @@ function initGallery(elm) {
   if (imgs.length === 0) {
     const loadImgs = gallery.createLoader(elm);
     loadImgs(9);
-    elm.nextElementSibling.onclick = () => loadImgs(3);
+    elm.nextElementSibling.onclick = () => loadImgs(6);
   }
 }
 function createScrollToggleHandler(toggleElm) {
