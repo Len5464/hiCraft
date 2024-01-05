@@ -2,7 +2,7 @@
 @import "../node_modules/bootstrap/scss/functions";
 
 /* 在此處匯入任何預設變數覆蓋 */
-@import "./helpers/variables";
+@import "./global/variables";
 
 /* 匯入所需的 Bootstrap 樣式表的其餘部分（包括任何獨立的顏色模式樣式表） */
 // @import "../node_modules/bootstrap/scss/variables";
@@ -52,8 +52,8 @@
 @import "../node_modules/bootstrap/scss/helpers";
 
 /* 在此處添加其他自定義代碼 */
-@import "./helpers/base";
-@import "./helpers/utils";
+@import "./global/base";
+@import "./global/utils";
 @import "./components/customization";
 @import "./components/bs-override";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap"); // fonts

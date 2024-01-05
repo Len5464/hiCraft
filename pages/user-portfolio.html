@@ -11,11 +11,16 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>hiCraft | 搜尋好設計、好點子</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
   </head>
   <body>
-    <%- include('./layout/navbar.ejs'); -%>
+    <%- include('./modules/navbar.ejs'); -%>
     <main class="container my-3 my-md-8">
-      <%- include('./layout/about-me.ejs'); -%>
+      <%- include('./modules/about-me.ejs'); -%>
       <h2 class="mb-8">作品:</h2>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 gy-6">
         <% for(let i=0 ; i < 12; i++){ %>
@@ -44,27 +49,27 @@
               <span aria-hidden="true">&laquo;</span>
             </a>
           </li>
-          <li class="page-item"
-            ><a
+          <li class="page-item">
+            <a
               class="page-link active"
               href="#"
               >1</a
-            ></li
-          >
-          <li class="page-item"
-            ><a
+            >
+          </li>
+          <li class="page-item">
+            <a
               class="page-link"
               href="#"
               >2</a
-            ></li
-          >
-          <li class="page-item"
-            ><a
+            >
+          </li>
+          <li class="page-item">
+            <a
               class="page-link"
               href="#"
               >3</a
-            ></li
-          >
+            >
+          </li>
           <li class="page-item">
             <a
               class="page-link"
@@ -77,9 +82,9 @@
         </ul>
       </nav>
     </main>
-    <%- include('./layout/footer.ejs'); -%>
+    <%- include('./modules/footer.ejs'); -%>
     <!--  -->
-    <%- include('./layout/loading'); -%>
+    <%- include('./modules/loading-mask'); -%>
     <script
       type="module"
       src="../main.js"

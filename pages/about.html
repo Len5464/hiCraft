@@ -11,16 +11,21 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>hiCraft | 搜尋好設計、好點子</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
   </head>
   <body>
-    <%- include('./layout/navbar'); -%>
+    <%- include('./modules/navbar'); -%>
     <header class="container pt-12 d-flex justify-content-sm-center align-items-center gap-4">
       <img
         class="pb-3"
         src="/assets/images/hiCraft_logo-light.svg"
         alt="logo"
       />
-      <h1 class="border-bottom border-3"> 關於我們 </h1>
+      <h1 class="border-bottom border-3">關於我們</h1>
     </header>
     <main class="container py-12">
       <h2 class="mb-6 ms-5">常見問答</h2>
@@ -82,7 +87,7 @@
             aria-labelledby="headingTwo"
             data-bs-parent="#accordionQA"
           >
-            <div class="accordion-body"> 登入會員後，可以在作品頁中直接留言給創作者。 </div>
+            <div class="accordion-body">登入會員後，可以在作品頁中直接留言給創作者。</div>
           </div>
         </div>
         <div class="accordion-item">
@@ -107,7 +112,7 @@
             aria-labelledby="headingThree"
             data-bs-parent="#accordionQA"
           >
-            <div class="accordion-body"> 請先註冊成為網站會員之後，即可在頁面上方上傳自己的作品。 </div>
+            <div class="accordion-body">請先註冊成為網站會員之後，即可在頁面上方上傳自己的作品。</div>
           </div>
         </div>
         <div class="accordion-item">
@@ -223,9 +228,9 @@
         </div>
       </section>
     </main>
-    <%- include('./layout/footer'); -%>
+    <%- include('./modules/footer'); -%>
     <!--  -->
-    <%- include('./layout/loading'); -%>
+    <%- include('./modules/loading-mask'); -%>
     <script
       type="module"
       src="../main.js"

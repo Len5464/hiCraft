@@ -11,9 +11,14 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>hiCraft | 搜尋好設計、好點子</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
   </head>
   <body>
-    <%- include('./layout/navbar.ejs',{enableCollapseSearch:true ,route:'/explore'}); -%>
+    <%- include('./modules/navbar.ejs',{enableCollapseSearch:true ,route:'/explore'}); -%>
     <nav class="border-bottom">
       <div
         class="nav nav-underline nav-tabs-lg container justify-content-center align-items-center gap-lg-12"
@@ -29,8 +34,9 @@
           role="tab"
           aria-controls="nav-hot"
           aria-selected="true"
-          >熱門作品</button
         >
+          熱門作品
+        </button>
         <span class="vr text-secondary"></span>
         <button
           class="nav-link py-4"
@@ -41,8 +47,9 @@
           role="tab"
           aria-controls="nav-newcomer"
           aria-selected="false"
-          >新人作品</button
         >
+          新人作品
+        </button>
         <span class="vr text-secondary"></span>
         <button
           class="nav-link py-4"
@@ -53,8 +60,9 @@
           role="tab"
           aria-controls="nav-topic"
           aria-selected="false"
-          >主題作品</button
         >
+          主題作品
+        </button>
       </div>
     </nav>
     <div
@@ -80,32 +88,32 @@
                 aria-expanded="false"
               ></a>
               <ul class="dropdown-menu dropdown-menu-end">
-                <li
-                  ><a
+                <li>
+                  <a
                     class="dropdown-item"
                     href="#"
-                    >最多人收藏</a
-                  ></li
-                >
-                <li
-                  ><a
+                    >最多人收藏
+                  </a>
+                </li>
+                <li>
+                  <a
                     class="dropdown-item"
                     href="#"
-                    >最多人觀看</a
-                  ></li
-                >
-                <li
-                  ><a
+                    >最多人觀看
+                  </a>
+                </li>
+                <li>
+                  <a
                     class="dropdown-item"
                     href="#"
-                    >最新</a
-                  ></li
-                >
+                    >最新
+                  </a>
+                </li>
               </ul>
             </div>
           </h1>
         </header>
-        <%-include('./layout/gallery.ejs',{filter:'熱門' ,route:'/explore'}); -%>
+        <%-include('./modules/gallery.ejs',{filter:'熱門' ,route:'/explore'}); -%>
       </div>
       <div
         class="tab-pane fade"
@@ -126,32 +134,32 @@
                 aria-expanded="false"
               ></a>
               <ul class="dropdown-menu dropdown-menu-end">
-                <li
-                  ><a
+                <li>
+                  <a
                     class="dropdown-item"
                     href="#"
                     >最多人收藏</a
-                  ></li
-                >
-                <li
-                  ><a
+                  >
+                </li>
+                <li>
+                  <a
                     class="dropdown-item"
                     href="#"
                     >最多人觀看</a
-                  ></li
-                >
-                <li
-                  ><a
+                  >
+                </li>
+                <li>
+                  <a
                     class="dropdown-item"
                     href="#"
                     >最新</a
-                  ></li
-                >
+                  >
+                </li>
               </ul>
             </div>
           </h1>
         </header>
-        <%-include('./layout/gallery.ejs',{filter:'新人作品' ,route:'/explore'}); -%>
+        <%-include('./modules/gallery.ejs',{filter:'新人作品' ,route:'/explore'}); -%>
       </div>
       <div
         class="tab-pane fade"
@@ -172,37 +180,37 @@
                 aria-expanded="false"
               ></a>
               <ul class="dropdown-menu dropdown-menu-end">
-                <li
-                  ><a
+                <li>
+                  <a
                     class="dropdown-item"
                     href="#"
                     >最多人收藏</a
-                  ></li
-                >
-                <li
-                  ><a
+                  >
+                </li>
+                <li>
+                  <a
                     class="dropdown-item"
                     href="#"
                     >最多人觀看</a
-                  ></li
-                >
-                <li
-                  ><a
+                  >
+                </li>
+                <li>
+                  <a
                     class="dropdown-item"
                     href="#"
                     >最新</a
-                  ></li
-                >
+                  >
+                </li>
               </ul>
             </div>
           </h1>
         </header>
-        <%-include('./layout/gallery.ejs',{filter: '中秋節 父親節 聖誕節' ,route:'/explore'}); -%>
+        <%-include('./modules/gallery.ejs',{filter: '中秋節 父親節 聖誕節' ,route:'/explore'}); -%>
       </div>
     </div>
-    <%- include('./layout/footer.ejs'); -%>
+    <%- include('./modules/footer.ejs'); -%>
     <!--  -->
-    <%- include('./layout/loading'); -%>
+    <%- include('./modules/loading-mask'); -%>
     <script
       type="module"
       src="../main.js"

@@ -14,8 +14,8 @@
         class="navbar-toggler border-0"
         type="button"
         data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar"
+        data-bs-target="#offcanvas-navbar"
+        aria-controls="offcanvas-navbar"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
@@ -24,13 +24,13 @@
       <div
         class="offcanvas offcanvas-end"
         tabindex="-1"
-        id="offcanvasNavbar"
-        aria-labelledby="offcanvasNavbarLabel"
+        id="offcanvas-navbar"
+        aria-labelledby="offcanvas-navbar-label"
       >
         <div class="offcanvas-header">
           <h5
             class="offcanvas-title"
-            id="offcanvasNavbarLabel"
+            id="offcanvas-navbar-label"
           ></h5>
           <button
             type="button"
@@ -90,7 +90,7 @@
             <li class="nav-item">
               <a
                 class="nav-link"
-                href="#SignUp-Form"
+                href="#modal-sign-up"
                 role="button"
                 data-bs-toggle="modal"
                 >登入 / 登出</a
@@ -100,15 +100,18 @@
         </div>
       </div>
       <ul class="navbar-nav d-none d-lg-flex gap-6">
-        <li class="nav-item bg-hover-primary-light"
-          ><a
+        <li class="nav-item bg-hover-primary-light">
+          <a
             href="upload.html"
             class="nav-link"
-            ><img
+          >
+            <img
               src="../assets/images/icons/icon-box-arrow-up.svg"
               width="48px"
-              alt="upload" /></a
-        ></li>
+              alt="upload"
+            />
+          </a>
+        </li>
         <li class="nav-item bg-hover-primary-light">
           <div class="dropdown">
             <a
@@ -163,9 +166,9 @@
             </ul>
           </div>
         </li>
-        <li class="nav-item bg-hover-primary-light"
-          ><a
-            href="#SignUp-Form"
+        <li class="nav-item bg-hover-primary-light">
+          <a
+            href="#modal-sign-up"
             class="nav-link"
             role="button"
             data-bs-toggle="modal"
@@ -178,7 +181,12 @@
       </ul>
     </div>
   </nav>
-  <% if( enableCollapseSearch ) { %> <%- include('./layout/collapse-search-bar.ejs'); -%> <% } %>
+  <% if( enableCollapseSearch ) { %> <%- include('./modules/search-bar-sticky-top.ejs'); -%> <% } %>
 </div>
-<%- include('./layout/sign-up'); -%> <%- include('./layout/login'); -%> <%- include('./layout/reset-password'); -%>
-<%-include('./layout/interest-modal'); -%>
+<%- include('./modules/modal-sign-up'); -%>
+<!--  -->
+<%- include('./modules/modal-login'); -%>
+<!--  -->
+<%- include('./modules/modal-reset-password'); -%>
+<!--  -->
+<%-include('./modules/modal-interest'); -%>

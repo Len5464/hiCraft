@@ -11,14 +11,19 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>hiCraft | 搜尋好設計、好點子</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
   </head>
   <body>
-    <%- include('./layout/navbar.ejs',{enableCollapseSearch:true ,route:'/interest'}); -%>
-    <header> <%- include('./layout/tags-selector.ejs'); -%> </header>
-    <main class="container"> <%- include('./layout/gallery.ejs',{route:'/interest'}); -%> </main>
-    <%- include('./layout/footer.ejs'); -%>
+    <%- include('./modules/navbar.ejs',{enableCollapseSearch:true ,route:'/interest'}); -%>
+    <header><%- include('./modules/tag-selector.ejs'); -%></header>
+    <main class="container"><%- include('./modules/gallery.ejs',{route:'/interest'}); -%></main>
+    <%- include('./modules/footer.ejs'); -%>
     <!--  -->
-    <%- include('./layout/loading'); -%>
+    <%- include('./modules/loading-mask'); -%>
     <script
       type="module"
       src="../main.js"

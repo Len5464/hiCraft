@@ -1,3 +1,4 @@
+/* 工具類 */
 .gap-26px {
   gap: 26px;
 }
@@ -15,7 +16,7 @@
     background-color: $secondary;
   }
 }
-// 生成自訂工具類
+// 生成自訂bootstrap工具類
 $utilities: map-merge(
   $utilities,
   (

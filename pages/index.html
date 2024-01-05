@@ -11,13 +11,18 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>hiCraft | 搜尋好設計、好點子</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
   </head>
   <body>
-    <%- include('./layout/navbar'); -%>
+    <%- include('./modules/navbar'); -%>
     <header class="bg-home-header d-flex flex-column">
       <div class="container my-auto">
         <h1 class="title-display">搜尋好設計、好點子</h1>
-        <%- include('./layout/search-bar'); -%>
+        <%- include('./modules/search-bar'); -%>
       </div>
       <picture>
         <source
@@ -91,7 +96,7 @@
       </svg>
       <div class="container">
         <div class="d-flex justify-content-between align-items-center">
-          <h2 class="z-1 mb-8">歡慶節日 </h2>
+          <h2 class="z-1 mb-8">歡慶節日</h2>
         </div>
         <div class="row gy-6">
           <div class="col-md-4">
@@ -292,18 +297,18 @@
     <section class="bg-white-brick py-30">
       <div class="container position-relative">
         <div class="d-flex justify-content-center align-items-center gap-2">
-          <h2 class="m-0">精選作品 </h2>
+          <h2 class="m-0">精選作品</h2>
           <img
             src="../assets/images/hiCraft_logo-light.svg"
             alt="hiCraft"
           />
         </div>
-        <%-include('./layout/gallery'); -%>
+        <%-include('./modules/gallery'); -%>
       </div>
     </section>
-    <%- include('./layout/footer'); -%>
+    <%- include('./modules/footer'); -%>
     <!--  -->
-    <%- include('./layout/loading'); -%>
+    <%- include('./modules/loading-mask'); -%>
     <script
       type="module"
       src="../main.js"

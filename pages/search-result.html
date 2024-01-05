@@ -11,9 +11,14 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>hiCraft | 搜尋好設計、好點子</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
   </head>
   <body>
-    <%- include('./layout/navbar.ejs',{enableCollapseSearch:true ,route:'/result'}); -%>
+    <%- include('./modules/navbar.ejs',{enableCollapseSearch:true ,route:'/result'}); -%>
     <header class="container">
       <form action="">
         <ul class="list-inline row my-8">
@@ -28,8 +33,9 @@
               <option
                 class="bg-secondary-subtle text-secondary-emphasis"
                 value="<%= index+1 %>"
-                ><%= item %></option
               >
+                <%= item %>
+              </option>
               <%})%>
             </select>
           </li>
@@ -44,8 +50,9 @@
               <option
                 class="bg-secondary-subtle text-secondary-emphasis"
                 value="<%= index+1 %>"
-                ><%= item %></option
               >
+                <%= item %>
+              </option>
               <%})%>
             </select>
           </li>
@@ -62,36 +69,36 @@
             aria-expanded="false"
           ></a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li
-              ><a
+            <li>
+              <a
                 class="dropdown-item"
                 href="#"
                 >最多人收藏</a
-              ></li
-            >
-            <li
-              ><a
+              >
+            </li>
+            <li>
+              <a
                 class="dropdown-item"
                 href="#"
                 >最多人觀看</a
-              ></li
-            >
-            <li
-              ><a
+              >
+            </li>
+            <li>
+              <a
                 class="dropdown-item"
                 href="#"
                 >最新</a
-              ></li
-            >
+              >
+            </li>
           </ul>
         </div>
       </h1>
     </header>
-    <main class="container position-relative"> <%- include('./layout/gallery.ejs',{route:'/result'}); -%> </main>
+    <main class="container position-relative"><%- include('./modules/gallery.ejs',{route:'/result'}); -%></main>
 
-    <%- include('./layout/footer.ejs'); -%>
+    <%- include('./modules/footer.ejs'); -%>
     <!--  -->
-    <%- include('./layout/loading'); -%>
+    <%- include('./modules/loading-mask'); -%>
     <script
       type="module"
       src="../main.js"

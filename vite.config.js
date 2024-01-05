@@ -28,7 +28,7 @@ export default defineConfig({
   // base: '/Repository 的名稱/'
   base: "/hiCraft/",
   plugins: [
-    liveReload(["./layout/**/*.ejs", "./pages/**/*.ejs", "./pages/**/*.html"]),
+    liveReload(["./modules/**/*.ejs", "./pages/**/*.ejs", "./pages/**/*.html"]),
     ViteEjsPlugin(templateData),
     moveOutputPlugin(),
   ],
