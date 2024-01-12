@@ -7,11 +7,24 @@ import templateData from "./template-data";
 
 import liveReload from "vite-plugin-live-reload";
 
+/**
+ * 建立一個 vite 插件，將輸出的檔案移動到不同的目錄。
+ *
+ * @returns {import('vite').Plugin} - vite 插件。
+ */
 function moveOutputPlugin() {
   return {
     name: "move-output",
     enforce: "post",
     apply: "build",
+
+    /**
+     * 使用指定的選項生成 bundle。
+     *
+     * @param {import('rollup').OutputOptions} options - 生成 bundle 的選項。
+     * @param {import('rollup').OutputBundle} bundle - 包含檔案的 bundle 物件。
+     * @returns {Promise<void>} - 當 bundle 生成時解析的 promise。
+     */
     async generateBundle(options, bundle) {
       for (const fileName in bundle) {
         if (fileName.startsWith("pages/")) {
@@ -37,6 +50,7 @@ export default defineConfig({
     open: "pages/index.html",
   },
   build: {
+    // 將 "pages/" 目錄下的所有 HTML 檔案作為輸入，並將打包後的檔案輸出到 "dist" 目錄。
     rollupOptions: {
       input: Object.fromEntries(
         glob
