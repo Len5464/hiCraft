@@ -303,7 +303,16 @@
             alt="hiCraft"
           />
         </div>
-        <%-include('./modules/gallery'); -%>
+        <ul
+          id="gallery-choice"
+          class="gallery mt-16"
+        ></ul>
+        <a
+          id="load-gallery-choice"
+          href=""
+          class="btn btn-primary-white btn-lg mt-16 mx-auto d-block"
+          >載入更多
+        </a>
       </div>
     </section>
     <%- include('./modules/footer'); -%>
@@ -313,5 +322,34 @@
       type="module"
       src="../main.js"
     ></script>
+    <script type="module">
+      import { debounce } from "/assets/js/utils.js";
+      import Gallery from "/assets/js/Gallery.js";
+      window.addEventListener("load", async () => {
+        const res = await fetch("/data/crafts.json").catch((error) => {
+          throw new Error("HTTP error! status: " + error.status);
+        });
+
+        const data = await res.json().catch((error) => {
+          throw new Error("Failed to fetch crafts data");
+        });
+
+        const imgURLs = data.filter((craft) => craft.tags.includes("精選")).map((craft) => craft.imgURLs[0]);
+        const loadBtn = document.querySelector("#load-gallery-choice");
+        const gallery = new Gallery("#gallery-choice", {
+          imgURLs: imgURLs,
+          loadButton: loadBtn,
+          loadAmount: 8,
+        });
+
+        window.addEventListener(
+          "resize",
+          debounce(
+            () => gallery.container.querySelectorAll(".gallery-item").forEach((item) => gallery.resizeItem(item)),
+            100
+          )
+        );
+      });
+    </script>
   </body>
 </html>

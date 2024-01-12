@@ -66,7 +66,7 @@
       </div>
     </nav>
     <div
-      class="container tab-content"
+      class="container tab-content py-16"
       id="nav-tabContent"
     >
       <div
@@ -76,7 +76,7 @@
         aria-labelledby="nav-hot-tab"
         tabindex="0"
       >
-        <header class="pt-12">
+        <header>
           <h1 class="border-bottom border-3 d-flex justify-content-between align-items-center">
             熱門作品
             <div class="dropdown">
@@ -113,7 +113,16 @@
             </div>
           </h1>
         </header>
-        <%-include('./modules/gallery.ejs',{filter:'熱門' ,route:'/explore'}); -%>
+        <ul
+          id="gallery-hot"
+          class="gallery"
+        ></ul>
+        <a
+          id="load-gallery-hot"
+          href=""
+          class="btn btn-primary-white btn-lg mt-16 mx-auto d-block"
+          >載入更多
+        </a>
       </div>
       <div
         class="tab-pane fade"
@@ -122,7 +131,7 @@
         aria-labelledby="nav-newcomer-tab"
         tabindex="0"
       >
-        <header class="pt-12">
+        <header>
           <h1 class="border-bottom border-3 d-flex justify-content-between align-items-center">
             新人作品
             <div class="dropdown">
@@ -159,7 +168,16 @@
             </div>
           </h1>
         </header>
-        <%-include('./modules/gallery.ejs',{filter:'新人作品' ,route:'/explore'}); -%>
+        <ul
+          id="gallery-newcomer"
+          class="gallery"
+        ></ul>
+        <a
+          id="load-gallery-newcomer"
+          href=""
+          class="btn btn-primary-white btn-lg mt-16 mx-auto d-block"
+          >載入更多
+        </a>
       </div>
       <div
         class="tab-pane fade"
@@ -168,7 +186,7 @@
         aria-labelledby="nav-topic-tab"
         tabindex="0"
       >
-        <header class="pt-12">
+        <header>
           <h1 class="border-bottom border-3 d-flex justify-content-between align-items-center">
             歡慶節日
             <div class="dropdown">
@@ -205,7 +223,16 @@
             </div>
           </h1>
         </header>
-        <%-include('./modules/gallery.ejs',{filter: '中秋節 父親節 聖誕節' ,route:'/explore'}); -%>
+        <ul
+          id="gallery-topic"
+          class="gallery"
+        ></ul>
+        <a
+          id="load-gallery-topic"
+          href=""
+          class="btn btn-primary-white btn-lg mt-16 mx-auto d-block"
+          >載入更多
+        </a>
       </div>
     </div>
     <%- include('./modules/footer.ejs'); -%>
@@ -215,5 +242,61 @@
       type="module"
       src="../main.js"
     ></script>
+    <script type="module">
+      import { debounce } from "/assets/js/utils.js";
+      import Gallery from "/assets/js/Gallery.js";
+
+      window.addEventListener("load", async () => {
+        const craftsResponse = await fetch("/data/crafts.json").catch((err) => {
+          throw new Error("HTTP error! status: " + err.status);
+        });
+        const tagGroupsResponse = await fetch("/data/tag-groups.json").catch((err) => {
+          throw new Error("Failed to fetch tag-groups data");
+        });
+
+        const [craftsData, tagGroups] = await Promise.all([craftsResponse.json(), tagGroupsResponse.json()]);
+
+        const hotCrafts = craftsData.filter((craft) => craft.tags.some((tag) => tagGroups?.hot.includes(tag)));
+        const newComerCrafts = craftsData.filter((craft) =>
+          craft.tags.some((tag) => tagGroups?.newcomer.includes(tag))
+        );
+        const topicCrafts = craftsData.filter((craft) => craft.tags.some((tag) => tagGroups?.topic.includes(tag)));
+
+        const panel = {
+          "nav-hot-tab": {
+            gallery: document.querySelector("#gallery-hot"),
+            loadButton: document.querySelector("#load-gallery-hot"),
+            crafts: hotCrafts,
+          },
+          "nav-newcomer-tab": {
+            gallery: document.querySelector("#gallery-newcomer"),
+            loadButton: document.querySelector("#load-gallery-newcomer"),
+            crafts: newComerCrafts,
+          },
+          "nav-topic-tab": {
+            gallery: document.querySelector("#gallery-topic"),
+            loadButton: document.querySelector("#load-gallery-topic"),
+            crafts: topicCrafts,
+          },
+        };
+
+        const tabs = document.querySelectorAll("#nav-hot-tab,#nav-newcomer-tab,#nav-topic-tab");
+        tabs.forEach((tab) => {
+          tab.addEventListener("shown.bs.tab", (event) => {
+            const id = event.target.getAttribute("id");
+            if (!id in panel) return;
+            if (panel[id].gallery.childElementCount > 0) return;
+            const gallery = new Gallery(panel[id].gallery, {
+              imgURLs: panel[id].crafts.map((craft) => craft.imgURLs[0]),
+              loadButton: panel[id].loadButton,
+              loadAmount: 8,
+            });
+          });
+        });
+
+        const activeTab = Array.from(tabs).find((tab) => tab.classList.contains("active"));
+        if (activeTab) activeTab.dispatchEvent(new Event("shown.bs.tab"));
+      });
+    </script>
   </body>
 </html>
