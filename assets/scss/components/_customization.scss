@@ -122,26 +122,18 @@
 }
 
 .gradient-mask {
-  &-y {
+  &-left {
     position: relative;
     &::after {
       content: "";
       position: absolute;
-      bottom: 0;
-      width: 100%;
-      padding-top: 80px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 78.13%);
+      top: 0;
+      left: 0;
+      height: 100%;
+      padding-left: 50px;
+      transform: translateX(-100%);
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 78.13%);
     }
-  }
-  &-left::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 30px;
-    height: 100%;
-    transform: translate(-100%, -50%);
-    background: linear-gradient(90deg, transparent, #fff 70%, #fff);
   }
 }
 .loading-mask {
@@ -183,19 +175,24 @@
     background-color: $primary-bg-subtle;
   }
 }
-.tags-list {
+.tags-group {
+  transition: all 0.5s ease-in-out;
+  height: 250px;
+  overflow-y: scroll;
+
   &-fold {
-    height: 54px;
     overflow-x: scroll;
     white-space: nowrap;
-    transition: all 0.5s ease-in-out;
+    height: 70px;
   }
 
-  &-expend {
-    height: 150px;
-    overflow-y: scroll;
-    white-space: normal;
-    transition: all 0.5s ease-in-out;
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    background-color: $light;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $secondary;
   }
 }
 

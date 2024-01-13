@@ -1,8 +1,8 @@
-<div class="d-flex fs-5 fs-lg-3 align-items-center py-3 border-bottom">
-  <ul
-    class="tags-list tags-list-fold list-inline mb-0 flex-fill scroll-bar-small"
-    id="tag-selector-tags"
-  >
+<div
+  id="tag-selector"
+  class="d-flex fs-5 fs-lg-3 align-items-stretch py-3 border-bottom"
+>
+  <ul class="tags-group tags-group-fold list-inline mb-0 flex-fill py-2">
     <% interests.forEach(item =>{ %>
     <li class="d-inline">
       <label class="btn btn-tag-primary px-lg-5 my-1 cursor-pointer">
@@ -15,11 +15,13 @@
     </li>
     <% }); %>
   </ul>
-  <ul class="list-inline d-flex ms-auto mb-0 py-3 gap-4 position-relative gradient-mask-left">
-    <li class="">
+  <ul class="list-unstyled d-flex justify-content-end align-items-end mb-0 py-3 ps-5 gap-4 gradient-mask-left">
+    <li
+      id="tag-selector-toggler"
+      class="transition"
+    >
       <a
         href="#"
-        id="tag-selector-toggle-btn"
         class="bi bi-chevron-down text-secondary"
       ></a>
     </li>

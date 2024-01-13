@@ -10,9 +10,13 @@
     }
   }
 }
-#offcanvasNavbar .nav-link {
-  @include media-breakpoint-down(lg) {
-    color: #fff;
+
+.offcanvas {
+  &.show,
+  &.showing {
+    .nav-link {
+      color: $light;
+    }
   }
 }
 .navbar-brand {
@@ -24,34 +28,41 @@
   &-primary {
     color: #fff;
   }
-  &-primary-white {
-    --bs-btn-border-color: #{$primary-border-subtle};
-    --bs-btn-bg: #fff;
-    --bs-btn-color: #{$primary-text-emphasis};
-    --bs-btn-hover-bg: #{$primary};
-    --bs-btn-hover-color: #{$primary-light};
-    --bs-btn-active-bg: #{$primary};
-    --bs-btn-active-color: #{$primary-light};
+  &.btn-primary-white {
+    border-color: $primary-border-subtle;
+    background-color: #fff;
+    color: $primary-text-emphasis;
+    &:hover,
+    &:active {
+      background-color: $primary;
+      color: $primary-light;
+    }
   }
-  &-tag-primary {
-    --bs-btn-border-radius: 25px;
-    --bs-btn-border-color: #{$primary-border-subtle};
-    --bs-btn-bg: #{$primary-bg-subtle};
-    --bs-btn-color: #{$primary-text-emphasis};
-    --bs-btn-hover-bg: #{$primary};
-    --bs-btn-hover-color: #{$primary-light};
-    --bs-btn-active-bg: #{$primary};
-    --bs-btn-active-color: #{$primary-light};
+
+  &.btn-tag-primary {
+    border-radius: 25px;
+    border-color: $primary-border-subtle;
+    background-color: $primary-bg-subtle;
+    color: $primary-text-emphasis;
+    &:hover,
+    &:active {
+      background-color: $primary;
+      color: $primary-light;
+    }
   }
-  &-tag-secondary {
-    --bs-btn-border-radius: 25px;
-    --bs-btn-border-color: #{$secondary-border-subtle};
-    --bs-btn-bg: #{$secondary-bg-subtle};
-    --bs-btn-color: #{$secondary-text-emphasis};
-    --bs-btn-hover-bg: #{$secondary};
-    --bs-btn-hover-color: #{$secondary-light};
-    --bs-btn-active-bg: #{$secondary};
-    --bs-btn-active-color: #{$secondary-light};
+  &.btn-tag-secondary {
+    border-radius: 25px;
+    border-color: $secondary-border-subtle;
+    background-color: $secondary-bg-subtle;
+    color: $secondary-text-emphasis;
+    &:hover,
+    &:active {
+      background-color: $secondary;
+      color: $secondary-light;
+    }
+    &:focus {
+      box-shadow: 0 0 0 0.25rem rgba($secondary, $focus-ring-opacity);
+    }
   }
 }
 .accordion {

@@ -1,5 +1,5 @@
 <div class="sticky-top">
-  <nav class="navbar navbar-expand-lg flex-column align-items-stretch bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg flex-column align-items-stretch bg-body-tertiary z-2">
     <div class="container">
       <a
         class="navbar-brand"
@@ -183,10 +183,11 @@
   </nav>
   <% if( enableCollapseSearch ) { %> <%- include('./modules/search-bar-sticky-top.ejs'); -%> <% } %>
 </div>
+<!-- 註冊框 -->
 <%- include('./modules/modal-sign-up'); -%>
-<!--  -->
+<!-- 登入框 -->
 <%- include('./modules/modal-login'); -%>
-<!--  -->
+<!-- 重設密碼框 -->
 <%- include('./modules/modal-reset-password'); -%>
-<!--  -->
+<!-- 選興趣框 -->
 <%-include('./modules/modal-interest'); -%>

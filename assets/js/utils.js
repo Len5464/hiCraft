@@ -2,18 +2,18 @@ import { Modal } from "bootstrap";
 
 /**
  * 表單送出時切換顯示下一個 bootstrap modal
- * @param {string} selector 當前 modal 的 選擇器
+ * @param {string} currentModalSelector 當前 modal 的 選擇器
  * @param {string} nextModalSelector 目標 modal 的 選擇器
  */
-export function defineModalSwitchOnSubmit(selector, nextModalSelector) {
-  const sourceModalElement = document.querySelector(selector);
+export function defineModalSwitchOnSubmit(currentModalSelector, nextModalSelector) {
+  const sourceModalElement = document.querySelector(currentModalSelector);
   const targetModalElement = document.querySelector(nextModalSelector);
 
   if (!sourceModalElement || !targetModalElement) {
-    throw new Error(`${selector} 或 ${nextModalSelector} 不是有效的選擇器`);
+    throw new Error(`${currentModalSelector} 或 ${nextModalSelector} 不是有效的選擇器`);
   }
   if (!sourceModalElement.classList.contains("modal") || !targetModalElement.classList.contains("modal")) {
-    throw new Error(`${selector} 或 ${nextModalSelector} 沒有 modal class`);
+    throw new Error(`${currentModalSelector} 或 ${nextModalSelector} 沒有 modal class`);
   }
 
   sourceModalElement.addEventListener("submit", (event) => {

@@ -1,18 +1,33 @@
 import { Popover } from "bootstrap";
+const tagsGroup = document.querySelector("#tag-selector .tags-group");
+const tagsSelector = document.querySelector("#tag-selector");
+
 /**
  * @param {Event} event
  */
-function toggleTags(event) {
-  const tags = document.querySelector("#tag-selector-tags");
-  const toggleBtn = event.target;
-  if (tags instanceof HTMLUListElement && toggleBtn instanceof HTMLAnchorElement) {
-    tags.classList.toggle("tags-list-fold");
-    tags.classList.toggle("tags-list-expend");
-    tags.parentElement?.classList.toggle("flex-wrap");
-    toggleBtn.parentElement?.classList.toggle("rotate-180");
+function toggleTagsGroup(event) {
+  const toggler = event.currentTarget;
+  if (tagsGroup && tagsSelector && toggler instanceof HTMLElement) {
+    tagsGroup.classList.toggle("tags-group-fold");
+    tagsSelector.classList.toggle("flex-column");
+    toggler.classList.toggle("rotate-180");
   }
 }
-document.querySelector("#tag-selector-toggle-btn")?.addEventListener("click", toggleTags);
+/**
+ * @param {Event} event
+ */
+function transferHorizonScroll(event) {
+  const thisElement = event.currentTarget;
+  if (!(event instanceof WheelEvent)) return;
+  if (!(thisElement instanceof HTMLElement)) return;
+
+  const newScrollPosition = thisElement.scrollLeft + event.deltaY;
+  thisElement.scrollLeft = newScrollPosition;
+  event.preventDefault();
+}
+
+document.querySelector("#tag-selector-toggler")?.addEventListener("click", toggleTagsGroup);
+tagsGroup?.addEventListener("wheel", transferHorizonScroll, { passive: false });
 Popover.getOrCreateInstance("#tag-selector-tips", {
   trigger: "focus",
 });

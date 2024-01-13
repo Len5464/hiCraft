@@ -2,20 +2,16 @@
 .gap-26px {
   gap: 26px;
 }
+.transition {
+  transition: all 0.3s ease-in-out;
+}
 .rotate-180 {
   transform: rotate(180deg);
-  transition: transform 0.2s ease-in-out;
 }
-.scroll-bar-small {
-  &::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
-    background-color: $light;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: $secondary;
-  }
+.translate-top {
+  transform: translateY(-100%);
 }
+
 // 生成自訂bootstrap工具類
 $utilities: map-merge(
   $utilities,

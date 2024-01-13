@@ -1566,8 +1566,10 @@ $modal-header-padding-x: $modal-inner-padding !default;
 $modal-header-padding: $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
 
 $modal-footer-bg: null !default;
-// $modal-footer-border-color:         $modal-header-border-color !default;
+
+$modal-footer-border-color: $modal-header-border-color !default;
 $modal-footer-border-color: transparent;
+
 $modal-footer-border-width: $modal-header-border-width !default;
 
 $modal-sm: 300px !default;
