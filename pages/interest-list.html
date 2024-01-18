@@ -18,7 +18,7 @@
     />
   </head>
   <body>
-    <%- include('./modules/navbar.ejs',{enableCollapseSearch:true ,route:'/interest'}); -%>
+    <%- include('./modules/navbar.ejs',{enableCollapseSearch:true}); -%>
     <header class="container">
       <%- include('./modules/tag-selector.ejs'); -%>
       <h2 class="border-bottom border-3 mt-16">正在關注的主題:</h2>
@@ -50,7 +50,7 @@
         const accountResponse = await fetch("/user/0/account.json").catch((err) => console.log(err));
 
         const [craftsData, accountData] = await Promise.all([craftsResponse.json(), accountResponse.json()]);
-        const crafts = craftsData.filter((craft) => craft.tags.some((tag) => accountData?.interestTags.includes(tag)));
+        const crafts = craftsData.filter((craft) => craft.tags.some((tag) => accountData.interestTags.includes(tag)));
 
         const imgURLs = crafts.map((craft) => craft.imgURLs[0]);
         const loadBtn = document.querySelector("#load-gallery-interest");

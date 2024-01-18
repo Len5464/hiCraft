@@ -27,18 +27,18 @@
       <div class="modal-body">
         <div class="container p-6 p-lg-12">
           <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-5 gx-5 gy-6">
-            <% category.forEach((item , index)=>{ %>
+            <% tagGroups["default-category"].forEach((tag , index)=>{ %>
             <div class="col">
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="<%= item %>"
+                  name="category"
                 />
                 <img
-                  src="../assets/images/category/<%= item %>.jpg"
+                  src="../assets/images/category/<%= tag %>.jpg"
                   alt="category<%= index %>"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i><%= item %>
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i><%= tagsI18n[tag]["zh-TW"] %>
               </label>
             </div>
             <% }) %>

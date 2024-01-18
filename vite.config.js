@@ -2,10 +2,12 @@ import { defineConfig } from "vite";
 import { ViteEjsPlugin } from "vite-plugin-ejs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
-import { glob } from "glob";
-import templateData from "./template-data";
-
 import liveReload from "vite-plugin-live-reload";
+import { glob } from "glob";
+import tagGroups from "./public/data/tag-groups.json";
+import tagsI18n from "./public/data/tags-i18n.json";
+import accountData from "./public/user/0/account.json";
+import crafts from "./public/data/crafts.json";
 
 /**
  * 建立一個 vite 插件，將輸出的檔案移動到不同的目錄。
@@ -42,7 +44,13 @@ export default defineConfig({
   base: "/hiCraft/",
   plugins: [
     liveReload(["./modules/**/*.ejs", "./pages/**/*.ejs", "./pages/**/*.html"]),
-    ViteEjsPlugin(templateData),
+    ViteEjsPlugin({
+      enableCollapseSearch: false,
+      tagGroups: tagGroups,
+      tagsI18n: tagsI18n,
+      interests: accountData.interestTags,
+      crafts: crafts,
+    }),
     moveOutputPlugin(),
   ],
   server: {

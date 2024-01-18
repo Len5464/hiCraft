@@ -18,7 +18,7 @@
     />
   </head>
   <body>
-    <%- include('./modules/navbar.ejs',{enableCollapseSearch:true ,route:'/result'}); -%>
+    <%- include('./modules/navbar.ejs',{enableCollapseSearch:true}); -%>
     <header class="container mt-8">
       <form action="">
         <ul class="list-inline row">
@@ -29,12 +29,12 @@
               name="materials"
             >
               <option selected>選擇材質</option>
-              <% materials.forEach( (item,index) => { %>
+              <% tagGroups["materials"].forEach( (item,index) => { %>
               <option
                 class="bg-secondary-subtle text-secondary-emphasis"
                 value="<%= index+1 %>"
               >
-                <%= item %>
+                <%= tagsI18n[item]["zh-TW"] %>
               </option>
               <%})%>
             </select>
@@ -46,12 +46,12 @@
               name="category"
             >
               <option selected>選擇類別</option>
-              <% category.forEach( (item,index) => { %>
+              <% tagGroups["default-category"].forEach( (item,index) => { %>
               <option
                 class="bg-secondary-subtle text-secondary-emphasis"
                 value="<%= index+1 %>"
               >
-                <%= item %>
+                <%= tagsI18n[item]["zh-TW"] %>
               </option>
               <%})%>
             </select>
@@ -126,15 +126,18 @@
       titleSearchResult.textContent = `${queryString} 有關的主題：`;
 
       window.addEventListener("load", async () => {
-        const res = await fetch("/data/crafts.json").catch((error) => {
-          throw new Error("HTTP error! status: " + error.status);
+        const craftsResponse = await fetch("/data/crafts.json").catch((err) => {
+          throw new Error("HTTP error! status: " + err.status);
         });
-
-        const data = await res.json().catch((error) => {
-          throw new Error("Failed to fetch crafts data");
+        const tagsI18nResponse = await fetch("/data/tags-i18n.json").catch((err) => {
+          throw new Error("Failed to fetch tag-i18n data");
         });
+        const [craftsData, tagsI18n] = await Promise.all([craftsResponse.json(), tagsI18nResponse.json()]);
+        const searchResult = findTag(queryString);
 
-        const imgURLs = data.filter((craft) => craft.tags.includes(queryString)).map((craft) => craft.imgURLs[0]);
+        const matchedData = craftsData.filter(({ tags }) => tags.includes(searchResult));
+        const imgURLs = matchedData.map((craft) => craft.imgURLs[0]);
+
         const loadBtn = document.querySelector("#load-gallery-search-result");
         const gallery = new Gallery("#gallery-search-result", {
           imgURLs: imgURLs,
@@ -149,6 +152,14 @@
             100
           )
         );
+        function findTag(queryString) {
+          for (const tagName in tagsI18n) {
+            if (tagName.toLowerCase() === queryString.toLowerCase()) return tagName;
+            for (const language in tagsI18n[tagName]) {
+              if (tagsI18n[tagName][language] === queryString) return tagName;
+            }
+          }
+        }
       });
     </script>
   </body>

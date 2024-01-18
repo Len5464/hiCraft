@@ -1,0 +1,261 @@
+{
+  "Woodworking": {
+    "zh-TW": "木工"
+  },
+  "Jewelry": {
+    "zh-TW": "珠寶"
+  },
+  "Accessories": {
+    "zh-TW": "飾品配件"
+  },
+  "Stationery": {
+    "zh-TW": "文具"
+  },
+  "Weaving": {
+    "zh-TW": "織布"
+  },
+  "Ceramics and Pottery": {
+    "zh-TW": "陶瓷和陶器"
+  },
+  "Clay Crafts": {
+    "zh-TW": "黏土工藝"
+  },
+
+  "Paper Crafts": {
+    "zh-TW": "紙藝"
+  },
+  "Glass Crafts": {
+    "zh-TW": "玻璃工藝"
+  },
+  "Antiques and Vintage Decor": {
+    "zh-TW": "古董和復古裝飾"
+  },
+  "Painting and Illustration": {
+    "zh-TW": "繪畫和插圖"
+  },
+  "Sculpture": {
+    "zh-TW": "雕塑"
+  },
+  "Leather Goods": {
+    "zh-TW": "皮革製品"
+  },
+  "Food Crafts": {
+    "zh-TW": "食品工藝"
+  },
+  "Candles and Aromatherapy": {
+    "zh-TW": "蠟燭和香薰"
+  },
+  "Music and Instruments": {
+    "zh-TW": "音樂和樂器"
+  },
+  "Eco-friendly Recycled Products": {
+    "zh-TW": "環保回收製品"
+  },
+  "Plants and Gardening": {
+    "zh-TW": "植物和園藝"
+  },
+  "Soft Toys and Dolls": {
+    "zh-TW": "毛絨玩具和娃娃"
+  },
+  "Collage and Decoupage": {
+    "zh-TW": "拼貼和雕貼"
+  },
+  "Electronic Crafts": {
+    "zh-TW": "電子工藝"
+  },
+  "Space Design and Decoration": {
+    "zh-TW": "空間設計和裝飾"
+  },
+  "Film and TV Crafts": {
+    "zh-TW": "影視手工藝"
+  },
+  "Installation Art": {
+    "zh-TW": "創意裝置藝術"
+  },
+  "DIY Tools and Craft Materials": {
+    "zh-TW": "DIY工具和工藝材料"
+  },
+  "Art": {
+    "zh-TW": "藝術"
+  },
+  "Decorations": {
+    "zh-TW": "裝飾"
+  },
+  "Carving": {
+    "zh-TW": "雕刻"
+  },
+  "Carpentry": {
+    "zh-TW": "木工"
+  },
+  "Hanging Paintings": {
+    "zh-TW": "掛畫"
+  },
+  "Design Furniture": {
+    "zh-TW": "設計家具"
+  },
+  "Wedding Accessories": {
+    "zh-TW": "婚禮配件"
+  },
+  "Travel Goods": {
+    "zh-TW": "旅行用品"
+  },
+  "Handmade Floral": {
+    "zh-TW": "手工花藝"
+  },
+  "Environmental Friendly": {
+    "zh-TW": "環保友善"
+  },
+  "Wood": {
+    "zh-TW": "木材"
+  },
+  "Metal": {
+    "zh-TW": "金屬"
+  },
+  "Glass": {
+    "zh-TW": "玻璃"
+  },
+  "Ceramic": {
+    "zh-TW": "陶瓷"
+  },
+  "Fabric": {
+    "zh-TW": "布料、紡織品"
+  },
+  "Leather": {
+    "zh-TW": "皮革"
+  },
+  "Paper": {
+    "zh-TW": "紙張"
+  },
+  "Plastic": {
+    "zh-TW": "塑料"
+  },
+  "Stone": {
+    "zh-TW": "石材"
+  },
+  "Clay": {
+    "zh-TW": "黏土"
+  },
+  "Paints": {
+    "zh-TW": "顏料"
+  },
+  "Plants": {
+    "zh-TW": "植物材料"
+  },
+  "Electronic Components": {
+    "zh-TW": "電子元件"
+  },
+  "Food Materials": {
+    "zh-TW": "食品材料"
+  },
+  "Paint Materials": {
+    "zh-TW": "繪畫材料"
+  },
+  "Candle Materials": {
+    "zh-TW": "蠟燭材料"
+  },
+  "Aromatherapy Materials": {
+    "zh-TW": "香薰材料"
+  },
+  "Eco-friendly Materials": {
+    "zh-TW": "環保材料"
+  },
+  "Plaster": {
+    "zh-TW": "石膏"
+  },
+  "Concrete": {
+    "zh-TW": "混凝土"
+  },
+  "Flexible Materials": {
+    "zh-TW": "軟性材質"
+  },
+  "Acidic Materials": {
+    "zh-TW": "酸性材質"
+  },
+  "Gold Leaf": {
+    "zh-TW": "金箔"
+  },
+  "Silver Leaf": {
+    "zh-TW": "銀箔"
+  },
+  "Composite Materials": {
+    "zh-TW": "複合材料"
+  },
+  "Other": {
+    "zh-TW": "其他"
+  },
+  "Christmas": {
+    "zh-TW": "聖誕節"
+  },
+  "Cute": {
+    "zh-TW": "可愛"
+  },
+  "Newcomer": {
+    "zh-TW": "新人作品"
+  },
+  "Featured": { "zh-TW": "特色" },
+  "Curtain": { "zh-TW": "窗簾" },
+  "Knitting": { "zh-TW": "針織" },
+  "Pot": { "zh-TW": "盆栽" },
+  "Dried Flowers": { "zh-TW": "乾花" },
+  "Popular": { "zh-TW": "熱門" },
+  "Heart": { "zh-TW": "心形" },
+  "Decoration": { "zh-TW": "裝飾" },
+  "Cup": { "zh-TW": "杯子" },
+  "Bouquet": { "zh-TW": "花束" },
+  "Bag": { "zh-TW": "包包" },
+  "Soap Rack": { "zh-TW": "肥皂架" },
+  "Handmade": { "zh-TW": "手工" },
+  "Soap": { "zh-TW": "肥皂" },
+  "Natural": { "zh-TW": "自然" },
+  "Plate": { "zh-TW": "碟子" },
+  "Lemon": { "zh-TW": "檸檬" },
+  "Vintage": { "zh-TW": "復古" },
+  "Bedside": { "zh-TW": "床頭" },
+  "Lamp": { "zh-TW": "燈具" },
+  "Woven": { "zh-TW": "編織" },
+  "Side Bag": { "zh-TW": "側背包" },
+  "Flower Pot": { "zh-TW": "花盆" },
+  "Hanging Basket": { "zh-TW": "懸掛籃" },
+  "Jam": { "zh-TW": "果醬" },
+  "Glazed": { "zh-TW": "釉面" },
+  "Vase": { "zh-TW": "花瓶" },
+  "Chess": { "zh-TW": "西洋棋" },
+  "Pendant Light": { "zh-TW": "吊燈" },
+  "Dinosaur": { "zh-TW": "恐龍" },
+  "Easter": { "zh-TW": "復活節" },
+  "Egg": { "zh-TW": "蛋" },
+  "Teddy Bear": { "zh-TW": "泰迪熊" },
+  "Card": { "zh-TW": "卡片" },
+  "Father's Day": { "zh-TW": "父親節" },
+  "Autumn": { "zh-TW": "秋季" },
+  "Painting": { "zh-TW": "繪畫" },
+  "Mid-Autumn Festival": { "zh-TW": "中秋節" },
+  "Chinese Style": { "zh-TW": "中國風" },
+  "Lantern Festival": { "zh-TW": "元宵節" },
+  "Lantern": { "zh-TW": "燈籠" },
+  "Blue": { "zh-TW": "藍色" },
+  "Orange": { "zh-TW": "橙色" },
+  "Wallet": { "zh-TW": "錢包" },
+  "Necktie": { "zh-TW": "領帶" },
+  "Scented Bag": { "zh-TW": "香袋" },
+  "Totem": { "zh-TW": "圖騰" },
+  "Dream": { "zh-TW": "夢想" },
+  "Handicraft": { "zh-TW": "手工藝" },
+  "Guardian": { "zh-TW": "守護者" },
+  "Bracelet": { "zh-TW": "手鐲" },
+  "Doll": { "zh-TW": "娃娃" },
+  "Otter": { "zh-TW": "水獺" },
+  "Fabric Art": { "zh-TW": "布藝藝術" },
+  "Building Blocks": { "zh-TW": "積木" },
+  "Toys": { "zh-TW": "玩具" },
+  "House": { "zh-TW": "房子" },
+  "Ornament": { "zh-TW": "裝飾品" },
+  "Wooden Horse": { "zh-TW": "木馬" },
+  "Folk Art": { "zh-TW": "民間藝術" },
+  "Wall Art": { "zh-TW": "牆藝" },
+  "Chrysanthemum": { "zh-TW": "菊花" },
+  "Bottle Staircase": { "zh-TW": "瓶樓梯" },
+  "Fantasy": { "zh-TW": "奇幻" },
+  "Kitchenware": { "zh-TW": "廚具" },
+  "Spoon": { "zh-TW": "湯匙" }
+}

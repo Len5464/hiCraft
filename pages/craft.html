@@ -18,7 +18,7 @@
     />
   </head>
   <body>
-    <%- include('./modules/navbar.ejs',{enableCollapseSearch:true ,route:'/craft-detail'}); -%>
+    <%- include('./modules/navbar.ejs',{enableCollapseSearch:true}); -%>
     <header class="container py-16 py-lg-24">
       <div class="row gx-lg-12 gy-12">
         <div class="col-lg-5 order-lg-last">
@@ -85,7 +85,7 @@
                 <a
                   href="explore.html"
                   class="badge btn btn-primary"
-                  >#<%= tag %></a
+                  >#<%= tagsI18n[tag]["zh-TW"] %></a
                 >
               </li>
               <% }) %>

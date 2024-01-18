@@ -11,19 +11,19 @@
         <div class="container mw-800px py-6 py-lg-12">
           <h2 class="mb-6">類別</h2>
           <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-5 gx-5 gy-6">
-            <% category.forEach((item , index)=>{ %>
+            <% tagGroups["default-category"].forEach((item , index)=>{ %>
             <div class="col">
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="<%= item %>"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
                   src="../assets/images/category/<%= item %>.jpg"
                   alt="category<%= index %>"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i><%= item %>
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i><%= tagsI18n[item]['zh-TW'] %>
               </label>
             </div>
             <% }) %>
@@ -74,19 +74,19 @@
         <div class="container mw-800px py-6 py-lg-12">
           <h2 class="mb-6">材料</h2>
           <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-5 gx-5 gy-6">
-            <% materials.forEach((item , index)=>{ %>
+            <% tagGroups["materials"].forEach((item , index)=>{ %>
             <div class="col">
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="<%= item %>"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
                   src="../assets/images/materials/<%= item %>.jpg"
                   alt="materials<%= index %>"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i><%= item %>
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i><%= tagsI18n[item]['zh-TW'] %>
               </label>
             </div>
             <% }) %>

@@ -18,7 +18,7 @@
     />
   </head>
   <body>
-    <%- include('./modules/navbar.ejs',{enableCollapseSearch:true ,route:'/explore'}); -%>
+    <%- include('./modules/navbar.ejs',{enableCollapseSearch:true }); -%>
     <nav class="border-bottom">
       <div
         class="nav nav-underline nav-tabs-lg container justify-content-center align-items-center gap-lg-12"
@@ -255,11 +255,11 @@
         });
 
         const [craftsData, tagGroups] = await Promise.all([craftsResponse.json(), tagGroupsResponse.json()]);
-
-        const hotCrafts = craftsData.filter((craft) => craft.tags.some((tag) => tagGroups?.hot.includes(tag)));
+        const hotCrafts = craftsData.filter((craft) => craft.tags.some((tag) => tag === "Popular"));
         const newComerCrafts = craftsData.filter((craft) =>
           craft.tags.some((tag) => tagGroups?.newcomer.includes(tag))
         );
+        console.log(hotCrafts);
         const topicCrafts = craftsData.filter((craft) => craft.tags.some((tag) => tagGroups?.topic.includes(tag)));
 
         const panel = {
@@ -291,6 +291,13 @@
               loadButton: panel[id].loadButton,
               loadAmount: 8,
             });
+            window.addEventListener(
+              "resize",
+              debounce(
+                () => gallery.container.querySelectorAll(".gallery-item").forEach((item) => gallery.resizeItem(item)),
+                100
+              )
+            );
           });
         });
 
