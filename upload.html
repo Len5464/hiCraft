@@ -11,12 +11,17 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>hiCraft | 搜尋好設計、好點子</title>
-    <script type="module" crossorigin src="/hiCraft/assets/main-93930feb.js"></script>
-    <link rel="stylesheet" href="/hiCraft/assets/main-974d005e.css">
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/hiCraft/favicon.svg"
+    />
+    <script type="module" crossorigin src="/hiCraft/assets/main-523da3af.js"></script>
+    <link rel="stylesheet" href="/hiCraft/assets/main-4023b451.css">
   </head>
   <body>
     <div class="sticky-top">
-  <nav class="navbar navbar-expand-lg flex-column align-items-stretch bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg flex-column align-items-stretch bg-body-tertiary z-2">
     <div class="container">
       <a
         class="navbar-brand"
@@ -31,8 +36,8 @@
         class="navbar-toggler border-0"
         type="button"
         data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar"
+        data-bs-target="#offcanvas-navbar"
+        aria-controls="offcanvas-navbar"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
@@ -41,13 +46,13 @@
       <div
         class="offcanvas offcanvas-end"
         tabindex="-1"
-        id="offcanvasNavbar"
-        aria-labelledby="offcanvasNavbarLabel"
+        id="offcanvas-navbar"
+        aria-labelledby="offcanvas-navbar-label"
       >
         <div class="offcanvas-header">
           <h5
             class="offcanvas-title"
-            id="offcanvasNavbarLabel"
+            id="offcanvas-navbar-label"
           ></h5>
           <button
             type="button"
@@ -60,7 +65,7 @@
           <ul class="navbar-nav nav-pills justify-content-center column-gap-8 row-gap-6 flex-grow-1">
             <li class="nav-item">
               <a
-                class="nav-link "
+                class="nav-link"
                 aria-current="page"
                 href="explore.html"
                 >好物推薦</a
@@ -68,7 +73,7 @@
             </li>
             <li class="nav-item">
               <a
-                class="nav-link "
+                class="nav-link"
                 href="interest-list.html"
                 >關注中</a
               >
@@ -107,7 +112,7 @@
             <li class="nav-item">
               <a
                 class="nav-link"
-                href="#SignUp-Form"
+                href="#modal-sign-up"
                 role="button"
                 data-bs-toggle="modal"
                 >登入 / 登出</a
@@ -117,15 +122,18 @@
         </div>
       </div>
       <ul class="navbar-nav d-none d-lg-flex gap-6">
-        <li class="nav-item bg-hover-primary-light"
-          ><a
+        <li class="nav-item bg-hover-primary-light">
+          <a
             href="upload.html"
             class="nav-link"
-            ><img
+          >
+            <img
               src="/hiCraft/assets/icon-box-arrow-up-7e13ccc4.svg"
               width="48px"
-              alt="upload" /></a
-        ></li>
+              alt="upload"
+            />
+          </a>
+        </li>
         <li class="nav-item bg-hover-primary-light">
           <div class="dropdown">
             <a
@@ -180,9 +188,9 @@
             </ul>
           </div>
         </li>
-        <li class="nav-item bg-hover-primary-light"
-          ><a
-            href="#SignUp-Form"
+        <li class="nav-item bg-hover-primary-light">
+          <a
+            href="#modal-sign-up"
             class="nav-link"
             role="button"
             data-bs-toggle="modal"
@@ -197,14 +205,15 @@
   </nav>
   
 </div>
+<!-- 註冊框 -->
 <form
   class="modal fade needs-validation"
   action=""
-  id="SignUp-Form"
+  id="modal-sign-up"
   data-bs-backdrop="static"
   data-bs-keyboard="false"
   tabindex="-1"
-  aria-labelledby="SignUpFormLabel"
+  aria-labelledby="modal-sign-up-title"
   aria-hidden="true"
 >
   <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
@@ -222,32 +231,39 @@
           class="mx-auto"
           src="/hiCraft/assets/hiCraft_logo-3ac4a473.svg"
         />
-        <h2 class="fw-bold mt-8">加入</h2>
+        <h2
+          id="modal-sign-up-title"
+          class="fw-bold mt-8"
+        >
+          加入
+        </h2>
         <ul class="list-unstyled d-flex mb-6 align-self-start gap-1 p-0">
           <li>
             <span class="text-black-50">已經是會員？</span>
           </li>
-          <li
-            ><a
-              href="#Login-Form"
+          <li>
+            <a
+              href="#modal-login"
               class="btn-link"
               role="button"
               data-bs-toggle="modal"
-              >登入</a
-            ></li
-          >
+            >
+              登入
+            </a>
+          </li>
         </ul>
 
         <div class="mb-6">
           <label
-            for="SignUp-UserName"
+            for="sign-up-input-user-name"
             class="form-label"
-            >暱稱</label
           >
+            暱稱
+          </label>
           <input
             type="text"
             class="form-control"
-            id="SignUp-UserName"
+            id="sign-up-input-user-name"
             placeholder="輸入暱稱"
             aria-placeholder="輸入暱稱"
             minlength="3"
@@ -257,14 +273,15 @@
         </div>
         <div class="mb-6">
           <label
-            for="SignUp-InputEmail"
+            for="sign-up-input-email"
             class="form-label"
-            >電子郵件</label
           >
+            電子郵件
+          </label>
           <input
             type="email"
             class="form-control"
-            id="SignUp-InputEmail"
+            id="sign-up-input-email"
             placeholder="輸入電子郵件"
             aria-placeholder="輸入電子郵件"
             required
@@ -272,14 +289,15 @@
         </div>
         <div class="mb-6">
           <label
-            for="SignUp-InputPassword"
+            for="sign-up-input-password"
             class="form-label"
-            >密碼</label
           >
+            密碼
+          </label>
           <input
             type="password"
             class="form-control"
-            id="SignUp-InputPassword"
+            id="sign-up-input-password"
             placeholder="密碼"
             aria-placeholder="輸入密碼"
             required
@@ -288,14 +306,15 @@
         </div>
         <div class="mb-6">
           <label
-            for="SignUp-ConfirmPassword"
+            for="sign-up-input-confirm-password"
             class="form-label"
-            >確認密碼</label
           >
+            確認密碼
+          </label>
           <input
             type="password"
             class="form-control"
-            id="SignUp-ConfirmPassword"
+            id="sign-up-input-confirm-password"
             placeholder="確認密碼"
             aria-placeholder="輸入密碼"
             required
@@ -305,26 +324,30 @@
         <button
           type="submit"
           class="btn btn-primary w-100 mt-8"
-          >建立帳號</button
         >
+          建立帳號
+        </button>
         <p class="text-center my-3 my-lg-6">或</p>
         <a
           href="#"
           class="btn btn-outline-primary w-100"
-          >透過Google登入</a
         >
+          透過Google登入
+        </a>
       </div>
     </div>
   </div>
 </form>
- <form
+
+<!-- 登入框 -->
+<form
   class="modal fade needs-validation"
   action=""
-  id="Login-Form"
+  id="modal-login"
   data-bs-backdrop="static"
   data-bs-keyboard="false"
   tabindex="-1"
-  aria-labelledby="Login-FormLabel"
+  aria-labelledby="modal-login-title"
   aria-hidden="true"
 >
   <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
@@ -342,17 +365,22 @@
           class="mb-12 mb-lg-16 mx-auto"
           src="/hiCraft/assets/hiCraft_logo-3ac4a473.svg"
         />
-        <h2 class="fw-bold text-center mb-12">歡迎來到XX手工</h2>
+        <h2
+          id="modal-login-title"
+          class="fw-bold text-center mb-12"
+        >
+          歡迎來到hiCraft
+        </h2>
         <div class="mb-6">
           <label
-            for="Login-InputEmail"
+            for="login-input-email"
             class="form-label"
             >電子郵件</label
           >
           <input
             type="email"
             class="form-control"
-            id="Login-InputEmail"
+            id="login-input-email"
             placeholder="輸入電子郵件"
             aria-placeholder="輸入電子郵件"
             required
@@ -360,14 +388,14 @@
         </div>
         <div class="mb-6">
           <label
-            for="Login-InputPassword"
+            for="login-input-password"
             class="form-label"
             >密碼</label
           >
           <input
             type="password"
             class="form-control"
-            id="Login-InputPassword"
+            id="login-input-password"
             placeholder="密碼"
             aria-placeholder="輸入密碼"
             required
@@ -379,28 +407,30 @@
             <input
               type="checkbox"
               class="form-check-input"
-              id="Login-RememberAccount"
+              id="login-input-remember-accunt"
             />
             <label
               class="form-check-label"
-              for="Login-RememberAccount"
+              for="login-input-remember-accunt"
               >記住帳號</label
             >
           </li>
-          <li
-            ><a
-              href="#ResetPassword-Form"
+          <li>
+            <a
+              href="#modal-reset-password"
               role="button"
               data-bs-toggle="modal"
-              >忘記密碼?</a
-            ></li
-          >
+            >
+              忘記密碼?
+            </a>
+          </li>
         </ul>
         <button
           type="submit"
           class="btn btn-primary w-100"
-          >登入</button
         >
+          登入
+        </button>
         <p class="text-center my-3 my-lg-6">或</p>
         <a
           href="#"
@@ -411,20 +441,22 @@
     </div>
   </div>
 </form>
- <div
+
+<!-- 重設密碼框 -->
+<div
   class="modal fade"
-  id="ResetPassword-Form"
+  id="modal-reset-password"
   data-bs-backdrop="static"
   data-bs-keyboard="false"
   tabindex="-1"
-  aria-labelledby="ResetPasswordLabel"
+  aria-labelledby="modal-reset-password-title"
   aria-hidden="true"
 >
   <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
     <div class="modal-content">
       <div class="modal-header align-items-center">
         <a
-          href="#Login-Form"
+          href="#modal-login"
           class="bi bi-arrow-left fs-5 link-dark"
           role="button"
           data-bs-toggle="modal"
@@ -441,22 +473,27 @@
           class="mx-auto"
           src="/hiCraft/assets/hiCraft_logo-3ac4a473.svg"
         />
-        <h2 class="fw-bold mt-8">忘記密碼?</h2>
+        <h2
+          id="modal-reset-password-title"
+          class="fw-bold mt-8"
+        >
+          忘記密碼?
+        </h2>
         <p class="text-black-50">下方輸入您帳戶的電子郵件，您將收到一封用於重置密碼的電子郵件。</p>
         <form
           action=""
-          id="resetPasswordForm"
+          id="modal-reset-password-form"
         >
           <div class="mb-6">
             <label
-              for="ResetPassword-InputEmail"
+              for="reset-password-input-email"
               class="form-label"
               >電子郵件</label
             >
             <input
               type="email"
               class="form-control"
-              id="ResetPassword-InputEmail"
+              id="reset-password-input-email"
               placeholder="輸入電子郵件"
               aria-placeholder="輸入電子郵件"
               required
@@ -466,8 +503,9 @@
           <button
             type="submit"
             class="btn btn-primary w-100 mb-16"
-            >發送信件</button
           >
+            發送信件
+          </button>
         </form>
       </div>
     </div>
@@ -497,7 +535,7 @@
         aria-label="Close"
       ></button>
     </div>
-    <div class="toast-body"> 我們已將重設密碼連結送至您的信箱 </div>
+    <div class="toast-body">我們已將重設密碼連結送至您的信箱</div>
   </div>
 
   <div
@@ -515,14 +553,17 @@
         aria-label="Close"
       ></button>
     </div>
-    <div class="toast-body"> 此網站僅作為切版練習用途，並不會蒐集email資訊與寄送郵件！ </div>
+    <div class="toast-body">此網站僅作為切版練習用途，並不會蒐集email資訊與寄送郵件！</div>
   </div>
 </div>
+
+
+<!-- 選興趣框 -->
 <div
   class="modal fade"
-  id="interestModal"
+  id="modal-interest"
   tabindex="-1"
-  aria-labelledby="interestModalLabel"
+  aria-labelledby="modal-interest-title"
   aria-hidden="true"
 >
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
@@ -533,9 +574,10 @@
       <div class="modal-header py-10 py-lg-20 justify-content-center bg-light position-relative">
         <h1
           class="modal-title"
-          id="interestModalLabel"
-          >什麼主題是你有興趣的</h1
+          id="modal-interest-title"
         >
+          什麼主題是你有興趣的
+        </h1>
         <button
           type="button"
           class="btn-close position-absolute top-0 end-0 m-0 p-4"
@@ -551,10 +593,10 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="木工"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/木工-e6c09f45.jpg"
+                  src="/hiCraft/assets/Woodworking-e6c09f45.jpg"
                   alt="category0"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>木工
@@ -565,81 +607,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="飾品"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/飾品-19cf715a.jpg"
+                  src="/hiCraft/assets/Jewelry-e6a26deb.jpg"
                   alt="category1"
-                />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>飾品
-              </label>
-            </div>
-            
-            <div class="col">
-              <label class="img-checkbox w-100">
-                <input
-                  type="checkbox"
-                  name="文具"
-                />
-                <img
-                  src="/hiCraft/assets/文具-d2c330f1.jpg"
-                  alt="category2"
-                />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>文具
-              </label>
-            </div>
-            
-            <div class="col">
-              <label class="img-checkbox w-100">
-                <input
-                  type="checkbox"
-                  name="織品"
-                />
-                <img
-                  src="/hiCraft/assets/織品-a1d180f2.jpg"
-                  alt="category3"
-                />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>織品
-              </label>
-            </div>
-            
-            <div class="col">
-              <label class="img-checkbox w-100">
-                <input
-                  type="checkbox"
-                  name="陶瓷和陶器"
-                />
-                <img
-                  src="/hiCraft/assets/陶瓷和陶器-f15e63ae.jpg"
-                  alt="category4"
-                />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>陶瓷和陶器
-              </label>
-            </div>
-            
-            <div class="col">
-              <label class="img-checkbox w-100">
-                <input
-                  type="checkbox"
-                  name="粘土創作"
-                />
-                <img
-                  src="/hiCraft/assets/粘土創作-a5854c22.jpg"
-                  alt="category5"
-                />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>粘土創作
-              </label>
-            </div>
-            
-            <div class="col">
-              <label class="img-checkbox w-100">
-                <input
-                  type="checkbox"
-                  name="珠寶"
-                />
-                <img
-                  src="/hiCraft/assets/珠寶-e6a26deb.jpg"
-                  alt="category6"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>珠寶
               </label>
@@ -649,10 +621,80 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="紙藝"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/紙藝-415101f9.jpg"
+                  src="/hiCraft/assets/Accessories-19cf715a.jpg"
+                  alt="category2"
+                />
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>飾品配件
+              </label>
+            </div>
+            
+            <div class="col">
+              <label class="img-checkbox w-100">
+                <input
+                  type="checkbox"
+                  name="category"
+                />
+                <img
+                  src="/hiCraft/assets/Stationery-d2c330f1.jpg"
+                  alt="category3"
+                />
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>文具
+              </label>
+            </div>
+            
+            <div class="col">
+              <label class="img-checkbox w-100">
+                <input
+                  type="checkbox"
+                  name="category"
+                />
+                <img
+                  src="/hiCraft/assets/Weaving-a1d180f2.jpg"
+                  alt="category4"
+                />
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>織布
+              </label>
+            </div>
+            
+            <div class="col">
+              <label class="img-checkbox w-100">
+                <input
+                  type="checkbox"
+                  name="category"
+                />
+                <img
+                  src="/hiCraft/assets/Ceramics and Pottery-f15e63ae.jpg"
+                  alt="category5"
+                />
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>陶瓷和陶器
+              </label>
+            </div>
+            
+            <div class="col">
+              <label class="img-checkbox w-100">
+                <input
+                  type="checkbox"
+                  name="category"
+                />
+                <img
+                  src="/hiCraft/assets/Clay Crafts-a5854c22.jpg"
+                  alt="category6"
+                />
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>黏土工藝
+              </label>
+            </div>
+            
+            <div class="col">
+              <label class="img-checkbox w-100">
+                <input
+                  type="checkbox"
+                  name="category"
+                />
+                <img
+                  src="/hiCraft/assets/Paper Crafts-415101f9.jpg"
                   alt="category7"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>紙藝
@@ -663,10 +705,10 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="玻璃工藝"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/玻璃工藝-204aaa98.jpg"
+                  src="/hiCraft/assets/Glass Crafts-204aaa98.jpg"
                   alt="category8"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>玻璃工藝
@@ -677,10 +719,10 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="古董和復古裝飾"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/古董和復古裝飾-1064c401.jpg"
+                  src="/hiCraft/assets/Antiques and Vintage Decor-1064c401.jpg"
                   alt="category9"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>古董和復古裝飾
@@ -691,13 +733,13 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="繪畫和插畫"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/繪畫和插畫-98be6440.jpg"
+                  src="/hiCraft/assets/Painting and Illustration-98be6440.jpg"
                   alt="category10"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>繪畫和插畫
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>繪畫和插圖
               </label>
             </div>
             
@@ -705,13 +747,13 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="雕刻"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/雕刻-b0b711d0.jpg"
+                  src="/hiCraft/assets/Sculpture-b0b711d0.jpg"
                   alt="category11"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>雕刻
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>雕塑
               </label>
             </div>
             
@@ -719,10 +761,10 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="皮革製品"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/皮革-2cb0c611.jpg"
+                  src="/hiCraft/assets/Leather-2cb0c611.jpg"
                   alt="category12"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>皮革製品
@@ -733,13 +775,13 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="美食工藝"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/美食工藝-8cb89a71.jpg"
+                  src="/hiCraft/assets/Food Crafts-8cb89a71.jpg"
                   alt="category13"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>美食工藝
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>食品工藝
               </label>
             </div>
             
@@ -747,10 +789,10 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="蠟燭和香薰"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/香薰材料-62b20f92.jpg"
+                  src="/hiCraft/assets/Aromatherapy Materials-62b20f92.jpg"
                   alt="category14"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>蠟燭和香薰
@@ -761,10 +803,10 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="音樂和樂器"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/音樂和樂器-e69125ff.jpg"
+                  src="/hiCraft/assets/Music and Instruments-e69125ff.jpg"
                   alt="category15"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>音樂和樂器
@@ -775,13 +817,13 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="環保再生製品"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/環保再生材料-5ca76481.jpg"
+                  src="/hiCraft/assets/Eco-friendly Materials-5ca76481.jpg"
                   alt="category16"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>環保再生製品
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>環保回收製品
               </label>
             </div>
             
@@ -789,10 +831,10 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="植物和園藝"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/植物和園藝-698473b2.jpg"
+                  src="/hiCraft/assets/Plants and Gardening-698473b2.jpg"
                   alt="category17"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>植物和園藝
@@ -803,13 +845,13 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="軟玩具和娃娃"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/軟玩具和娃娃-6d24fd1f.jpg"
+                  src="/hiCraft/assets/Soft Toys and Dolls-6d24fd1f.jpg"
                   alt="category18"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>軟玩具和娃娃
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>毛絨玩具和娃娃
               </label>
             </div>
             
@@ -817,10 +859,10 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="拼貼和雕貼"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/拼貼和雕貼-7805e245.jpg"
+                  src="/hiCraft/assets/Collage and Decoupage-7805e245.jpg"
                   alt="category19"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>拼貼和雕貼
@@ -831,13 +873,13 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="電子手工藝"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/電子手工藝-541f48fa.jpg"
+                  src="/hiCraft/assets/Electronic Crafts-541f48fa.jpg"
                   alt="category20"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>電子手工藝
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>電子工藝
               </label>
             </div>
             
@@ -845,10 +887,10 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="空間設計和裝飾"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/空間設計和裝飾-19623abb.jpg"
+                  src="/hiCraft/assets/Space Design and Decoration-19623abb.jpg"
                   alt="category21"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>空間設計和裝飾
@@ -859,10 +901,10 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="影視手工藝"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/影視手工藝-3894c63c.jpg"
+                  src="/hiCraft/assets/Film and TV Crafts-3894c63c.jpg"
                   alt="category22"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>影視手工藝
@@ -873,10 +915,10 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="創意裝置藝術"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/創意裝置藝術-2cd88655.jpg"
+                  src="/hiCraft/assets/Installation Art-2cd88655.jpg"
                   alt="category23"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>創意裝置藝術
@@ -887,10 +929,10 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="DIY工具和工藝材料"
+                  name="category"
                 />
                 <img
-                  src="/hiCraft/assets/DIY工具和工藝材料-37447b3f.jpg"
+                  src="/hiCraft/assets/DIY Tools and Craft Materials-37447b3f.jpg"
                   alt="category24"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>DIY工具和工藝材料
@@ -906,8 +948,9 @@
           class="btn btn-primary col-5"
           data-bs-dismiss="modal"
           aria-label="Close"
-          >確定</button
         >
+          確定
+        </button>
       </div>
     </form>
   </div>
@@ -949,11 +992,13 @@
                 ><i class="bi bi-x"></i>可愛</a
               >
               <a
-                href="#craftTagsModal"
+                id="add-creats-tags-btn"
+                href="#modal-craft-tags"
                 class="btn btn-secondary mt-4 rounded-5 w-100 mt-auto"
                 data-bs-toggle="modal"
-                ><i class="bi bi-plus"></i>新增標籤</a
               >
+                <i class="bi bi-plus"></i>新增標籤
+              </a>
             </div>
           </li>
         </ul>
@@ -1016,16 +1061,17 @@
           <button
             class="btn btn-lg btn-primary"
             type="submit"
-            >提交</button
           >
+            提交
+          </button>
         </div>
       </form>
     </main>
     <div
   class="modal fade"
-  id="craftTagsModal"
+  id="modal-craft-tags"
   tabindex="-1"
-  aria-labelledby="craftTagsModalLabel"
+  aria-labelledby="add-creats-tags-btn"
   aria-hidden="true"
 >
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl modal-fullscreen-sm-down">
@@ -1039,11 +1085,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="木工"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/木工-e6c09f45.jpg"
+                  src="/hiCraft/assets/Woodworking-e6c09f45.jpg"
                   alt="category0"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>木工
@@ -1054,87 +1100,12 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="飾品"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/飾品-19cf715a.jpg"
+                  src="/hiCraft/assets/Jewelry-e6a26deb.jpg"
                   alt="category1"
-                />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>飾品
-              </label>
-            </div>
-            
-            <div class="col">
-              <label class="img-checkbox w-100">
-                <input
-                  type="checkbox"
-                  name="文具"
-                />
-                <img
-                  class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/文具-d2c330f1.jpg"
-                  alt="category2"
-                />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>文具
-              </label>
-            </div>
-            
-            <div class="col">
-              <label class="img-checkbox w-100">
-                <input
-                  type="checkbox"
-                  name="織品"
-                />
-                <img
-                  class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/織品-a1d180f2.jpg"
-                  alt="category3"
-                />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>織品
-              </label>
-            </div>
-            
-            <div class="col">
-              <label class="img-checkbox w-100">
-                <input
-                  type="checkbox"
-                  name="陶瓷和陶器"
-                />
-                <img
-                  class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/陶瓷和陶器-f15e63ae.jpg"
-                  alt="category4"
-                />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>陶瓷和陶器
-              </label>
-            </div>
-            
-            <div class="col">
-              <label class="img-checkbox w-100">
-                <input
-                  type="checkbox"
-                  name="粘土創作"
-                />
-                <img
-                  class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/粘土創作-a5854c22.jpg"
-                  alt="category5"
-                />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>粘土創作
-              </label>
-            </div>
-            
-            <div class="col">
-              <label class="img-checkbox w-100">
-                <input
-                  type="checkbox"
-                  name="珠寶"
-                />
-                <img
-                  class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/珠寶-e6a26deb.jpg"
-                  alt="category6"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>珠寶
               </label>
@@ -1144,11 +1115,86 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="紙藝"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/紙藝-415101f9.jpg"
+                  src="/hiCraft/assets/Accessories-19cf715a.jpg"
+                  alt="category2"
+                />
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>飾品配件
+              </label>
+            </div>
+            
+            <div class="col">
+              <label class="img-checkbox w-100">
+                <input
+                  type="checkbox"
+                  name="category"
+                />
+                <img
+                  class="w-100 object-fit-cover h-100px"
+                  src="/hiCraft/assets/Stationery-d2c330f1.jpg"
+                  alt="category3"
+                />
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>文具
+              </label>
+            </div>
+            
+            <div class="col">
+              <label class="img-checkbox w-100">
+                <input
+                  type="checkbox"
+                  name="category"
+                />
+                <img
+                  class="w-100 object-fit-cover h-100px"
+                  src="/hiCraft/assets/Weaving-a1d180f2.jpg"
+                  alt="category4"
+                />
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>織布
+              </label>
+            </div>
+            
+            <div class="col">
+              <label class="img-checkbox w-100">
+                <input
+                  type="checkbox"
+                  name="category"
+                />
+                <img
+                  class="w-100 object-fit-cover h-100px"
+                  src="/hiCraft/assets/Ceramics and Pottery-f15e63ae.jpg"
+                  alt="category5"
+                />
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>陶瓷和陶器
+              </label>
+            </div>
+            
+            <div class="col">
+              <label class="img-checkbox w-100">
+                <input
+                  type="checkbox"
+                  name="category"
+                />
+                <img
+                  class="w-100 object-fit-cover h-100px"
+                  src="/hiCraft/assets/Clay Crafts-a5854c22.jpg"
+                  alt="category6"
+                />
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>黏土工藝
+              </label>
+            </div>
+            
+            <div class="col">
+              <label class="img-checkbox w-100">
+                <input
+                  type="checkbox"
+                  name="category"
+                />
+                <img
+                  class="w-100 object-fit-cover h-100px"
+                  src="/hiCraft/assets/Paper Crafts-415101f9.jpg"
                   alt="category7"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>紙藝
@@ -1159,11 +1205,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="玻璃工藝"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/玻璃工藝-204aaa98.jpg"
+                  src="/hiCraft/assets/Glass Crafts-204aaa98.jpg"
                   alt="category8"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>玻璃工藝
@@ -1174,11 +1220,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="古董和復古裝飾"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/古董和復古裝飾-1064c401.jpg"
+                  src="/hiCraft/assets/Antiques and Vintage Decor-1064c401.jpg"
                   alt="category9"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>古董和復古裝飾
@@ -1189,14 +1235,14 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="繪畫和插畫"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/繪畫和插畫-98be6440.jpg"
+                  src="/hiCraft/assets/Painting and Illustration-98be6440.jpg"
                   alt="category10"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>繪畫和插畫
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>繪畫和插圖
               </label>
             </div>
             
@@ -1204,14 +1250,14 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="雕刻"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/雕刻-b0b711d0.jpg"
+                  src="/hiCraft/assets/Sculpture-b0b711d0.jpg"
                   alt="category11"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>雕刻
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>雕塑
               </label>
             </div>
             
@@ -1219,11 +1265,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="皮革製品"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/皮革-2cb0c611.jpg"
+                  src="/hiCraft/assets/Leather-2cb0c611.jpg"
                   alt="category12"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>皮革製品
@@ -1234,14 +1280,14 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="美食工藝"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/美食工藝-8cb89a71.jpg"
+                  src="/hiCraft/assets/Food Crafts-8cb89a71.jpg"
                   alt="category13"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>美食工藝
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>食品工藝
               </label>
             </div>
             
@@ -1249,11 +1295,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="蠟燭和香薰"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/香薰材料-62b20f92.jpg"
+                  src="/hiCraft/assets/Aromatherapy Materials-62b20f92.jpg"
                   alt="category14"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>蠟燭和香薰
@@ -1264,11 +1310,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="音樂和樂器"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/音樂和樂器-e69125ff.jpg"
+                  src="/hiCraft/assets/Music and Instruments-e69125ff.jpg"
                   alt="category15"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>音樂和樂器
@@ -1279,14 +1325,14 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="環保再生製品"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/環保再生材料-5ca76481.jpg"
+                  src="/hiCraft/assets/Eco-friendly Materials-5ca76481.jpg"
                   alt="category16"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>環保再生製品
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>環保回收製品
               </label>
             </div>
             
@@ -1294,11 +1340,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="植物和園藝"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/植物和園藝-698473b2.jpg"
+                  src="/hiCraft/assets/Plants and Gardening-698473b2.jpg"
                   alt="category17"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>植物和園藝
@@ -1309,14 +1355,14 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="軟玩具和娃娃"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/軟玩具和娃娃-6d24fd1f.jpg"
+                  src="/hiCraft/assets/Soft Toys and Dolls-6d24fd1f.jpg"
                   alt="category18"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>軟玩具和娃娃
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>毛絨玩具和娃娃
               </label>
             </div>
             
@@ -1324,11 +1370,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="拼貼和雕貼"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/拼貼和雕貼-7805e245.jpg"
+                  src="/hiCraft/assets/Collage and Decoupage-7805e245.jpg"
                   alt="category19"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>拼貼和雕貼
@@ -1339,14 +1385,14 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="電子手工藝"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/電子手工藝-541f48fa.jpg"
+                  src="/hiCraft/assets/Electronic Crafts-541f48fa.jpg"
                   alt="category20"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>電子手工藝
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>電子工藝
               </label>
             </div>
             
@@ -1354,11 +1400,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="空間設計和裝飾"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/空間設計和裝飾-19623abb.jpg"
+                  src="/hiCraft/assets/Space Design and Decoration-19623abb.jpg"
                   alt="category21"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>空間設計和裝飾
@@ -1369,11 +1415,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="影視手工藝"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/影視手工藝-3894c63c.jpg"
+                  src="/hiCraft/assets/Film and TV Crafts-3894c63c.jpg"
                   alt="category22"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>影視手工藝
@@ -1384,11 +1430,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="創意裝置藝術"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/創意裝置藝術-2cd88655.jpg"
+                  src="/hiCraft/assets/Installation Art-2cd88655.jpg"
                   alt="category23"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>創意裝置藝術
@@ -1399,11 +1445,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="DIY工具和工藝材料"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
-                  src="/hiCraft/assets/DIY工具和工藝材料-37447b3f.jpg"
+                  src="/hiCraft/assets/DIY Tools and Craft Materials-37447b3f.jpg"
                   alt="category24"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>DIY工具和工藝材料
@@ -1420,7 +1466,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="addNewCategory"
+                  id="add-new-category"
                   placeholder="最多10字"
                   aria-placeholder="最多10字"
                   maxlength="10"
@@ -1431,25 +1477,26 @@
                 <button
                   class="btn btn-secondary text-nowrap"
                   type="submit"
-                  >新增</button
                 >
+                  新增
+                </button>
               </div>
             </form>
             <ul class="list-inline mb-0 d-flex gap-2 gap-md-4">
-              <li
-                ><a
+              <li>
+                <a
                   href="#"
                   class="btn btn-tag-secondary"
                   ><i class="bi bi-x"></i>香皂</a
-                ></li
-              >
-              <li
-                ><a
+                >
+              </li>
+              <li>
+                <a
                   href="#"
                   class="btn btn-tag-secondary"
                   ><i class="bi bi-x"></i>樂器</a
-                ></li
-              >
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -1461,11 +1508,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="木材"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/木材-aa3f28df.jpg"
+                  src="/hiCraft/assets/Wood-aa3f28df.jpg"
                   alt="materials0"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>木材
@@ -1476,11 +1523,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="金屬"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/金屬-edaab6d2.jpg"
+                  src="/hiCraft/assets/Metal-edaab6d2.jpg"
                   alt="materials1"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>金屬
@@ -1491,11 +1538,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="玻璃"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/玻璃-ab5d935e.jpg"
+                  src="/hiCraft/assets/Glass-ab5d935e.jpg"
                   alt="materials2"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>玻璃
@@ -1506,11 +1553,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="陶瓷"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/陶瓷-d5a3546b.jpg"
+                  src="/hiCraft/assets/Ceramic-d5a3546b.jpg"
                   alt="materials3"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>陶瓷
@@ -1521,11 +1568,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="布料、紡織品"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/布料、紡織品-9f1d9165.jpg"
+                  src="/hiCraft/assets/Fabric-9f1d9165.jpg"
                   alt="materials4"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>布料、紡織品
@@ -1536,11 +1583,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="皮革"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/皮革-2cb0c611.jpg"
+                  src="/hiCraft/assets/Leather-2cb0c611.jpg"
                   alt="materials5"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>皮革
@@ -1551,14 +1598,14 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="紙張、紙板"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/紙張、紙板-21c35df1.jpg"
+                  src="/hiCraft/assets/Paper-21c35df1.jpg"
                   alt="materials6"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>紙張、紙板
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>紙張
               </label>
             </div>
             
@@ -1566,11 +1613,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="塑料"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/塑料-cc9cafe1.jpg"
+                  src="/hiCraft/assets/Plastic-cc9cafe1.jpg"
                   alt="materials7"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>塑料
@@ -1581,11 +1628,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="石材"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/石材-525071c1.jpg"
+                  src="/hiCraft/assets/Stone-525071c1.jpg"
                   alt="materials8"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>石材
@@ -1596,14 +1643,14 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="珠寶材料"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/珠寶材料-26488512.jpg"
+                  src="/hiCraft/assets/Jewelry-26488512.jpg"
                   alt="materials9"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>珠寶材料
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>珠寶
               </label>
             </div>
             
@@ -1611,14 +1658,14 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="粘土"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/粘土-42213c9e.jpg"
+                  src="/hiCraft/assets/Clay-42213c9e.jpg"
                   alt="materials10"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>粘土
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>黏土
               </label>
             </div>
             
@@ -1626,12 +1673,27 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="植物材料"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/植物材料-967dcbaa.jpg"
+                  src="/hiCraft/assets/Paints-9513eab2.jpg"
                   alt="materials11"
+                />
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>顏料
+              </label>
+            </div>
+            
+            <div class="col">
+              <label class="img-checkbox w-100">
+                <input
+                  type="checkbox"
+                  name="materials"
+                />
+                <img
+                  class="w-100 h-100px object-fit-cover"
+                  src="/hiCraft/assets/Plants-967dcbaa.jpg"
+                  alt="materials12"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>植物材料
               </label>
@@ -1641,12 +1703,12 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="電子元件"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/電子元件-5962eae2.jpg"
-                  alt="materials12"
+                  src="/hiCraft/assets/Electronic Components-5962eae2.jpg"
+                  alt="materials13"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>電子元件
               </label>
@@ -1656,12 +1718,12 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="食品材料"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/食品材料-56f20adb.jpg"
-                  alt="materials13"
+                  src="/hiCraft/assets/Food Materials-56f20adb.jpg"
+                  alt="materials14"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>食品材料
               </label>
@@ -1671,26 +1733,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="水彩、油畫顏料"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/水彩、油畫顏料-9513eab2.jpg"
-                  alt="materials14"
-                />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>水彩、油畫顏料
-              </label>
-            </div>
-            
-            <div class="col">
-              <label class="img-checkbox w-100">
-                <input
-                  type="checkbox"
-                  name="蠟燭材料"
-                />
-                <img
-                  class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/蠟燭材料-ac42a846.jpg"
+                  src="/hiCraft/assets/Candle Materials-ac42a846.jpg"
                   alt="materials15"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>蠟燭材料
@@ -1701,11 +1748,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="香薰材料"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/香薰材料-62b20f92.jpg"
+                  src="/hiCraft/assets/Aromatherapy Materials-62b20f92.jpg"
                   alt="materials16"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>香薰材料
@@ -1716,14 +1763,14 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="環保再生材料"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/環保再生材料-5ca76481.jpg"
+                  src="/hiCraft/assets/Eco-friendly Materials-5ca76481.jpg"
                   alt="materials17"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>環保再生材料
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>環保材料
               </label>
             </div>
             
@@ -1731,14 +1778,14 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="石膏、混凝土"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/石膏、混凝土-61facece.jpg"
+                  src="/hiCraft/assets/Plaster-61facece.jpg"
                   alt="materials18"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>石膏、混凝土
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>石膏
               </label>
             </div>
             
@@ -1746,11 +1793,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="軟性材質"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/軟性材質-d0c1bf40.jpg"
+                  src="/hiCraft/assets/Flexible Materials-d0c1bf40.jpg"
                   alt="materials19"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>軟性材質
@@ -1761,11 +1808,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="酸性材質"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/酸性材質-29dd8460.jpg"
+                  src="/hiCraft/assets/Acidic Materials-29dd8460.jpg"
                   alt="materials20"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>酸性材質
@@ -1776,14 +1823,14 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="金箔、銀箔"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/金箔、銀箔-7b349f5d.jpg"
+                  src="/hiCraft/assets/Gold Leaf-7b349f5d.jpg"
                   alt="materials21"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>金箔、銀箔
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>金箔
               </label>
             </div>
             
@@ -1791,11 +1838,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="複合材料"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/複合材料-06f5539e.jpg"
+                  src="/hiCraft/assets/Composite Materials-06f5539e.jpg"
                   alt="materials22"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>複合材料
@@ -1806,11 +1853,11 @@
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="其他"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
-                  src="/hiCraft/assets/其他-6fd9a369.jpg"
+                  src="/hiCraft/assets/Other-6fd9a369.jpg"
                   alt="materials23"
                 />
                 <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i>其他
@@ -1827,7 +1874,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="addNewMatirial"
+                  id="add-new-materials"
                   placeholder="最多10字"
                   aria-placeholder="最多10字"
                   maxlength="10"
@@ -1838,25 +1885,26 @@
                 <button
                   class="btn btn-secondary text-nowrap"
                   type="submit"
-                  >新增</button
                 >
+                  新增
+                </button>
               </div>
             </form>
             <ul class="list-inline mb-0 d-flex gap-2 gap-md-4">
-              <li
-                ><a
+              <li>
+                <a
                   href="#"
                   class="btn btn-tag-secondary"
                   ><i class="bi bi-x"></i>有機物質</a
-                ></li
-              >
-              <li
-                ><a
+                >
+              </li>
+              <li>
+                <a
                   href="#"
                   class="btn btn-tag-secondary"
                   ><i class="bi bi-x"></i>鑽石</a
-                ></li
-              >
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -1867,7 +1915,7 @@
               <input
                 type="text"
                 class="form-control"
-                id="addOthersTag"
+                id="add-other-tags"
                 placeholder="最多10字"
                 aria-placeholder="最多10字"
                 maxlength="10"
@@ -1878,25 +1926,26 @@
               <button
                 class="btn btn-secondary text-nowrap"
                 type="submit"
-                >新增</button
               >
+                新增
+              </button>
             </div>
           </form>
           <ul class="list-inline mb-0 d-flex gap-2 gap-md-4">
-            <li
-              ><a
+            <li>
+              <a
                 href="#"
                 class="btn btn-tag-secondary"
                 ><i class="bi bi-x"></i>古典</a
-              ></li
-            >
-            <li
-              ><a
+              >
+            </li>
+            <li>
+              <a
                 href="#"
                 class="btn btn-tag-secondary"
                 ><i class="bi bi-x"></i>歐式</a
-              ></li
-            >
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -1906,13 +1955,15 @@
           class="btn btn-outline-secondary"
           data-bs-dismiss="modal"
           aria-label="Close"
-          >取消</button
         >
+          取消
+        </button>
         <button
           type="submit"
           class="btn btn-primary"
-          >確定</button
         >
+          確定
+        </button>
       </div>
     </div>
   </div>
@@ -1928,40 +1979,44 @@
           class=""
         />
         <ul class="list-unstyled mb-0 ms-6 col-md-7 d-flex flex-column gap-2 justify-content-center">
-          <li
-            ><a
+          <li>
+            <a
               href="index.html"
               class="link-black-100"
-              >首頁</a
-            ></li
-          >
-          <li
-            ><a
+              >首頁
+            </a>
+          </li>
+          <li>
+            <a
               href="about.html"
               class="link-black-100"
-              >關於我們</a
-            ></li
-          >
-          <li
-            ><a
+              >關於我們
+            </a>
+          </li>
+          <li>
+            <a
               class="link-black-100"
               href="user-portfolio.html"
-              >個人中心</a
-            ></li
-          >
+              >個人中心
+            </a>
+          </li>
         </ul>
       </div>
       <ul class="list-unstyled mb-0 col-md-3 d-flex flex-column gap-26px text-end">
-        <li class="d-flex gap-6 justify-content-end"
-          ><a href="#"
-            ><img
+        <li class="d-flex gap-6 justify-content-end">
+          <a href="#">
+            <img
               src="/hiCraft/assets/facebook-288e02cc.svg"
-              alt="fb link" /></a
-          ><a href="#"
-            ><img
+              alt="fb link"
+            />
+          </a>
+          <a href="#">
+            <img
               src="/hiCraft/assets/instagram-7be74289.svg"
-              alt="ig link" /></a
-        ></li>
+              alt="ig link"
+            />
+          </a>
+        </li>
         <li>Copyright © 2023 All rights reserved.</li>
       </ul>
     </div>
@@ -1976,6 +2031,7 @@
     <span class="visually-hidden">Loading...</span>
   </div>
 </div>
+
     
   </body>
 </html>
