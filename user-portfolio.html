@@ -16,7 +16,7 @@
       type="image/svg+xml"
       href="/hiCraft/favicon.svg"
     />
-    <script type="module" crossorigin src="/hiCraft/assets/main-523da3af.js"></script>
+    <script type="module" crossorigin src="/hiCraft/assets/main-3d3740bf.js"></script>
     <link rel="stylesheet" href="/hiCraft/assets/main-4023b451.css">
   </head>
   <body>
@@ -207,6 +207,7 @@
 </div>
 <!-- 註冊框 -->
 <form
+  novalidate
   class="modal fade needs-validation"
   action=""
   id="modal-sign-up"
@@ -266,10 +267,12 @@
             id="sign-up-input-user-name"
             placeholder="輸入暱稱"
             aria-placeholder="輸入暱稱"
+            autocomplete="off"
             minlength="3"
             maxlength="20"
             required
           />
+          <div class="invalid-feedback">長度介於3~20個字元</div>
         </div>
         <div class="mb-6">
           <label
@@ -284,8 +287,10 @@
             id="sign-up-input-email"
             placeholder="輸入電子郵件"
             aria-placeholder="輸入電子郵件"
+            autocomplete="email"
             required
           />
+          <div class="invalid-feedback">請輸入正確的電子郵件</div>
         </div>
         <div class="mb-6">
           <label
@@ -300,9 +305,11 @@
             id="sign-up-input-password"
             placeholder="密碼"
             aria-placeholder="輸入密碼"
+            autocomplete="new-password"
             required
             minlength="6"
           />
+          <div class="invalid-feedback">至少6個字元</div>
         </div>
         <div class="mb-6">
           <label
@@ -317,9 +324,11 @@
             id="sign-up-input-confirm-password"
             placeholder="確認密碼"
             aria-placeholder="輸入密碼"
+            autocomplete="new-password"
             required
             minlength="6"
           />
+          <div class="invalid-feedback">至少6個字元</div>
         </div>
         <button
           type="submit"
@@ -341,6 +350,7 @@
 
 <!-- 登入框 -->
 <form
+  novalidate
   class="modal fade needs-validation"
   action=""
   id="modal-login"
@@ -383,8 +393,10 @@
             id="login-input-email"
             placeholder="輸入電子郵件"
             aria-placeholder="輸入電子郵件"
+            autocomplete="email"
             required
           />
+          <div class="invalid-feedback">請輸入正確的電子郵件</div>
         </div>
         <div class="mb-6">
           <label
@@ -398,9 +410,11 @@
             id="login-input-password"
             placeholder="密碼"
             aria-placeholder="輸入密碼"
+            autocomplete="current-password"
             required
             minlength="6"
           />
+          <div class="invalid-feedback">至少6個字元</div>
         </div>
         <ul class="list-unstyled mb-11 form-check d-flex justify-content-between">
           <li>
@@ -496,6 +510,7 @@
               id="reset-password-input-email"
               placeholder="輸入電子郵件"
               aria-placeholder="輸入電子郵件"
+              autocomplete="email"
               required
             />
           </div>
@@ -1036,6 +1051,7 @@
           <img
             class="w-100 h-300px object-fit-cover"
             src="/hiCraft/assets/fake1-b47188f8.jpg"
+            alt="craft image"
           />
         </a>
         
@@ -1046,6 +1062,7 @@
           <img
             class="w-100 h-300px object-fit-cover"
             src="/hiCraft/assets/fake2-9d089131.jpg"
+            alt="craft image"
           />
         </a>
         
@@ -1056,6 +1073,7 @@
           <img
             class="w-100 h-300px object-fit-cover"
             src="/hiCraft/assets/fake3-b0e2a9c4.jpg"
+            alt="craft image"
           />
         </a>
         
@@ -1066,6 +1084,7 @@
           <img
             class="w-100 h-300px object-fit-cover"
             src="/hiCraft/assets/fake4-53aec15b.jpg"
+            alt="craft image"
           />
         </a>
         
@@ -1076,6 +1095,7 @@
           <img
             class="w-100 h-300px object-fit-cover"
             src="/hiCraft/assets/fake5-4172a906.jpg"
+            alt="craft image"
           />
         </a>
         
@@ -1086,6 +1106,7 @@
           <img
             class="w-100 h-300px object-fit-cover"
             src="/hiCraft/assets/fake6-52cb3dc0.jpg"
+            alt="craft image"
           />
         </a>
         
@@ -1096,6 +1117,7 @@
           <img
             class="w-100 h-300px object-fit-cover"
             src="/hiCraft/assets/fake7-960fd359.jpg"
+            alt="craft image"
           />
         </a>
         
@@ -1106,6 +1128,7 @@
           <img
             class="w-100 h-300px object-fit-cover"
             src="/hiCraft/assets/fake8-9839bf90.jpg"
+            alt="craft image"
           />
         </a>
         
@@ -1116,6 +1139,7 @@
           <img
             class="w-100 h-300px object-fit-cover"
             src="/hiCraft/assets/fake9-4bec8a13.jpg"
+            alt="craft image"
           />
         </a>
         
@@ -1126,6 +1150,7 @@
           <img
             class="w-100 h-300px object-fit-cover"
             src="/hiCraft/assets/fake10-c0764ca1.jpg"
+            alt="craft image"
           />
         </a>
         
@@ -1136,6 +1161,7 @@
           <img
             class="w-100 h-300px object-fit-cover"
             src="/hiCraft/assets/fake11-9ee73972.jpg"
+            alt="craft image"
           />
         </a>
         
@@ -1146,6 +1172,7 @@
           <img
             class="w-100 h-300px object-fit-cover"
             src="/hiCraft/assets/fake12-8a659724.jpg"
+            alt="craft image"
           />
         </a>
         
