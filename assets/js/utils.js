@@ -18,10 +18,17 @@ export function defineModalSwitchOnSubmit(currentModalSelector, nextModalSelecto
 
   sourceModalElement.addEventListener("submit", (event) => {
     event.preventDefault();
-    const sourceModal = Modal.getOrCreateInstance(sourceModalElement);
-    const targetModal = Modal.getOrCreateInstance(targetModalElement);
-    targetModal.show();
-    sourceModal.hide();
+    const form = event.target;
+    if (!(form instanceof HTMLFormElement)) return;
+    if (form.checkValidity()) {
+      const sourceModal = Modal.getOrCreateInstance(sourceModalElement);
+      const targetModal = Modal.getOrCreateInstance(targetModalElement);
+      targetModal.show();
+      sourceModal.hide();
+    } else {
+      event.stopPropagation();
+    }
+    form.classList.add("was-validated");
   });
 }
 

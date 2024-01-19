@@ -1,4 +1,5 @@
 <form
+  novalidate
   class="modal fade needs-validation"
   action=""
   id="modal-sign-up"
@@ -58,10 +59,12 @@
             id="sign-up-input-user-name"
             placeholder="輸入暱稱"
             aria-placeholder="輸入暱稱"
+            autocomplete="off"
             minlength="3"
             maxlength="20"
             required
           />
+          <div class="invalid-feedback">長度介於3~20個字元</div>
         </div>
         <div class="mb-6">
           <label
@@ -76,8 +79,10 @@
             id="sign-up-input-email"
             placeholder="輸入電子郵件"
             aria-placeholder="輸入電子郵件"
+            autocomplete="email"
             required
           />
+          <div class="invalid-feedback">請輸入正確的電子郵件</div>
         </div>
         <div class="mb-6">
           <label
@@ -92,9 +97,11 @@
             id="sign-up-input-password"
             placeholder="密碼"
             aria-placeholder="輸入密碼"
+            autocomplete="new-password"
             required
             minlength="6"
           />
+          <div class="invalid-feedback">至少6個字元</div>
         </div>
         <div class="mb-6">
           <label
@@ -109,9 +116,11 @@
             id="sign-up-input-confirm-password"
             placeholder="確認密碼"
             aria-placeholder="輸入密碼"
+            autocomplete="new-password"
             required
             minlength="6"
           />
+          <div class="invalid-feedback">至少6個字元</div>
         </div>
         <button
           type="submit"

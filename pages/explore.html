@@ -245,12 +245,13 @@
     <script type="module">
       import { debounce } from "/assets/js/utils.js";
       import Gallery from "/assets/js/Gallery.js";
+      const baseURL = import.meta.env.BASE_URL;
 
       window.addEventListener("load", async () => {
-        const craftsResponse = await fetch("/data/crafts.json").catch((err) => {
+        const craftsResponse = await fetch(baseURL + "data/crafts.json").catch((err) => {
           throw new Error("HTTP error! status: " + err.status);
         });
-        const tagGroupsResponse = await fetch("/data/tag-groups.json").catch((err) => {
+        const tagGroupsResponse = await fetch(baseURL + "data/tag-groups.json").catch((err) => {
           throw new Error("Failed to fetch tag-groups data");
         });
 
@@ -259,7 +260,6 @@
         const newComerCrafts = craftsData.filter((craft) =>
           craft.tags.some((tag) => tagGroups?.newcomer.includes(tag))
         );
-        console.log(hotCrafts);
         const topicCrafts = craftsData.filter((craft) => craft.tags.some((tag) => tagGroups?.topic.includes(tag)));
 
         const panel = {

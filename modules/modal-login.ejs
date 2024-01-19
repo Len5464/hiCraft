@@ -1,4 +1,5 @@
 <form
+  novalidate
   class="modal fade needs-validation"
   action=""
   id="modal-login"
@@ -41,8 +42,10 @@
             id="login-input-email"
             placeholder="輸入電子郵件"
             aria-placeholder="輸入電子郵件"
+            autocomplete="email"
             required
           />
+          <div class="invalid-feedback">請輸入正確的電子郵件</div>
         </div>
         <div class="mb-6">
           <label
@@ -56,9 +59,11 @@
             id="login-input-password"
             placeholder="密碼"
             aria-placeholder="輸入密碼"
+            autocomplete="current-password"
             required
             minlength="6"
           />
+          <div class="invalid-feedback">至少6個字元</div>
         </div>
         <ul class="list-unstyled mb-11 form-check d-flex justify-content-between">
           <li>

@@ -122,14 +122,15 @@
       import { debounce } from "../assets/js/utils.js";
       const urlParams = new URLSearchParams(window.location.search);
       const queryString = urlParams.get("query");
+      const baseURL = import.meta.env.BASE_URL;
       const titleSearchResult = document.querySelector("#title-search-result");
       titleSearchResult.textContent = `${queryString} 有關的主題：`;
 
       window.addEventListener("load", async () => {
-        const craftsResponse = await fetch("/data/crafts.json").catch((err) => {
+        const craftsResponse = await fetch(baseURL + "data/crafts.json").catch((err) => {
           throw new Error("HTTP error! status: " + err.status);
         });
-        const tagsI18nResponse = await fetch("/data/tags-i18n.json").catch((err) => {
+        const tagsI18nResponse = await fetch(baseURL + "data/tags-i18n.json").catch((err) => {
           throw new Error("Failed to fetch tag-i18n data");
         });
         const [craftsData, tagsI18n] = await Promise.all([craftsResponse.json(), tagsI18nResponse.json()]);

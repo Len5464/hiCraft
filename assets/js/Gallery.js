@@ -72,6 +72,7 @@ export default class Gallery {
     };
 
     img.src = imgURL;
+    img.alt = "craft image";
     img.classList.add("gallery-img");
     item.classList.add("gallery-item");
     a.href = "craft.html";

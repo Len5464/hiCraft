@@ -45,9 +45,11 @@
     <script type="module">
       import { debounce } from "/assets/js/utils.js";
       import Gallery from "/assets/js/Gallery.js";
+      const baseURL = import.meta.env.BASE_URL;
+
       window.addEventListener("load", async () => {
-        const craftsResponse = await fetch("/data/crafts.json").catch((err) => console.log(err));
-        const accountResponse = await fetch("/user/0/account.json").catch((err) => console.log(err));
+        const craftsResponse = await fetch(baseURL + "data/crafts.json").catch((err) => console.log(err));
+        const accountResponse = await fetch(baseURL + "user/0/account.json").catch((err) => console.log(err));
 
         const [craftsData, accountData] = await Promise.all([craftsResponse.json(), accountResponse.json()]);
         const crafts = craftsData.filter((craft) => craft.tags.some((tag) => accountData.interestTags.includes(tag)));
