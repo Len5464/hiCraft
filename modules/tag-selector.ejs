@@ -1,28 +1,30 @@
-<div class="container d-flex fs-5 fs-lg-3 align-items-center py-3 border-bottom">
-  <ul
-    class="tags-list tags-list-fold list-inline mb-0 flex-fill scroll-bar-small"
-    id="tagsList"
-  >
+<div
+  id="tag-selector"
+  class="d-flex fs-5 fs-lg-3 align-items-stretch py-3 border-bottom"
+>
+  <ul class="tags-group tags-group-fold list-inline mb-0 flex-fill py-2">
     <% interests.forEach(item =>{ %>
     <li class="d-inline">
       <label class="btn btn-tag-primary px-lg-5 my-1 cursor-pointer">
         <input
           type="checkbox"
-          name="tag<%= item.id %>"
+          name="interests"
         />
-        <span><%= item.titleZH %></span>
+        <span><%= tagsI18n[item]["zh-TW"] %></span>
       </label>
     </li>
     <% }); %>
   </ul>
-  <ul class="list-inline d-flex ms-auto mb-0 py-3 gap-4 position-relative gradient-mask-left">
-    <li class="">
+  <ul class="list-unstyled d-flex justify-content-end align-items-end mb-0 py-3 ps-5 gap-4 gradient-mask-left">
+    <li
+      id="tag-selector-toggler"
+      class="transition"
+    >
       <a
         href="#"
-        id="tagsToggle"
         class="bi bi-chevron-down text-secondary"
-      ></a
-    ></li>
+      ></a>
+    </li>
     <li class="dropdown dropdown-center">
       <a
         href="#"
@@ -32,34 +34,34 @@
         aria-expanded="false"
       ></a>
       <ul class="dropdown-menu">
-        <li
-          ><a
+        <li>
+          <a
             class="dropdown-item active"
             aria-current="true"
             href="#"
             >最多人收藏</a
-          ></li
-        >
-        <li
-          ><a
+          >
+        </li>
+        <li>
+          <a
             class="dropdown-item"
             href="#"
             >最多人觀看</a
-          ></li
-        >
-        <li
-          ><a
+          >
+        </li>
+        <li>
+          <a
             class="dropdown-item"
             href="#"
             >最新</a
-          ></li
-        >
+          >
+        </li>
       </ul>
     </li>
     <li>
       <a
         tabindex="0"
-        id="tagListTips"
+        id="tag-selector-tips"
         class="bi bi-info-circle text-secondary"
         role="button"
         data-bs-toggle="popover"
@@ -71,14 +73,7 @@
     </li>
   </ul>
 </div>
-<script>
-  const tagsList = document.querySelector("#tagsList");
-  const tagsToggle = document.querySelector("#tagsToggle");
-
-  tagsToggle.addEventListener("click", () => {
-    tagsList.classList.toggle("tags-list-fold");
-    tagsList.classList.toggle("tags-list-expend");
-    tagsList.parentElement.classList.toggle("flex-wrap");
-    tagsToggle.parentElement.classList.toggle("rotate-180");
-  });
-</script>
+<script
+  type="module"
+  src="/modules/tag-selector.js"
+></script>

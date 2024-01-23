@@ -11,9 +11,14 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>hiCraft | 搜尋好設計、好點子</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
   </head>
   <body>
-    <%- include('./layout/navbar.ejs',{enableCollapseSearch:true ,route:'/explore'}); -%>
+    <%- include('./modules/navbar.ejs',{enableCollapseSearch:true }); -%>
     <nav class="border-bottom">
       <div
         class="nav nav-underline nav-tabs-lg container justify-content-center align-items-center gap-lg-12"
@@ -29,8 +34,9 @@
           role="tab"
           aria-controls="nav-hot"
           aria-selected="true"
-          >熱門作品</button
         >
+          熱門作品
+        </button>
         <span class="vr text-secondary"></span>
         <button
           class="nav-link py-4"
@@ -41,8 +47,9 @@
           role="tab"
           aria-controls="nav-newcomer"
           aria-selected="false"
-          >新人作品</button
         >
+          新人作品
+        </button>
         <span class="vr text-secondary"></span>
         <button
           class="nav-link py-4"
@@ -53,12 +60,13 @@
           role="tab"
           aria-controls="nav-topic"
           aria-selected="false"
-          >主題作品</button
         >
+          主題作品
+        </button>
       </div>
     </nav>
     <div
-      class="tab-content"
+      class="container tab-content py-16"
       id="nav-tabContent"
     >
       <div
@@ -68,7 +76,7 @@
         aria-labelledby="nav-hot-tab"
         tabindex="0"
       >
-        <header class="container pt-12">
+        <header>
           <h1 class="border-bottom border-3 d-flex justify-content-between align-items-center">
             熱門作品
             <div class="dropdown">
@@ -80,44 +88,41 @@
                 aria-expanded="false"
               ></a>
               <ul class="dropdown-menu dropdown-menu-end">
-                <li
-                  ><a
+                <li>
+                  <a
                     class="dropdown-item"
                     href="#"
-                    >最多人收藏</a
-                  ></li
-                >
-                <li
-                  ><a
+                    >最多人收藏
+                  </a>
+                </li>
+                <li>
+                  <a
                     class="dropdown-item"
                     href="#"
-                    >最多人觀看</a
-                  ></li
-                >
-                <li
-                  ><a
+                    >最多人觀看
+                  </a>
+                </li>
+                <li>
+                  <a
                     class="dropdown-item"
                     href="#"
-                    >最新</a
-                  ></li
-                >
+                    >最新
+                  </a>
+                </li>
               </ul>
             </div>
           </h1>
         </header>
-        <main class="container position-relative">
-          <%-include('./layout/gallery.ejs',{filter:'熱門' ,route:'/explore'}); -%>
-        </main>
-        <nav class="container py-4 py-lg-8">
-          <div class="row mt-16 align-items-center">
-            <a
-              href="#"
-              class="btn btn-outline-primary col-6 offset-3"
-              >下一頁</a
-            >
-            <span class="col offset-md-1 offset-lg-2">1/15 頁</span>
-          </div>
-        </nav>
+        <ul
+          id="gallery-hot"
+          class="gallery"
+        ></ul>
+        <a
+          id="load-gallery-hot"
+          href=""
+          class="btn btn-primary-white btn-lg mt-16 mx-auto d-block"
+          >載入更多
+        </a>
       </div>
       <div
         class="tab-pane fade"
@@ -126,7 +131,7 @@
         aria-labelledby="nav-newcomer-tab"
         tabindex="0"
       >
-        <header class="container pt-12">
+        <header>
           <h1 class="border-bottom border-3 d-flex justify-content-between align-items-center">
             新人作品
             <div class="dropdown">
@@ -138,44 +143,41 @@
                 aria-expanded="false"
               ></a>
               <ul class="dropdown-menu dropdown-menu-end">
-                <li
-                  ><a
+                <li>
+                  <a
                     class="dropdown-item"
                     href="#"
                     >最多人收藏</a
-                  ></li
-                >
-                <li
-                  ><a
+                  >
+                </li>
+                <li>
+                  <a
                     class="dropdown-item"
                     href="#"
                     >最多人觀看</a
-                  ></li
-                >
-                <li
-                  ><a
+                  >
+                </li>
+                <li>
+                  <a
                     class="dropdown-item"
                     href="#"
                     >最新</a
-                  ></li
-                >
+                  >
+                </li>
               </ul>
             </div>
           </h1>
         </header>
-        <main class="container position-relative">
-          <%-include('./layout/gallery.ejs',{filter:'新人作品' ,route:'/explore'}); -%>
-        </main>
-        <nav class="container py-4 py-lg-8">
-          <div class="row mt-16 align-items-center">
-            <a
-              href="#"
-              class="btn btn-outline-primary col-6 offset-3"
-              >下一頁</a
-            >
-            <span class="col offset-md-1 offset-lg-2">1/15 頁</span>
-          </div>
-        </nav>
+        <ul
+          id="gallery-newcomer"
+          class="gallery"
+        ></ul>
+        <a
+          id="load-gallery-newcomer"
+          href=""
+          class="btn btn-primary-white btn-lg mt-16 mx-auto d-block"
+          >載入更多
+        </a>
       </div>
       <div
         class="tab-pane fade"
@@ -184,7 +186,7 @@
         aria-labelledby="nav-topic-tab"
         tabindex="0"
       >
-        <header class="container pt-12">
+        <header>
           <h1 class="border-bottom border-3 d-flex justify-content-between align-items-center">
             歡慶節日
             <div class="dropdown">
@@ -196,50 +198,112 @@
                 aria-expanded="false"
               ></a>
               <ul class="dropdown-menu dropdown-menu-end">
-                <li
-                  ><a
+                <li>
+                  <a
                     class="dropdown-item"
                     href="#"
                     >最多人收藏</a
-                  ></li
-                >
-                <li
-                  ><a
+                  >
+                </li>
+                <li>
+                  <a
                     class="dropdown-item"
                     href="#"
                     >最多人觀看</a
-                  ></li
-                >
-                <li
-                  ><a
+                  >
+                </li>
+                <li>
+                  <a
                     class="dropdown-item"
                     href="#"
                     >最新</a
-                  ></li
-                >
+                  >
+                </li>
               </ul>
             </div>
           </h1>
         </header>
-        <main class="container position-relative">
-          <%-include('./layout/gallery.ejs',{filter: '中秋節 父親節 聖誕節' ,route:'/explore'}); -%>
-        </main>
-        <nav class="container py-4 py-lg-8">
-          <div class="row mt-16 align-items-center">
-            <a
-              href="#"
-              class="btn btn-outline-primary col-6 offset-3"
-              >下一頁</a
-            >
-            <span class="col offset-md-1 offset-lg-2">1/15 頁</span>
-          </div>
-        </nav>
+        <ul
+          id="gallery-topic"
+          class="gallery"
+        ></ul>
+        <a
+          id="load-gallery-topic"
+          href=""
+          class="btn btn-primary-white btn-lg mt-16 mx-auto d-block"
+          >載入更多
+        </a>
       </div>
     </div>
-    <%- include('./layout/footer.ejs'); -%>
+    <%- include('./modules/footer.ejs'); -%>
+    <!--  -->
+    <%- include('./modules/loading-mask'); -%>
     <script
       type="module"
       src="../main.js"
     ></script>
+    <script type="module">
+      import { debounce } from "/assets/js/utils.js";
+      import Gallery from "/assets/js/Gallery.js";
+      const baseURL = import.meta.env.BASE_URL;
+
+      window.addEventListener("load", async () => {
+        const craftsResponse = await fetch(baseURL + "data/crafts.json").catch((err) => {
+          throw new Error("HTTP error! status: " + err.status);
+        });
+        const tagGroupsResponse = await fetch(baseURL + "data/tag-groups.json").catch((err) => {
+          throw new Error("Failed to fetch tag-groups data");
+        });
+
+        const [craftsData, tagGroups] = await Promise.all([craftsResponse.json(), tagGroupsResponse.json()]);
+        const hotCrafts = craftsData.filter((craft) => craft.tags.some((tag) => tag === "Popular"));
+        const newComerCrafts = craftsData.filter((craft) =>
+          craft.tags.some((tag) => tagGroups?.newcomer.includes(tag))
+        );
+        const topicCrafts = craftsData.filter((craft) => craft.tags.some((tag) => tagGroups?.topic.includes(tag)));
+
+        const panel = {
+          "nav-hot-tab": {
+            gallery: document.querySelector("#gallery-hot"),
+            loadButton: document.querySelector("#load-gallery-hot"),
+            crafts: hotCrafts,
+          },
+          "nav-newcomer-tab": {
+            gallery: document.querySelector("#gallery-newcomer"),
+            loadButton: document.querySelector("#load-gallery-newcomer"),
+            crafts: newComerCrafts,
+          },
+          "nav-topic-tab": {
+            gallery: document.querySelector("#gallery-topic"),
+            loadButton: document.querySelector("#load-gallery-topic"),
+            crafts: topicCrafts,
+          },
+        };
+
+        const tabs = document.querySelectorAll("#nav-hot-tab,#nav-newcomer-tab,#nav-topic-tab");
+        tabs.forEach((tab) => {
+          tab.addEventListener("shown.bs.tab", (event) => {
+            const id = event.target.getAttribute("id");
+            if (!id in panel) return;
+            if (panel[id].gallery.childElementCount > 0) return;
+            const gallery = new Gallery(panel[id].gallery, {
+              imgURLs: panel[id].crafts.map((craft) => craft.imgURLs[0]),
+              loadButton: panel[id].loadButton,
+              loadAmount: 8,
+            });
+            window.addEventListener(
+              "resize",
+              debounce(
+                () => gallery.container.querySelectorAll(".gallery-item").forEach((item) => gallery.resizeItem(item)),
+                100
+              )
+            );
+          });
+        });
+
+        const activeTab = Array.from(tabs).find((tab) => tab.classList.contains("active"));
+        if (activeTab) activeTab.dispatchEvent(new Event("shown.bs.tab"));
+      });
+    </script>
   </body>
 </html>

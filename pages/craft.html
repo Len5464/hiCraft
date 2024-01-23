@@ -11,9 +11,14 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>hiCraft | 搜尋好設計、好點子</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
   </head>
   <body>
-    <%- include('./layout/navbar.ejs',{enableCollapseSearch:true ,route:'/craft-detail'}); -%>
+    <%- include('./modules/navbar.ejs',{enableCollapseSearch:true}); -%>
     <header class="container py-16 py-lg-24">
       <div class="row gx-lg-12 gy-12">
         <div class="col-lg-5 order-lg-last">
@@ -25,15 +30,16 @@
                 alt="avatar"
               />
             </a>
-            <h4 class="mb-0"
-              ><%= crafts[0].author %><a
+            <h4 class="mb-0">
+              <%= crafts[0].author %>
+              <a
                 href="#"
-                class="bi bi-plus-circle ms-4 "
-              ></a
-            ></span>
+                class="bi bi-plus-circle ms-4"
+              ></a>
+            </h4>
           </div>
-          <h2 class="d-flex align-items-center fw-bold mb-12"> 
-            <%= crafts[0].title %> 
+          <h2 class="d-flex align-items-center fw-bold mb-12">
+            <%= crafts[0].title %>
             <ul class="list-unstyled d-flex gap-8 fs-3 ms-auto mb-0">
               <li>
                 <a
@@ -52,8 +58,8 @@
                   href="#"
                   class="bi bi-hand-thumbs-up"
                 >
-                <small><%= crafts[0].like %> </small>
-              </a>
+                  <small><%= crafts[0].like %> </small>
+                </a>
               </li>
             </ul>
           </h2>
@@ -62,9 +68,9 @@
             <div class="callout callout-primary mb-4">
               <p><%= crafts[0].description %></p>
               <ul class="list-inline mb-0">
-                <% crafts[0].shopLinks.forEach( link => { %> 
-                <li class="list-inline-item"
-                  ><a
+                <% crafts[0].shopLinks.forEach( link => { %>
+                <li class="list-inline-item">
+                  <a
                     href="<%= link %>"
                     class="link-primary"
                     >Shoppee</a
@@ -74,12 +80,12 @@
               </ul>
             </div>
             <ul class="list-inline mb-0">
-              <% crafts[0].tags.forEach( tag => { %> 
-              <li class="list-inline-item"
-                ><a
+              <% crafts[0].tags.forEach( tag => { %>
+              <li class="list-inline-item">
+                <a
                   href="explore.html"
                   class="badge btn btn-primary"
-                  >#<%= tag %></a
+                  >#<%= tagsI18n[tag]["zh-TW"] %></a
                 >
               </li>
               <% }) %>
@@ -87,45 +93,94 @@
           </article>
         </div>
         <div class="col-lg-7">
-            <div id="craftCarousel" class="carousel slide ">
-                <div class="carousel-inner">
-                  <% crafts[0].imgURLs.forEach( (url , index)=> { %> 
-                    <div class="carousel-item <%= index === 0? 'active':'' %>">
-                        <img src="<%= crafts[0].imgURLs[index] %>" class="d-block w-100 object-fit-cover ratio-self-3x2" alt="..." >
-                    </div>
-                  <%})%>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#craftCarousel" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#craftCarousel" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-            <div class="row row-cols-3 row-cols-md-4 row-cols-lg-5 gy-6 mt-0">
-              <% crafts[0].imgURLs.forEach( (url , index)=> { %> 
-              <div class="col">
-                <a class="active focus-ring d-block opacity-50 opacity-100-focus" role="button" href="#craftCarousel" data-bs-slide-to="<%= index %>"  aria-current="<%= index === 0 %>" aria-label="Slide <%= index+1 %>">
-                  <img class="object-fit-cover ratio-self-1x1 w-100 " src="<%= crafts[0].imgURLs[index] %>"  alt="...">
-                </a>
+          <div
+            id="craftCarousel"
+            class="carousel slide"
+          >
+            <div class="carousel-inner">
+              <% crafts[0].imgURLs.forEach( (url , index)=> { %>
+              <div class="carousel-item <%= index === 0? 'active':'' %>">
+                <img
+                  src="<%= crafts[0].imgURLs[index] %>"
+                  class="d-block w-100 object-fit-cover ratio-self-3x2"
+                  alt="..."
+                />
               </div>
               <%})%>
             </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#craftCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#craftCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="row row-cols-3 row-cols-md-4 row-cols-lg-5 gy-6 mt-0">
+            <% crafts[0].imgURLs.forEach( (url , index)=> { %>
+            <div class="col">
+              <a
+                class="active focus-ring d-block opacity-50 opacity-100-focus"
+                role="button"
+                href="#craftCarousel"
+                data-bs-slide-to="<%= index %>"
+                aria-current="<%= index === 0 %>"
+                aria-label="Slide <%= index+1 %>"
+              >
+                <img
+                  class="object-fit-cover ratio-self-1x1 w-100"
+                  src="<%= crafts[0].imgURLs[index] %>"
+                  alt="..."
+                />
+              </a>
+            </div>
+            <%})%>
+          </div>
         </div>
-
       </div>
     </header>
     <main>
       <div class="bg-secondary-subtle py-12">
-        <form class="container" action="">
-          <h5>
-            留言區
-          </h5>
-          <div class="vstack flex-md-row  gap-5">
-            <textarea class="form-control" name="message" id="craftMessageInput" cols="30" rows="10" placeholder="最多500字" maxlength="500" required aria-required="true" ></textarea>
-            <button class="btn btn-lg btn-primary align-self-end text-nowrap" type="submit">送出</button>
+        <form
+          class="container"
+          action=""
+        >
+          <h5>留言區</h5>
+          <div class="vstack flex-md-row gap-5">
+            <textarea
+              class="form-control"
+              name="message"
+              id="craftMessageInput"
+              cols="30"
+              rows="10"
+              placeholder="最多500字"
+              maxlength="500"
+              required
+              aria-required="true"
+            ></textarea>
+            <button
+              class="btn btn-lg btn-primary align-self-end text-nowrap"
+              type="submit"
+            >
+              送出
+            </button>
           </div>
         </form>
       </div>
@@ -141,23 +196,63 @@
                     alt="avatar"
                   />
                 </a>
-                <h5 class="mb-0 me-auto" >
-                  Zawa 
+                <h5 class="mb-0 me-auto">
+                  Zawa
                   <small class="d-block text-secondary">1天前</small>
                 </h5>
-                <a class="bi bi-hand-thumbs-up-fill fs-4 " href="#"><small class="ms-2" >2</small></a>
-                <a class="link-primary text-decoration-underline mt-auto mb-2" href="#reply1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseReply1">回覆</a>
+                <a
+                  class="bi bi-hand-thumbs-up-fill fs-4"
+                  href="#"
+                  ><small class="ms-2">2</small></a
+                >
+                <a
+                  class="link-primary text-decoration-underline mt-auto mb-2"
+                  href="#reply1"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseReply1"
+                  >回覆</a
+                >
               </div>
               <p>讚喔!</p>
-              <form class="collapse ms-8 border-start border-3 p-5" id="reply1" action="">
-                <textarea class="form-control mb-4" name="message" id="replyMessageInput1" cols="30" rows="10" placeholder="最多500字" maxlength="500" required aria-required="true" ></textarea>
+              <form
+                class="collapse ms-8 border-start border-3 p-5"
+                id="reply1"
+                action=""
+              >
+                <textarea
+                  class="form-control mb-4"
+                  name="message"
+                  id="replyMessageInput1"
+                  cols="30"
+                  rows="10"
+                  placeholder="最多500字"
+                  maxlength="500"
+                  required
+                  aria-required="true"
+                ></textarea>
                 <div class="d-flex justify-content-end gap-4">
-                  <button class="btn btn-secondary" type="button"  data-bs-toggle="collapse" data-bs-target="#reply1" aria-expanded="false" aria-controls="collapseReply1">取消</button>
-                  <button class="btn btn-primary" type="submit">送出</button>
+                  <button
+                    class="btn btn-secondary"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#reply1"
+                    aria-expanded="false"
+                    aria-controls="collapseReply1"
+                  >
+                    取消
+                  </button>
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                  >
+                    送出
+                  </button>
                 </div>
               </form>
             </li>
-            <hr>
+            <hr />
             <li>
               <div class="d-flex gap-4 align-items-center mb-4">
                 <a href="user-portfolio.html">
@@ -167,19 +262,59 @@
                     alt="avatar"
                   />
                 </a>
-                <h5 class="mb-0 me-auto" >
-                  MOMO 
+                <h5 class="mb-0 me-auto">
+                  MOMO
                   <small class="d-block text-secondary">1個月前</small>
                 </h5>
-                <a class="bi bi-hand-thumbs-up-fill fs-4" href="#"><small class="ms-2">1</small></a>
-                <a class="link-primary text-decoration-underline mt-auto mb-2" href="#reply2" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseReply2">回覆</a>
+                <a
+                  class="bi bi-hand-thumbs-up-fill fs-4"
+                  href="#"
+                  ><small class="ms-2">1</small></a
+                >
+                <a
+                  class="link-primary text-decoration-underline mt-auto mb-2"
+                  href="#reply2"
+                  data-bs-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseReply2"
+                  >回覆</a
+                >
               </div>
               <p>好好看!</p>
-              <form class="collapse show ms-8 border-start border-3 p-5" id="reply2" action="">
-                <textarea class="form-control mb-4" name="message" id="replyMessageInput2" cols="30" rows="10" placeholder="最多500字" maxlength="500" required aria-required="true" ></textarea>
+              <form
+                class="collapse show ms-8 border-start border-3 p-5"
+                id="reply2"
+                action=""
+              >
+                <textarea
+                  class="form-control mb-4"
+                  name="message"
+                  id="replyMessageInput2"
+                  cols="30"
+                  rows="10"
+                  placeholder="最多500字"
+                  maxlength="500"
+                  required
+                  aria-required="true"
+                ></textarea>
                 <div class="d-flex justify-content-end gap-4">
-                  <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#reply2" aria-expanded="false" aria-controls="collapseReply2">取消</button>
-                  <button class="btn btn-primary" type="submit">送出</button>
+                  <button
+                    class="btn btn-secondary"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#reply2"
+                    aria-expanded="false"
+                    aria-controls="collapseReply2"
+                  >
+                    取消
+                  </button>
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                  >
+                    送出
+                  </button>
                 </div>
               </form>
             </li>
@@ -187,7 +322,11 @@
         </div>
       </div>
     </main>
-    <%- include('./layout/craft-tags-modal'); -%> <%- include('./layout/footer'); -%>
+    <%- include('./modules/modal-craft-tags'); -%>
+    <!--  -->
+    <%- include('./modules/footer'); -%>
+    <!--  -->
+    <%- include('./modules/loading-mask'); -%>
     <script
       type="module"
       src="../main.js"

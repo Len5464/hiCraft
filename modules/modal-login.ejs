@@ -1,11 +1,12 @@
 <form
+  novalidate
   class="modal fade needs-validation"
   action=""
-  id="Login-Form"
+  id="modal-login"
   data-bs-backdrop="static"
   data-bs-keyboard="false"
   tabindex="-1"
-  aria-labelledby="Login-FormLabel"
+  aria-labelledby="modal-login-title"
   aria-hidden="true"
 >
   <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
@@ -23,65 +24,76 @@
           class="mb-12 mb-lg-16 mx-auto"
           src="../assets/images/hiCraft_logo.svg"
         />
-        <h2 class="fw-bold text-center mb-12">歡迎來到XX手工</h2>
+        <h2
+          id="modal-login-title"
+          class="fw-bold text-center mb-12"
+        >
+          歡迎來到hiCraft
+        </h2>
         <div class="mb-6">
           <label
-            for="Login-InputEmail"
+            for="login-input-email"
             class="form-label"
             >電子郵件</label
           >
           <input
             type="email"
             class="form-control"
-            id="Login-InputEmail"
+            id="login-input-email"
             placeholder="輸入電子郵件"
             aria-placeholder="輸入電子郵件"
+            autocomplete="email"
             required
           />
+          <div class="invalid-feedback">請輸入正確的電子郵件</div>
         </div>
         <div class="mb-6">
           <label
-            for="Login-InputPassword"
+            for="login-input-password"
             class="form-label"
             >密碼</label
           >
           <input
             type="password"
             class="form-control"
-            id="Login-InputPassword"
+            id="login-input-password"
             placeholder="密碼"
             aria-placeholder="輸入密碼"
+            autocomplete="current-password"
             required
             minlength="6"
           />
+          <div class="invalid-feedback">至少6個字元</div>
         </div>
         <ul class="list-unstyled mb-11 form-check d-flex justify-content-between">
           <li>
             <input
               type="checkbox"
               class="form-check-input"
-              id="Login-RememberAccount"
+              id="login-input-remember-accunt"
             />
             <label
               class="form-check-label"
-              for="Login-RememberAccount"
+              for="login-input-remember-accunt"
               >記住帳號</label
             >
           </li>
-          <li
-            ><a
-              href="#ResetPassword-Form"
+          <li>
+            <a
+              href="#modal-reset-password"
               role="button"
               data-bs-toggle="modal"
-              >忘記密碼?</a
-            ></li
-          >
+            >
+              忘記密碼?
+            </a>
+          </li>
         </ul>
         <button
           type="submit"
           class="btn btn-primary w-100"
-          >登入</button
         >
+          登入
+        </button>
         <p class="text-center my-3 my-lg-6">或</p>
         <a
           href="#"
@@ -92,3 +104,7 @@
     </div>
   </div>
 </form>
+<script
+  type="module"
+  src="/modules/modal-login.js"
+></script>

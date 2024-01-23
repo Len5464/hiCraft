@@ -11,25 +11,65 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>hiCraft | 搜尋好設計、好點子</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
   </head>
   <body>
-    <%- include('./layout/navbar.ejs',{enableCollapseSearch:true ,route:'/interest'}); -%>
-    <header> <%- include('./layout/tags-selector.ejs'); -%> </header>
-    <main class="container position-relative"> <%- include('./layout/gallery.ejs',{route:'/interest'}); -%> </main>
-    <nav class="container py-4 py-lg-8">
-      <div class="row mt-16 align-items-center">
-        <a
-          href="#"
-          class="btn btn-outline-primary col-6 offset-3"
-          >下一頁</a
-        >
-        <span class="col-12 col-lg-1 offset-lg-2 text-center py-2">1/15 頁</span>
-      </div>
-    </nav>
-    <%- include('./layout/footer.ejs'); -%>
+    <%- include('./modules/navbar.ejs',{enableCollapseSearch:true}); -%>
+    <header class="container">
+      <%- include('./modules/tag-selector.ejs'); -%>
+      <h2 class="border-bottom border-3 mt-16">正在關注的主題:</h2>
+    </header>
+    <main class="container py-16">
+      <ul
+        id="gallery-interest"
+        class="gallery"
+      ></ul>
+      <a
+        id="load-gallery-interest"
+        href=""
+        class="btn btn-primary-white btn-lg mt-16 mx-auto d-block"
+        >載入更多
+      </a>
+    </main>
+    <%- include('./modules/footer.ejs'); -%>
+    <!--  -->
+    <%- include('./modules/loading-mask'); -%>
     <script
       type="module"
       src="../main.js"
     ></script>
+    <script type="module">
+      import { debounce } from "/assets/js/utils.js";
+      import Gallery from "/assets/js/Gallery.js";
+      const baseURL = import.meta.env.BASE_URL;
+
+      window.addEventListener("load", async () => {
+        const craftsResponse = await fetch(baseURL + "data/crafts.json").catch((err) => console.log(err));
+        const accountResponse = await fetch(baseURL + "user/0/account.json").catch((err) => console.log(err));
+
+        const [craftsData, accountData] = await Promise.all([craftsResponse.json(), accountResponse.json()]);
+        const crafts = craftsData.filter((craft) => craft.tags.some((tag) => accountData.interestTags.includes(tag)));
+
+        const imgURLs = crafts.map((craft) => craft.imgURLs[0]);
+        const loadBtn = document.querySelector("#load-gallery-interest");
+        const gallery = new Gallery("#gallery-interest", {
+          imgURLs: imgURLs,
+          loadButton: loadBtn,
+          loadAmount: 8,
+        });
+
+        window.addEventListener(
+          "resize",
+          debounce(
+            () => gallery.container.querySelectorAll(".gallery-item").forEach((item) => gallery.resizeItem(item)),
+            100
+          )
+        );
+      });
+    </script>
   </body>
 </html>

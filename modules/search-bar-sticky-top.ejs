@@ -1,6 +1,6 @@
 <nav
-  id="navSearch"
-  class="collapse bg-secondary-subtle"
+  id="search-bar-sliding"
+  class="transition bg-secondary-subtle z-1"
 >
   <div class="container py-3">
     <form
@@ -22,10 +22,12 @@
         />
       </svg>
       <input
-        class="form-control border-0"
+        class="form-control border-0 mx-2"
         type="search"
         placeholder="搜尋"
+        name="query"
         aria-label="Search"
+        autocomplete="off"
       />
 
       <select
@@ -35,8 +37,9 @@
         <option
           value="topic"
           selected
-          >找主題</option
         >
+          找主題
+        </option>
         <option value="author">找作者</option>
         <option value="name">找作品</option>
       </select>
@@ -60,3 +63,7 @@
     </form>
   </div>
 </nav>
+<script
+  type="module"
+  src="/modules/search-bar-sticky-top.js"
+></script>

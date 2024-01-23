@@ -1,11 +1,12 @@
 <form
+  novalidate
   class="modal fade needs-validation"
   action=""
-  id="SignUp-Form"
+  id="modal-sign-up"
   data-bs-backdrop="static"
   data-bs-keyboard="false"
   tabindex="-1"
-  aria-labelledby="SignUpFormLabel"
+  aria-labelledby="modal-sign-up-title"
   aria-hidden="true"
 >
   <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
@@ -23,98 +24,122 @@
           class="mx-auto"
           src="../assets/images/hiCraft_logo.svg"
         />
-        <h2 class="fw-bold mt-8">加入</h2>
+        <h2
+          id="modal-sign-up-title"
+          class="fw-bold mt-8"
+        >
+          加入
+        </h2>
         <ul class="list-unstyled d-flex mb-6 align-self-start gap-1 p-0">
           <li>
             <span class="text-black-50">已經是會員？</span>
           </li>
-          <li
-            ><a
-              href="#Login-Form"
+          <li>
+            <a
+              href="#modal-login"
               class="btn-link"
               role="button"
               data-bs-toggle="modal"
-              >登入</a
-            ></li
-          >
+            >
+              登入
+            </a>
+          </li>
         </ul>
 
         <div class="mb-6">
           <label
-            for="SignUp-UserName"
+            for="sign-up-input-user-name"
             class="form-label"
-            >暱稱</label
           >
+            暱稱
+          </label>
           <input
             type="text"
             class="form-control"
-            id="SignUp-UserName"
+            id="sign-up-input-user-name"
             placeholder="輸入暱稱"
             aria-placeholder="輸入暱稱"
+            autocomplete="off"
             minlength="3"
             maxlength="20"
             required
           />
+          <div class="invalid-feedback">長度介於3~20個字元</div>
         </div>
         <div class="mb-6">
           <label
-            for="SignUp-InputEmail"
+            for="sign-up-input-email"
             class="form-label"
-            >電子郵件</label
           >
+            電子郵件
+          </label>
           <input
             type="email"
             class="form-control"
-            id="SignUp-InputEmail"
+            id="sign-up-input-email"
             placeholder="輸入電子郵件"
             aria-placeholder="輸入電子郵件"
+            autocomplete="email"
             required
           />
+          <div class="invalid-feedback">請輸入正確的電子郵件</div>
         </div>
         <div class="mb-6">
           <label
-            for="SignUp-InputPassword"
+            for="sign-up-input-password"
             class="form-label"
-            >密碼</label
           >
+            密碼
+          </label>
           <input
             type="password"
             class="form-control"
-            id="SignUp-InputPassword"
+            id="sign-up-input-password"
             placeholder="密碼"
             aria-placeholder="輸入密碼"
+            autocomplete="new-password"
             required
             minlength="6"
           />
+          <div class="invalid-feedback">至少6個字元</div>
         </div>
         <div class="mb-6">
           <label
-            for="SignUp-ConfirmPassword"
+            for="sign-up-input-confirm-password"
             class="form-label"
-            >確認密碼</label
           >
+            確認密碼
+          </label>
           <input
             type="password"
             class="form-control"
-            id="SignUp-ConfirmPassword"
+            id="sign-up-input-confirm-password"
             placeholder="確認密碼"
             aria-placeholder="輸入密碼"
+            autocomplete="new-password"
             required
             minlength="6"
           />
+          <div class="invalid-feedback">至少6個字元</div>
         </div>
         <button
           type="submit"
           class="btn btn-primary w-100 mt-8"
-          >建立帳號</button
         >
+          建立帳號
+        </button>
         <p class="text-center my-3 my-lg-6">或</p>
         <a
           href="#"
           class="btn btn-outline-primary w-100"
-          >透過Google登入</a
         >
+          透過Google登入
+        </a>
       </div>
     </div>
   </div>
 </form>
+<script
+  type="module"
+  src="/modules/modal-sign-up.js"
+></script>

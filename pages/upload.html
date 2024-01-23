@@ -11,9 +11,14 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>hiCraft | 搜尋好設計、好點子</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
   </head>
   <body>
-    <%- include('./layout/navbar'); -%>
+    <%- include('./modules/navbar'); -%>
     <main class="container py-16 py-lg-24">
       <form
         action=""
@@ -30,7 +35,7 @@
             >
               <img
                 class="position-absolute top-50 start-50 translate-middle"
-                src="../assets/images/icons/add_photo.svg"
+                src="../assets/icons/add_photo.svg"
                 width="100"
                 height="100"
                 alt="上傳圖片"
@@ -51,11 +56,13 @@
                 ><i class="bi bi-x"></i>可愛</a
               >
               <a
-                href="#craftTagsModal"
+                id="add-creats-tags-btn"
+                href="#modal-craft-tags"
                 class="btn btn-secondary mt-4 rounded-5 w-100 mt-auto"
                 data-bs-toggle="modal"
-                ><i class="bi bi-plus"></i>新增標籤</a
               >
+                <i class="bi bi-plus"></i>新增標籤
+              </a>
             </div>
           </li>
         </ul>
@@ -118,12 +125,17 @@
           <button
             class="btn btn-lg btn-primary"
             type="submit"
-            >提交</button
           >
+            提交
+          </button>
         </div>
       </form>
     </main>
-    <%- include('./layout/craft-tags-modal'); -%> <%- include('./layout/footer'); -%>
+    <%- include('./modules/modal-craft-tags'); -%>
+    <!--  -->
+    <%- include('./modules/footer'); -%>
+    <!--  -->
+    <%- include('./modules/loading-mask'); -%>
     <script
       type="module"
       src="../main.js"

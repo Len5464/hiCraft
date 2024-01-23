@@ -1,5 +1,8 @@
 <div class="sticky-top">
-  <nav class="navbar navbar-expand-lg flex-column align-items-stretch bg-body-tertiary">
+  <nav
+    class="navbar navbar-expand-lg flex-column align-items-stretch bg-body-tertiary z-2"
+    id="navbar"
+  >
     <div class="container">
       <a
         class="navbar-brand"
@@ -14,8 +17,8 @@
         class="navbar-toggler border-0"
         type="button"
         data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar"
+        data-bs-target="#offcanvas-navbar"
+        aria-controls="offcanvas-navbar"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
@@ -24,13 +27,13 @@
       <div
         class="offcanvas offcanvas-end"
         tabindex="-1"
-        id="offcanvasNavbar"
-        aria-labelledby="offcanvasNavbarLabel"
+        id="offcanvas-navbar"
+        aria-labelledby="offcanvas-navbar-label"
       >
         <div class="offcanvas-header">
           <h5
             class="offcanvas-title"
-            id="offcanvasNavbarLabel"
+            id="offcanvas-navbar-label"
           ></h5>
           <button
             type="button"
@@ -43,16 +46,17 @@
           <ul class="navbar-nav nav-pills justify-content-center column-gap-8 row-gap-6 flex-grow-1">
             <li class="nav-item">
               <a
-                class="nav-link <%= route === '/explore'? 'active' : '' %>"
-                aria-current="page"
-                href="explore.html"
+                id="link-explore"
+                class="nav-link"
+                href="explore.html?page=explore"
                 >好物推薦</a
               >
             </li>
             <li class="nav-item">
               <a
-                class="nav-link <%= route === '/interest'? 'active' : '' %>"
-                href="interest-list.html"
+                id="link-interest-list"
+                class="nav-link"
+                href="interest-list.html?page=interest-list"
                 >關注中</a
               >
             </li>
@@ -90,7 +94,7 @@
             <li class="nav-item">
               <a
                 class="nav-link"
-                href="#SignUp-Form"
+                href="#modal-sign-up"
                 role="button"
                 data-bs-toggle="modal"
                 >登入 / 登出</a
@@ -100,15 +104,18 @@
         </div>
       </div>
       <ul class="navbar-nav d-none d-lg-flex gap-6">
-        <li class="nav-item bg-hover-primary-light"
-          ><a
+        <li class="nav-item bg-hover-primary-light">
+          <a
             href="upload.html"
             class="nav-link"
-            ><img
-              src="../assets/images/icons/icon-box-arrow-up.svg"
+          >
+            <img
+              src="../assets/icons/icon-box-arrow-up.svg"
               width="48px"
-              alt="upload" /></a
-        ></li>
+              alt="upload"
+            />
+          </a>
+        </li>
         <li class="nav-item bg-hover-primary-light">
           <div class="dropdown">
             <a
@@ -118,7 +125,7 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
               ><img
-                src="../assets/images/icons/icon-bell-circle.svg"
+                src="../assets/icons/icon-bell-circle.svg"
                 width="48px"
                 alt="notifications"
               />
@@ -163,14 +170,14 @@
             </ul>
           </div>
         </li>
-        <li class="nav-item bg-hover-primary-light"
-          ><a
-            href="#SignUp-Form"
+        <li class="nav-item bg-hover-primary-light">
+          <a
+            href="#modal-sign-up"
             class="nav-link"
             role="button"
             data-bs-toggle="modal"
             ><img
-              src="../assets/images/icons/icon-person.svg"
+              src="../assets/icons/icon-person.svg"
               width="48px"
               alt="login"
           /></a>
@@ -178,7 +185,17 @@
       </ul>
     </div>
   </nav>
-  <% if( enableCollapseSearch ) { %> <%- include('./layout/collapse-search-bar.ejs'); -%> <% } %>
+  <% if( enableCollapseSearch ) { %> <%- include('./modules/search-bar-sticky-top.ejs'); -%> <% } %>
 </div>
-<%- include('./layout/sign-up'); -%> <%- include('./layout/login'); -%> <%- include('./layout/reset-password'); -%>
-<%-include('./layout/interest-modal'); -%>
+<!-- 註冊框 -->
+<%- include('./modules/modal-sign-up'); -%>
+<!-- 登入框 -->
+<%- include('./modules/modal-login'); -%>
+<!-- 重設密碼框 -->
+<%- include('./modules/modal-reset-password'); -%>
+<!-- 選興趣框 -->
+<%-include('./modules/modal-interest'); -%>
+<script
+  type="module"
+  src="/modules/navbar.js"
+></script>

@@ -11,12 +11,17 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>hiCraft | 搜尋好設計、好點子</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
   </head>
   <body>
-    <%- include('./layout/navbar.ejs',{enableCollapseSearch:true ,route:'/result'}); -%>
-    <header class="container">
+    <%- include('./modules/navbar.ejs',{enableCollapseSearch:true}); -%>
+    <header class="container mt-8">
       <form action="">
-        <ul class="list-inline row my-8">
+        <ul class="list-inline row">
           <li class="col-6 col-lg-2">
             <select
               class="form-select btn btn-tag-secondary"
@@ -24,12 +29,13 @@
               name="materials"
             >
               <option selected>選擇材質</option>
-              <% materials.forEach( (item,index) => { %>
+              <% tagGroups["materials"].forEach( (item,index) => { %>
               <option
                 class="bg-secondary-subtle text-secondary-emphasis"
                 value="<%= index+1 %>"
-                ><%= item %></option
               >
+                <%= tagsI18n[item]["zh-TW"] %>
+              </option>
               <%})%>
             </select>
           </li>
@@ -40,18 +46,22 @@
               name="category"
             >
               <option selected>選擇類別</option>
-              <% category.forEach( (item,index) => { %>
+              <% tagGroups["default-category"].forEach( (item,index) => { %>
               <option
                 class="bg-secondary-subtle text-secondary-emphasis"
                 value="<%= index+1 %>"
-                ><%= item %></option
               >
+                <%= tagsI18n[item]["zh-TW"] %>
+              </option>
               <%})%>
             </select>
           </li>
         </ul>
       </form>
-      <h1 class="border-bottom border-3 d-flex justify-content-between align-items-center">
+      <h1
+        id="title-search-result"
+        class="border-bottom border-3 mt-8 d-flex justify-content-between align-items-center"
+      >
         父親節 有關的主題：
         <div class="dropdown">
           <a
@@ -62,46 +72,96 @@
             aria-expanded="false"
           ></a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li
-              ><a
+            <li>
+              <a
                 class="dropdown-item"
                 href="#"
                 >最多人收藏</a
-              ></li
-            >
-            <li
-              ><a
+              >
+            </li>
+            <li>
+              <a
                 class="dropdown-item"
                 href="#"
                 >最多人觀看</a
-              ></li
-            >
-            <li
-              ><a
+              >
+            </li>
+            <li>
+              <a
                 class="dropdown-item"
                 href="#"
                 >最新</a
-              ></li
-            >
+              >
+            </li>
           </ul>
         </div>
       </h1>
     </header>
-    <main class="container position-relative"> <%- include('./layout/gallery.ejs',{route:'/result'}); -%> </main>
-    <nav class="container py-4 py-lg-8">
-      <div class="row mt-16 align-items-center">
-        <a
-          href="#"
-          class="btn btn-outline-primary col-6 offset-3"
-          >下一頁</a
-        >
-        <span class="col-12 col-lg-1 offset-lg-2 text-center py-2">1/15 頁</span>
-      </div>
-    </nav>
-    <%- include('./layout/footer.ejs'); -%>
+    <main class="container position-relative py-16">
+      <ul
+        id="gallery-search-result"
+        class="gallery"
+      ></ul>
+      <a
+        id="load-gallery-search-result"
+        href=""
+        class="btn btn-primary-white btn-lg mt-16 mx-auto d-block"
+        >載入更多
+      </a>
+    </main>
+
+    <%- include('./modules/footer.ejs'); -%>
+    <!--  -->
+    <%- include('./modules/loading-mask'); -%>
     <script
       type="module"
       src="../main.js"
     ></script>
+    <script type="module">
+      import Gallery from "../assets/js/Gallery.js";
+      import { debounce } from "../assets/js/utils.js";
+      const urlParams = new URLSearchParams(window.location.search);
+      const queryString = urlParams.get("query");
+      const baseURL = import.meta.env.BASE_URL;
+      const titleSearchResult = document.querySelector("#title-search-result");
+      titleSearchResult.textContent = `${queryString} 有關的主題：`;
+
+      window.addEventListener("load", async () => {
+        const craftsResponse = await fetch(baseURL + "data/crafts.json").catch((err) => {
+          throw new Error("HTTP error! status: " + err.status);
+        });
+        const tagsI18nResponse = await fetch(baseURL + "data/tags-i18n.json").catch((err) => {
+          throw new Error("Failed to fetch tag-i18n data");
+        });
+        const [craftsData, tagsI18n] = await Promise.all([craftsResponse.json(), tagsI18nResponse.json()]);
+        const searchResult = findTag(queryString);
+
+        const matchedData = craftsData.filter(({ tags }) => tags.includes(searchResult));
+        const imgURLs = matchedData.map((craft) => craft.imgURLs[0]);
+
+        const loadBtn = document.querySelector("#load-gallery-search-result");
+        const gallery = new Gallery("#gallery-search-result", {
+          imgURLs: imgURLs,
+          loadButton: loadBtn,
+          loadAmount: 8,
+        });
+
+        window.addEventListener(
+          "resize",
+          debounce(
+            () => gallery.container.querySelectorAll(".gallery-item").forEach((item) => gallery.resizeItem(item)),
+            100
+          )
+        );
+        function findTag(queryString) {
+          for (const tagName in tagsI18n) {
+            if (tagName.toLowerCase() === queryString.toLowerCase()) return tagName;
+            for (const language in tagsI18n[tagName]) {
+              if (tagsI18n[tagName][language] === queryString) return tagName;
+            }
+          }
+        }
+      });
+    </script>
   </body>
 </html>

@@ -2,6 +2,7 @@
   action="search-result.html"
   class="row align-items-center gy-2 gy-lg-0 mw-1060px mx-auto bg-white rounded-3 p-2 border border-primary-light border-4 border-lg-8 border-opacity-50"
   role="search"
+  method="get"
 >
   <div class="col-lg-8 d-flex align-items-center">
     <svg
@@ -17,10 +18,12 @@
       />
     </svg>
     <input
-      class="form-control border-0 py-4"
+      class="form-control border-0 py-4 mx-2"
       type="search"
-      placeholder="試試看輸入父親節"
+      name="query"
+      placeholder="尋找您感興趣的手工藝品"
       aria-label="Search"
+      autocomplete="off"
     />
   </div>
   <div class="col-lg-2 d-flex align-items-center border-start-lg border-end-lg">
@@ -44,8 +47,9 @@
       <option
         value="topic"
         selected
-        >找主題</option
       >
+        找主題
+      </option>
       <option value="author">找作者</option>
       <option value="name">找作品</option>
     </select>
@@ -54,7 +58,8 @@
     <button
       class="btn btn-lg btn-primary w-100 text-nowrap"
       type="submit"
-      >Search
+    >
+      Search
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"

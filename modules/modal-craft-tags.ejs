@@ -1,8 +1,8 @@
 <div
   class="modal fade"
-  id="craftTagsModal"
+  id="modal-craft-tags"
   tabindex="-1"
-  aria-labelledby="craftTagsModalLabel"
+  aria-labelledby="add-creats-tags-btn"
   aria-hidden="true"
 >
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl modal-fullscreen-sm-down">
@@ -11,19 +11,19 @@
         <div class="container mw-800px py-6 py-lg-12">
           <h2 class="mb-6">類別</h2>
           <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-5 gx-5 gy-6">
-            <% category.forEach((item , index)=>{ %>
+            <% tagGroups["default-category"].forEach((item , index)=>{ %>
             <div class="col">
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="<%= item %>"
+                  name="category"
                 />
                 <img
                   class="w-100 object-fit-cover h-100px"
                   src="../assets/images/category/<%= item %>.jpg"
                   alt="category<%= index %>"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i><%= item %>
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i><%= tagsI18n[item]['zh-TW'] %>
               </label>
             </div>
             <% }) %>
@@ -37,7 +37,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="addNewCategory"
+                  id="add-new-category"
                   placeholder="最多10字"
                   aria-placeholder="最多10字"
                   maxlength="10"
@@ -48,44 +48,45 @@
                 <button
                   class="btn btn-secondary text-nowrap"
                   type="submit"
-                  >新增</button
                 >
+                  新增
+                </button>
               </div>
             </form>
             <ul class="list-inline mb-0 d-flex gap-2 gap-md-4">
-              <li
-                ><a
+              <li>
+                <a
                   href="#"
                   class="btn btn-tag-secondary"
                   ><i class="bi bi-x"></i>香皂</a
-                ></li
-              >
-              <li
-                ><a
+                >
+              </li>
+              <li>
+                <a
                   href="#"
                   class="btn btn-tag-secondary"
                   ><i class="bi bi-x"></i>樂器</a
-                ></li
-              >
+                >
+              </li>
             </ul>
           </div>
         </div>
         <div class="container mw-800px py-6 py-lg-12">
           <h2 class="mb-6">材料</h2>
           <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-5 gx-5 gy-6">
-            <% materials.forEach((item , index)=>{ %>
+            <% tagGroups["materials"].forEach((item , index)=>{ %>
             <div class="col">
               <label class="img-checkbox w-100">
                 <input
                   type="checkbox"
-                  name="<%= item %>"
+                  name="materials"
                 />
                 <img
                   class="w-100 h-100px object-fit-cover"
                   src="../assets/images/materials/<%= item %>.jpg"
                   alt="materials<%= index %>"
                 />
-                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i><%= item %>
+                <i class="img-checkbox-mark fs-3 bi bi-check-circle-fill"></i><%= tagsI18n[item]['zh-TW'] %>
               </label>
             </div>
             <% }) %>
@@ -99,7 +100,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="addNewMatirial"
+                  id="add-new-materials"
                   placeholder="最多10字"
                   aria-placeholder="最多10字"
                   maxlength="10"
@@ -110,25 +111,26 @@
                 <button
                   class="btn btn-secondary text-nowrap"
                   type="submit"
-                  >新增</button
                 >
+                  新增
+                </button>
               </div>
             </form>
             <ul class="list-inline mb-0 d-flex gap-2 gap-md-4">
-              <li
-                ><a
+              <li>
+                <a
                   href="#"
                   class="btn btn-tag-secondary"
                   ><i class="bi bi-x"></i>有機物質</a
-                ></li
-              >
-              <li
-                ><a
+                >
+              </li>
+              <li>
+                <a
                   href="#"
                   class="btn btn-tag-secondary"
                   ><i class="bi bi-x"></i>鑽石</a
-                ></li
-              >
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -139,7 +141,7 @@
               <input
                 type="text"
                 class="form-control"
-                id="addOthersTag"
+                id="add-other-tags"
                 placeholder="最多10字"
                 aria-placeholder="最多10字"
                 maxlength="10"
@@ -150,25 +152,26 @@
               <button
                 class="btn btn-secondary text-nowrap"
                 type="submit"
-                >新增</button
               >
+                新增
+              </button>
             </div>
           </form>
           <ul class="list-inline mb-0 d-flex gap-2 gap-md-4">
-            <li
-              ><a
+            <li>
+              <a
                 href="#"
                 class="btn btn-tag-secondary"
                 ><i class="bi bi-x"></i>古典</a
-              ></li
-            >
-            <li
-              ><a
+              >
+            </li>
+            <li>
+              <a
                 href="#"
                 class="btn btn-tag-secondary"
                 ><i class="bi bi-x"></i>歐式</a
-              ></li
-            >
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -178,13 +181,15 @@
           class="btn btn-outline-secondary"
           data-bs-dismiss="modal"
           aria-label="Close"
-          >取消</button
         >
+          取消
+        </button>
         <button
           type="submit"
           class="btn btn-primary"
-          >確定</button
         >
+          確定
+        </button>
       </div>
     </div>
   </div>

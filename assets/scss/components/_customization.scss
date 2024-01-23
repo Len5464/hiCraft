@@ -1,3 +1,4 @@
+/* 自訂的元件樣式 */
 .festival-card {
   display: block;
   position: relative;
@@ -121,26 +122,35 @@
 }
 
 .gradient-mask {
-  &-y {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 78.13%);
-    padding-top: var(--gradient-mask-spacer, 48px);
-    display: flex;
-    justify-content: center;
-  }
-  &-left::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 30px;
-    height: 100%;
-    transform: translate(-100%, -50%);
-    background: linear-gradient(90deg, transparent, #fff 70%, #fff);
+  &-left {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      padding-left: 50px;
+      transform: translateX(-100%);
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 78.13%);
+    }
   }
 }
+.loading-mask {
+  background-color: #ffffff9d;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+}
+
 .title-display {
   color: var(--color, #fff);
   text-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);
@@ -165,18 +175,50 @@
     background-color: $primary-bg-subtle;
   }
 }
-.tags-list {
+.tags-group {
+  transition: all 0.5s ease-in-out;
+  height: 250px;
+  overflow-y: scroll;
+
   &-fold {
-    height: 54px;
     overflow-x: scroll;
     white-space: nowrap;
-    transition: all 0.5s ease-in-out;
+    height: 70px;
   }
 
-  &-expend {
-    height: 150px;
-    overflow-y: scroll;
-    white-space: normal;
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    background-color: $light;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $secondary;
+  }
+}
+
+.gallery {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 8px;
+  &-item {
+    border-radius: $border-radius;
+    overflow: hidden;
+  }
+
+  &-img {
+    width: 100%;
+    height: auto;
     transition: all 0.5s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &:empty {
+    background: url(/assets/images/no-result.svg) center/contain no-repeat;
+    height: 500px;
   }
 }
