@@ -16,14 +16,17 @@
       type="image/svg+xml"
       href="/hiCraft/favicon.svg"
     />
-    <script type="module" crossorigin src="/hiCraft/assets/index-3feba6bb.js"></script>
-    <link rel="modulepreload" crossorigin href="/hiCraft/assets/main-3d3740bf.js">
+    <script type="module" crossorigin src="/hiCraft/assets/index-de8e56eb.js"></script>
+    <link rel="modulepreload" crossorigin href="/hiCraft/assets/main-d5dfb24a.js">
     <link rel="modulepreload" crossorigin href="/hiCraft/assets/Gallery-a727a01d.js">
     <link rel="stylesheet" href="/hiCraft/assets/main-4023b451.css">
   </head>
   <body>
     <div class="sticky-top">
-  <nav class="navbar navbar-expand-lg flex-column align-items-stretch bg-body-tertiary z-2">
+  <nav
+    class="navbar navbar-expand-lg flex-column align-items-stretch bg-body-tertiary z-2"
+    id="navbar"
+  >
     <div class="container">
       <a
         class="navbar-brand"
@@ -67,16 +70,17 @@
           <ul class="navbar-nav nav-pills justify-content-center column-gap-8 row-gap-6 flex-grow-1">
             <li class="nav-item">
               <a
+                id="link-explore"
                 class="nav-link"
-                aria-current="page"
-                href="explore.html"
+                href="explore.html?page=explore"
                 >好物推薦</a
               >
             </li>
             <li class="nav-item">
               <a
+                id="link-interest-list"
                 class="nav-link"
-                href="interest-list.html"
+                href="interest-list.html?page=interest-list"
                 >關注中</a
               >
             </li>
@@ -972,6 +976,7 @@
     </form>
   </div>
 </div>
+
     <header class="bg-home-header d-flex flex-column">
       <div class="container my-auto">
         <h1 class="title-display">搜尋好設計、好點子</h1>
